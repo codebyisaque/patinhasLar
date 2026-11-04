@@ -6,6 +6,33 @@
   <title>Login</title>
 </head>
 <body>
-  <h1>Criando Login</h1>
+  <main class="container">
+      <h1>Bem-vindo de volta</h1>
+      <p>Acesse sua conta com segurança e continue de onde parou.</p>
+    <form>
+      <div class="dado">
+      <label for="email">E-mail</label>
+      <input placeholder="nome@exemplo.com" type="email" id="email">
+      </div>
+
+      <div class="dado">
+        <label for="senha">Senha</label>
+        <input placeholder="••••••••" type="password" id="senha">
+      </div>
+
+      <div class="lembrar-senha">
+        <label for="lembrar"> <input type="checkbox" id="lembrar"> Lembrar-me</label>
+        <a href="#">Esqueci minha senha</a>
+      </div>
+
+      <button type="submit" class="btn-normal">Entrar</button>
+      <span>ou</span>
+      <button type="button" class="btn-google">Entrar com Google</button>
+
+      <div class="registro">
+        <p>Não tem conta? <a href="#">Cadastre-se agora</a></p>
+      </div>
+    </form>
+  </main>
 </body>
 </html>
