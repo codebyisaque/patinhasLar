@@ -20,15 +20,20 @@ body{
 }
 
 .header{
-  display: flex;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
   background-color: #FF746C;
   margin: 35px auto;
   max-width: 1210px;
   height: 89px;
   border-radius: 40px;
-  align-items: center;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   justify-content: space-between;
+  align-content: center;
 }
 
 .menu{
@@ -36,6 +41,7 @@ body{
  font-weight: 700;
  font-size: 1.5rem;
  display: flex;
+ align-items: center;
  gap: 40px;
 }
 
@@ -53,6 +59,8 @@ body{
   margin-right: 50px;
   font-family: 'fredoka';
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .menu-cadastro{
@@ -64,3 +72,8 @@ body{
   color: #FAD383;
   text-decoration: underline;
   text-underline-offset: 25%;
+}
+
+.imagem-conta:hover path{
+  fill: #FAD383;
+}
