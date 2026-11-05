@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.header{
+  display: flex;
+  background-color: #FF746C;
+  margin: 35px auto;
+  max-width: 1210px;
+  height: 89px;
+  border-radius: 40px;
+}
+
+.logo{
+  margin: 15px 50px ;
+  width: 99px;
+  height: 61.5px;
+}
