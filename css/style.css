@@ -4,7 +4,21 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  text-transform: capitalize;
+  outline: none;
+  
 }
+
+body{
+  background: #FFF0E8;
+  margin: 0px 115px;
+}
+.logo{
+  margin: 15px 0px 15px 50px;
+  width: 99px;
+  height: 61.5px;
+}
+
 .header{
   display: flex;
   background-color: #FF746C;
@@ -12,10 +26,41 @@
   max-width: 1210px;
   height: 89px;
   border-radius: 40px;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
 }
 
-.logo{
-  margin: 15px 50px ;
-  width: 99px;
-  height: 61.5px;
+.menu{
+ font-family: 'fredoka';
+ font-weight: 700;
+ font-size: 1.5rem;
+ display: flex;
+ gap: 40px;
 }
+
+.menu-item:hover{
+  color: #FAD383;
+  text-decoration: underline;
+  text-underline-offset: 25%;
+}
+
+.menu-item{
+  color: #ffffff;
+}
+
+.cadastre-se{
+  margin-right: 50px;
+  font-family: 'fredoka';
+  font-weight: 700;
+}
+
+.menu-cadastro{
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.menu-cadastro:hover{
+  color: #FAD383;
+  text-decoration: underline;
+  text-underline-offset: 25%;
