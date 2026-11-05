@@ -1,42 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/login.css">
-  <title>Login</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login</title>
+  </head>
 
-<body>
-  <main class="container">
+  <body>
+    <main class="container">
       <h1>Bem-vindo de volta</h1>
       <p>Acesse sua conta com segurança e continue de onde parou.</p>
-    <form>
-      <div class="dado">
-        <h2>E-mail</h2>
-      <input placeholder="nome@exemplo.com" type="email" id="email">
-      </div>
+      <form>
+        <div class="dado">
+          <h2>E-mail</h2>
+          <input placeholder="nome@exemplo.com" type="email" id="email" />
+        </div>
 
-      <div class="dado">
-        <h2>Senha</h2>
-        <input placeholder="••••••••" type="password" id="senha">
-      </div>
+        <div class="dado">
+          <h2>Senha</h2>
+          <input placeholder="••••••••••" type="password" id="senha" />
+        </div>
 
-      <div class="lembrar-senha">
-        <label for="lembrar"> <input type="checkbox" id="lembrar"> Lembrar-me</label>
-        <a href="#"> Esqueci minha senha</a>
-      </div>
+        <div class="lembrar-senha">
+          <label for="lembrar">
+            <input type="checkbox" id="lembrar" /> Lembrar-me</label
+          >
+          <a href="#"> Esqueci minha senha</a>
+        </div>
 
-      <div class="botao">
-      <button type="submit" class="btn-normal">Entrar</button>
-      <span>ou</span>
-      <button type="button" class="btn-google">Entrar com Google</button>
-      </div>
+        <div class="botao">
+          <button type="submit" class="btn-normal">Entrar</button>
 
-      <div class="registro">
-        <p>Não tem conta? <a href="#">Cadastre-se agora</a></p>
-      </div>
-    </form>
-  </main>
-</body>
+          <div class="divisao">
+            <span>ou</span>
+          </div>
+
+          <button type="button" class="btn-google">
+            <i class="fa-brands fa-google"></i> Entrar com Google
+          </button>
+        </div>
+
+        <div class="registro">
+          <p>Não tem conta? <a href="#">Cadastre-se agora</a></p>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
