@@ -1,3 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../assets/img/Imagem_login.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container{
+  background-color: #FFF0E8;
+  padding: 32px;
+  border-radius: 28px;
+  max-width: 580px;
+  box-shadow: 1px 1px rgba(70, 70, 70, 0.4);
+  
+}
+
+.container h1{
+  font-family: "Fredoka", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #464646;
+  margin-bottom: 5px;
+}
+
+.container p{
+  color: #464646;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.dado h2{
+  font-size: 1.1rem;
+  color: #464646;
+}
+
+.dado input{
+  width: 95%;
+  padding: 18px 10px;
+  border: 1px solid #464646;
+  font-size: 0.9rem;
+  border-radius: 16px;
+  margin: 10px 0;
+}
+
+.lembrar-senha{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.lembrar-senha a, .registro a{
+  font-size: 1rem;
+  font-weight: 650;
+  text-decoration: none;
+  color: #464646;
+}
+
+.lembrar-senha a:hover, .registro a:hover{
+  text-decoration: underline;
+}
+
+.registro{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.06rem;
+}
+
+span{
+  display: flex;
+  justify-content: center;
+}
+.btn-normal{
+  background-color: #FF746C;
+}
+
+.btn-google{
+  background-color: #FFF;
+}
