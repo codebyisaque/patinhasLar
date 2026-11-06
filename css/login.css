@@ -37,19 +37,19 @@ body {
 }
 
 .container p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
 .dado h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .dado input {
   width: 100%;
   padding: 20px 15px;
   border: 1px solid #464646;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border-radius: 16px;
   margin: 10px 0 20px 0;
 }
@@ -58,7 +58,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 15px 0px;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .lembrar-senha label input {
@@ -69,7 +69,7 @@ body {
 
 .lembrar-senha a,
 .registro a {
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 650;
   text-decoration: none;
 }
@@ -80,7 +80,7 @@ body {
 }
 
 .registro p {
-  font-size: 1.02rem;
+  font-size: 1rem;
 }
 
 .registro {
@@ -115,7 +115,7 @@ button {
   width: 100%;
   padding: 18px 10px;
   border-radius: 16px;
-  font-size: 1.08rem;
+  font-size: 1rem;
   margin: 25px 0;
   cursor: pointer;
   display: flex;
