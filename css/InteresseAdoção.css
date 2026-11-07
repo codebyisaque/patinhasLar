@@ -29,8 +29,8 @@ body{
 .card{
   background-color: #fff;
   border-radius: 28px;
-  padding: 40px 40px;
-  max-width: 760px;
+  padding: 20px 30px;
+  max-width: 650px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -41,16 +41,21 @@ body{
 
 .seu-interesse{
   background-color: #FFF0E8;
-  padding: 6px 12px 6px 20px;
+  padding: 6px 8px;
   border-radius: 100px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 1rem;
-  margin-bottom: 20px;
-  font-family: "Fredoka", sans-serif;
-  font-weight: 700;
   border: 1px solid #4646461a;
+}
+
+.card-interesse {
+  font-weight: 700;
+  font-family: "Fredoka", sans-serif;
+}
+.seu-interesse span{
+  font-weight: 700;
 }
 
 .seu-interesse .adocao{
@@ -70,12 +75,12 @@ body{
 .casinha{
   background-color: #FF746C;
   border-radius: 44px;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 .casinha img{
@@ -85,29 +90,37 @@ body{
 
 .titulo{
   font-family: "Fredoka", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
+.bloco-texto{
+  width: 100%;
+  max-width: 550px;
+  padding: 0px 10px;
+}
+
 .descricao{
-  font-size: 1.25rem;
-  margin: 20px;
+  font-size: 1rem;
+  margin: 20px 0px 15px 0px;
 }
 
 .sub-descricao{
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 25px;
 }
 
 .btn{
   background-color: #FAD383;
   padding: 12px 12px;
+  font-size: 1rem;
   font-family: "Fredoka", sans-serif;
   font-weight: 600;
   text-decoration: none;
   border-radius: 16px;
   transition: 0.3s linear;
   border: 1px solid #464646;
+  margin-bottom: 10px;
 }
 
 .btn:hover{
