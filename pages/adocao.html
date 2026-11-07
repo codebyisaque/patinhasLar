@@ -4,16 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/adocao.style.css">
-    
+    <link rel="stylesheet" href="../css/style.css">
+
     <title>Página de doação</title>
 </head>
 <body>
-    <H1>Doações</H1>
-    <header class = navbar>
-        <div class = logo>
-          <img src="../assets/img/Logo.png" alt="patinhalogo">  
-       </div>
-           
+    
+    <header class="header">
+    <div class="logo"><img src="../assets/img/icons/Logo.svg" alt="Logo PatinhasLar"></div>
+    <nav class="menu">
+      <a href="" class="menu-item">Home</a>
+      <a href="" class="menu-item">Parceiros</a>
+      <a href="" class="menu-item">Sobre Nós</a>
+    </nav>
+    <div class="user-menu-container">
+           <div class="cadastre-se">
+                <a href="#">
+                    <svg class="imagem-conta" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.9286 9.64286C28.9286 12.2003 27.9126 14.653 26.1042 16.4614C24.2958 18.2698 21.8431 19.2857 19.2857 19.2857C16.7283 19.2857 14.2756 18.2698 12.4672 16.4614C10.6588 14.653 9.64286 12.2003 9.64286 9.64286C9.64286 7.08541 10.6588 4.6327 12.4672 2.82431C14.2756 1.01592 16.7283 0 19.2857 0C21.8431 0 24.2958 1.01592 26.1042 2.82431C27.9126 4.6327 28.9286 7.08541 28.9286 9.64286Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="dropdown-perfil">
+                <a href="#" class="dropdown-item">Meu perfil</a>
+                <a href="cadastroanimal.html" class="dropdown-item">Cadastrar novo animal</a>
+                <a href="login.html" class="dropdown-item sair">Sair</a>
+            </div>
+     </header>
+
+    <main class = "container-principal">
+    
+        <aside class="sidebar-filtros">
+           <h2>Filtros</h2>
+
+        <div class= "grupo-filtro">
+            <h3>Porte do animal</h3>
+         <div class="opcoes-porte">
+            <button type="button">Pequeno</button>
+            <button type="button">Médio</button>
+            <button type="button">Grande</button>
+         </div>   
+         </div>   
+            
+         <div class="grupo-filtro">
+              <h3>Qual idade?</h3>
+              <input type="number" placeholder="anos">
+        </div>
+             
+
+       <div class="grupo-filtro">
+          <h3>Qual Patinha?</h3>
+          <div class="opcoes-especie">
+            <button type="button">Cachorro</button>
+            <button type="button">Gato</button>
+          </div>
+        </div>
+
+ 
+        <div class="grupo-filtro">
+          <h3>Qual Sexo?</h3>
+          <div class="opcoes-sexo">
+            <button type="button">Fêmea</button>
+            <button type="button">Macho</button>
+          </div>
+        
+        <div class="grupo-filtro">
+          <h3>Disponíveis para:</h3>
+          <div class="opcoes-modalidade">
+            <button type="button">Adotar</button>
+            <button type="button">Apadrinhar</button>
+            <button type="button">Lar temporário</button>
+          </div>
+         </div>
+        </aside>
+
+       <section class ="catalago-animais">
+               <div class="topo-catalogo">
+                <h1>Patinhas para adoção</h1>
+                <div class="busca-container">
+                    <input type="text" placeholder="Pesquise pelo nome...">
+                    <span>86 patinhas precisando de um lar</span>
+               </div>
+               </div>
+
+               <div class="grid-cards">
+
+                    <article class="card-animal">
+                     <div class="foto-animal">
+                     <img src="../assets/img/dog.pagina.doacao.jpg" alt="Foto do animal"> 
+                    </div>
+
+                    <h3>Ronaldinho</h3>
+                    <span class="idade">8 Anos</span>
+                    <p class="descricao">
+                        Ajudar com os custos de vacinas, banho, tosa, remédios, antipulgas e tratamento de dermatite.
+                    </p>
+                    <a href="#" class="btn-adotar">Adotar &rarr;</a>
+                    </article>
+
+            
+            </div>
+            </section>
 
 
 
@@ -22,8 +114,12 @@
 
 
 
+    </main>
 
-    </header>
+
+
+
+
     
 </body>
 </html>
