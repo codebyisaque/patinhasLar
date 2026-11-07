@@ -19,7 +19,7 @@
     <form>
       <div class="nome">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Nome do pet">
+        <input type="text" id="nome">
       </div>
       <div class="cidade">
         <label for="cidade">Cidade:</label>
@@ -47,7 +47,46 @@
         <label for="peso">Peso:</label>
         <input type="number" id="peso" min="0" max="25" placeholder="0"> <span>kg</span>
       </div>
-      <!--Parei em informações adicionais-->
+      <h2>Informações adicionais</h2>
+      <div class="toggle-container">
+        <label for="vacinado">Vacinado</label>
+        <label class="switch">
+          <input type="checkbox" id="vacinado">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-container">
+        <label for="vermifugado">Vermifugado</label>
+        <label class="switch">
+          <input type="checkbox" id="vermifugado">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-container">
+        <label for="castrado">Castrado</label>
+        <label class="switch">
+          <input type="checkbox" id="castrado">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-container">
+        <label for="check-up">Check-up de saúde recente</label>
+        <label class="switch">
+          <input type="checkbox" id="check-up">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-container">
+        <label for="cuidados">Cuidados especiais</label>
+        <label class="switch">
+          <input type="checkbox" id="cuidados">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="oqueleprecisa">
+        <label for="precisa">O uqe ele precisa?</label>
+        <input type="text" id="precisa">
+      </div>
     </form>
   </main>
 </body>
