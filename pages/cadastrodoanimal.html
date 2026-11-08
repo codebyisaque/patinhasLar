@@ -10,11 +10,20 @@
   <main>
     <h1>Cadastrar uma Patinha</h1>
     <h2>Fotos da Patinha</h2>
-    <div class="gradefotos">
-      <div class="foto1"></div>
-      <div class="foto2"></div>
-      <div class="foto3"></div>
+    <div class="grade-fotos">
+    <div class="item-foto foto-um">
+      <input type="file" id="foto1" accept="image/*">
+      <label for="foto1">Adionar foto</label>
     </div>
+    <div class="item-foto foto-dois">
+      <input type="file" id="foto2" accept="image/*">
+      <label for="foto2">Adionar foto</label>
+    </div>
+    <div class="item-foto foto-tres">
+      <input type="file" id="foto3" accept="image/*">
+      <label for="foto3">Adionar foto</label>
+    </div>
+  </div>
     <form action="#" method="POST">
         <div class="infodopet">
           <div class="nome">
@@ -161,7 +170,7 @@
           </div>
           <div class="opcao">
             <input type="checkbox" id="per-assustado" value="assustado">
-            <label for="per-assustado">assustado</label>
+            <label for="per-assustado">Assustado</label>
           </div>
           <div class="opcao">
             <input type="checkbox" id="per-preguicoso" value="preguicoso">
