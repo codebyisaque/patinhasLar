@@ -14,7 +14,13 @@ html, body {
     height: auto;
     min-height: 100%;
     overflow-y: auto;
-    background: url();
+}
+body {
+ background: url(../assets/img/laterais_site_pets_corrigida.png);  
+ background-repeat: repeat-y;
+background-position: center top;
+background-size: 100% auto;
+
 }
 
 .texto {
@@ -26,13 +32,27 @@ html, body {
     font-weight: 400;
 }
 
-.texto pre {
-    margin-bottom: 35px;
+.caixa{
+    background-color: #FF746C;
+    width: 900px;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 180px  auto 60px auto;
+    
+}
+
+.caixa2{
+    background-color: #FF746C;
+    width: 1000px;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 180px  auto 60px auto;
+    
 }
 
 .titulinho{
-margin-bottom:20px;
-padding:50px;
 font-family: 'Fredoka', sans-serif;
 font-size:  6.1rem;
 letter-spacing: 2px;
@@ -42,13 +62,20 @@ text-align: center;
 }
 
  .textinho{
-font-family: 'Nunito', sans-serif;
-text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: center;
 color: #464646;
-padding:10px;
-font-size: 2.9rem;
  }
 
+p{
+    margin-bottom: 35px;
+}
 
 header{ /*imagem gato provisorio*/
     background: url(../assets/img/unsplash_3Ex793Z3Vx0.svg);
