@@ -16,13 +16,20 @@ html, body {
     overflow-y: auto;
 }
 body {
- background: url(../assets/img/laterais_site_pets_corrigida.png);  
- background-repeat: repeat-y;
-background-position: center top;
-background-size: 100% auto;
-
+    background: url(../assets/img/laterais_site_pets_corrigida.png);  
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+    
 }
 
+header{ /*imagem gato provisorio*/
+    background: url(../assets/img/unsplash_3Ex793Z3Vx0.svg);
+    height:120vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+}
 .texto {
     width: 55%;
     margin: 0 auto;
@@ -76,14 +83,4 @@ color: #464646;
 p{
     margin-bottom: 35px;
 }
-
-header{ /*imagem gato provisorio*/
-    background: url(../assets/img/unsplash_3Ex793Z3Vx0.svg);
-    height:120vh;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center top;
-}
-
-
 
