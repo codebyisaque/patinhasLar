@@ -14,80 +14,229 @@
     <div class="gradefotos">
       <div class="foto1"></div>
       <div class="foto2"></div>
-      <div class="foto2"></div>
+      <div class="foto3"></div>
     </div>
-    <form>
-      <div class="nome">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome">
+    <form action="#" method="POST">
+      <form>
+        <div class="infodopet">
+          <div class="nome">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+          </div>
+          <div class="cidade">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade">
+          </div>
+          <div class="especie">
+            <span>Especie:</span>
+            <input type="radio" id="cachorro" name="especie" value="cachorro" checked>
+            <label for="cachorro" class="botaoespecie"><!--icone do cachorro-->Cachorro</label>
+            <input type="radio" id="gato" name="especie" value="gato">
+            <label for="gato" class="botaoespecie">Gato<!--icone do gato--></label>
+          </div>
+          <div class="sexo">
+            <span>Sexo:</span>
+            <input type="radio" id="femea" name="sexo" value="femea">
+            <label for="femea" class="botaosexo"><!--simbolo fêmea-->Fêmea</label>
+            <input type="radio" id="macho" name="sexo" value="macho">
+            <label for="macho" class="botaosexo"><!--simbolo macho-->Macho</label>
+          </div>
+          <div class="idade">
+            <label for="idade">Idade estipulada:</label>
+            <input type="number" id="idade" min="0" max="25" placeholder="0"> <span>anos</span>
+          </div>
+          <div class="peso">
+            <label for="peso">Peso:</label>
+            <input type="number" id="peso" min="0" max="25" placeholder="0"> <span>kg</span>
+          </div>
+        </div>
+        <div class="infoadicionais">
+          <h2>Informações adicionais</h2>
+          <div class="toggle-container">
+            <label for="vacinado">Vacinado</label>
+            <label class="switch">
+              <input type="checkbox" id="vacinado">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="vermifugado">Vermifugado</label>
+            <label class="switch">
+              <input type="checkbox" id="vermifugado">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="castrado">Castrado</label>
+            <label class="switch">
+              <input type="checkbox" id="castrado">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="check-up">Check-up de saúde recente</label>
+            <label class="switch">
+              <input type="checkbox" id="check-up">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="cuidados">Cuidados especiais</label>
+            <label class="switch">
+              <input type="checkbox" id="cuidados">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="oqueleprecisa">
+            <label for="precisa">O que ele precisa?</label>
+            <input type="text" id="precisa">
+          </div>
+        </div>
+        <div class="selecaoporte">
+          <h2>Porte</h2>
+          <div class="tam-pequeno">
+            <input type="radio" id="portepequeno" value="pequeno">
+            <label for="portepequeno">
+              <span class="textodalabel">Pequeno</span>
+              <!-- icone patinha -->
+            </label>
+          </div>
+          <div class="tam-medio">
+            <input type="radio" id="portemedio" value="medio" checked>
+            <label for="portemedio">
+              <span class="textodalabel">Médio</span>
+              <!-- icone patinha 2 -->
+            </label>
+          </div>
+          <div class="tam-grande">
+            <input type="radio" id="portegrande" value="grande">
+            <label for="portegrande">
+              <span class="textodalabel">Grande</span>
+              <!-- icone patinha -->
+            </label>
+          </div>
+        </div>
+        <div class="convivio-adaptacao">
+          <h2>Convívio e Adaptação</h2>
+          <div class="toggle-container">
+            <label for="sociavel-caes">Sociável com cães</label>
+            <label class="switch">
+              <input type="checkbox" id="sociavel-caes">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="sociavel-gatos">Sociável com gatos</label>
+            <label class="switch">
+              <input type="checkbox" id="sociavel-gatos">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="docil-criancas">Dócil com crianças</label>
+            <label class="switch">
+              <input type="checkbox" id="docil-criancas">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="necessidades">Faz necessidades no tapete/rua</label>
+            <label class="switch">
+              <input type="checkbox" id="necessidades">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle-container">
+            <label for="apto-apartamento">Apto para apartamento</label>
+            <label class="switch">
+              <input type="checkbox" id="apto-apartamento">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <h2>Personalidade e Temperamento</h2>
+        <div class="personalidade">
+          <div class="opcao">
+            <input type="checkbox" id="per-docil" value="docil">
+            <label for="per-docil">Dócil</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-agressivo" name="personalidade" value="agressivo">
+            <label for="per-agressivo">Agressivo</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-alerta" value="alerta">
+            <label for="per-alerta">Alerta</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-tranquilo" value="tranquilo">
+            <label for="per-tranquilo">Tranquilo</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-afetuoso" value="afetuoso">
+            <label for="per-afetuoso">Afetuoso</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-assustado" value="assustado">
+            <label for="per-assustado">assustado</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-preguicoso" value="preguicoso">
+            <label for="per-preguicoso">Preguiçoso</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-ativo" value="ativo">
+            <label for="per-ativo">Ativo</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-curioso" value="curioso">
+            <label for="per-curioso">Curioso</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-independente" value="independente">
+            <label for="per-independente">Independente</label>
+          </div>
+          <div class="opcao">
+            <input type="checkbox" id="per-inteligente" value="inteligente">
+            <label for="per-inteligente">Inteligente</label>
+          </div>
+        </div>
+        <div class="pet-sobre">
+          <h2>Sobre</h2>
+          <label for="sobre">
+            <p>Nos conte sobre onde você encontrou o animal, em que situação estava e como está sendo sua convivência com ele de forma mais detalha. Nos ajude a encontrar o melhor lar possível para o nosso amigo!</p>
+          </label>
+          <textarea id="sobre" rows="4" placeholder="Escreva aqui os detalhes..."></textarea> <!--sugestão da ia para colocar textarea pois cabe mais informações do que input="text"-->
+        </div>
+        <div class="pet-descrição">
+          <h2>Descrição</h2>
+          <label for="descricao">
+            <p>Informe uma breve descrição sobre seu “patinha”, as pessoas ao navegar pelo site vão visualizar o que for descrito</p>
+          </label>
+          <textarea id="descricao" rows="4" placeholder="Escreva aqui como seu pet é..."></textarea>
+        </div>
+        <h2>Finalidade do Cadastro</h2>
+        <div class="finalizarcadastro">
+          <div class="selecaocadstro">
+            <label for="lartemporario">Lar temporário</label>
+            <input type="radio" id="lartemporario">
+            <span>(em busca de um lar temporário para tirar o animal da rua ou reduzir a superlotação de forma urgente)</span>
+          </div>
+          <div class="selecaocadstro">
+            <input type="radio" id="adocao">
+            <label for="adocao">Adoção</label>
+            <span>(o animal está recebendo os devidos cuidados e você tem as condições de ficar com ele até aparecer um interessado)</span>
+          </div>
+          <div class="selecaocadstro">
+            <input type="radio" id="apadrinhar">
+            <label for="apadrinhar">Apadrinhar</label>
+            <span>(peça o suporte para ajudar um animal com deficiência)</span>
+          </div>
+        </div>
+        <div class="acoes-formulario">
+        <button type="submit" class="btn-enviar">Finalizar Cadastro</button>
       </div>
-      <div class="cidade">
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade">
-      </div>
-      <div class="especie">
-        <span>Especie:</span><!--não sei se o span fica adequado usar aqui-->
-        <label for="cachorro" class="botaoespecie"> <!--icone do cachorro-->Cachorro</label>
-        <input type="radio" id="cachorro" value="cachorro">
-        <label for="gato" class="botaoespecie">Gato<!--icone do gato--></label>
-        <input type="radio" id="gato" value="gato">
-      </div>
-      <div class="Sexo">
-        <span>Sexo:</span>
-        <label for="femea" class="botaosexo"> <!--simbolo fêmea-->Fêmea</label>
-        <input type="radio" id="femea" value="Fêmea">
-        <label for="macho" class="botaosexo"><!--simbolo macho-->Macho</label>
-        <input type="radio" id="Macho" value="Macho">
-      </div>
-      <div class="idade">
-        <label for="idade">Idade estipulada:</label>
-        <input type="number" id="idade" min="0" max="25" placeholder="0"> <span>anos</span>
-      </div>
-      <div class="Peso">
-        <label for="peso">Peso:</label>
-        <input type="number" id="peso" min="0" max="25" placeholder="0"> <span>kg</span>
-      </div>
-      <h2>Informações adicionais</h2>
-      <div class="toggle-container">
-        <label for="vacinado">Vacinado</label>
-        <label class="switch">
-          <input type="checkbox" id="vacinado">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="toggle-container">
-        <label for="vermifugado">Vermifugado</label>
-        <label class="switch">
-          <input type="checkbox" id="vermifugado">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="toggle-container">
-        <label for="castrado">Castrado</label>
-        <label class="switch">
-          <input type="checkbox" id="castrado">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="toggle-container">
-        <label for="check-up">Check-up de saúde recente</label>
-        <label class="switch">
-          <input type="checkbox" id="check-up">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="toggle-container">
-        <label for="cuidados">Cuidados especiais</label>
-        <label class="switch">
-          <input type="checkbox" id="cuidados">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="oqueleprecisa">
-        <label for="precisa">O uqe ele precisa?</label>
-        <input type="text" id="precisa">
-      </div>
-    </form>
+      </form>
   </main>
 </body>
 </html>
