@@ -77,3 +77,9 @@ body{
 .imagem-conta:hover path{
   fill: #FAD383;
 }
+
+header{
+  background: url(../assets/img/unsplash_3Ex793Z3Vx0.svg);
+ height: 100vh;
+}
+

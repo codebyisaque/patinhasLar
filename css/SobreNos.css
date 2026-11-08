@@ -14,6 +14,7 @@ html, body {
     height: auto;
     min-height: 100%;
     overflow-y: auto;
+    background: url();
 }
 
 .texto {
@@ -47,3 +48,15 @@ color: #464646;
 padding:10px;
 font-size: 2.9rem;
  }
+
+
+header{ /*imagem gato provisorio*/
+    background: url(../assets/img/unsplash_3Ex793Z3Vx0.svg);
+    height:120vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+}
+
+
+
