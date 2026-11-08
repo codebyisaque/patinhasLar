@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/cadastroanimal.css">
   <title>Cadastro do Animal</title>
 </head>
-
 <body>
   <main>
     <h1>Cadastrar uma Patinha</h1>
@@ -17,7 +16,6 @@
       <div class="foto3"></div>
     </div>
     <form action="#" method="POST">
-      <form>
         <div class="infodopet">
           <div class="nome">
             <label for="nome">Nome:</label>
@@ -47,7 +45,7 @@
           </div>
           <div class="peso">
             <label for="peso">Peso:</label>
-            <input type="number" id="peso" min="0" max="25" placeholder="0"> <span>kg</span>
+            <input type="number" id="peso" min="0" max="100" placeholder="0"> <span>kg</span>
           </div>
         </div>
         <div class="infoadicionais">
@@ -94,27 +92,12 @@
         </div>
         <div class="selecaoporte">
           <h2>Porte</h2>
-          <div class="tam-pequeno">
-            <input type="radio" id="portepequeno" value="pequeno">
-            <label for="portepequeno">
-              <span class="textodalabel">Pequeno</span>
-              <!-- icone patinha -->
-            </label>
-          </div>
-          <div class="tam-medio">
-            <input type="radio" id="portemedio" value="medio" checked>
-            <label for="portemedio">
-              <span class="textodalabel">Médio</span>
-              <!-- icone patinha 2 -->
-            </label>
-          </div>
-          <div class="tam-grande">
-            <input type="radio" id="portegrande" value="grande">
-            <label for="portegrande">
-              <span class="textodalabel">Grande</span>
-              <!-- icone patinha -->
-            </label>
-          </div>
+            <input type="radio" id="portepequeno" name="porte" value="pequeno">
+            <label for="portepequeno">Pequeno<!-- icone patinha --></label>
+            <input type="radio" id="portemedio" name="porte" value="medio">
+            <label for="portemedio">Médio<!-- icone patinha 2 --></label>
+            <input type="radio" id="portegrande" name="porte" value="grande">
+            <label for="portegrande">Grande<!-- icone patinha 3--></label>
         </div>
         <div class="convivio-adaptacao">
           <h2>Convívio e Adaptação</h2>
@@ -218,17 +201,17 @@
         <h2>Finalidade do Cadastro</h2>
         <div class="finalizarcadastro">
           <div class="selecaocadstro">
-            <input type="radio" id="lartemporario">
+            <input type="radio" id="lartemporario" name="finalidade">
             <label for="lartemporario">Lar temporário</label>
             <span>(em busca de um lar temporário para tirar o animal da rua ou reduzir a superlotação de forma urgente)</span>
           </div>
           <div class="selecaocadstro">
-            <input type="radio" id="adocao">
+            <input type="radio" id="adocao" name="finalidade">
             <label for="adocao">Adoção</label>
             <span>(o animal está recebendo os devidos cuidados e você tem as condições de ficar com ele até aparecer um interessado)</span>
           </div>
           <div class="selecaocadstro">
-            <input type="radio" id="apadrinhar">
+            <input type="radio" id="apadrinhar" name="finalidade">
             <label for="apadrinhar">Apadrinhar</label>
             <span>(peça o suporte para ajudar um animal com deficiência)</span>
           </div>
