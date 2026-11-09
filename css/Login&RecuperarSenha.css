@@ -23,7 +23,7 @@ body {
 
 .container {
   background-color: #fff0e8;
-  padding: 65px 35px 45px 35px;
+  padding: 40px 35px;
   border-radius: 28px;
   width: 600px;
   box-shadow: 1px 1px rgba(70, 70, 70, 0.4);
@@ -33,7 +33,7 @@ body {
   font-family: 'Fredoka', sans-serif;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .container p {
@@ -41,17 +41,38 @@ body {
   margin-bottom: 20px;
 }
 
-.dado h2 {
+.dado label{
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .dado input {
   width: 100%;
   padding: 20px 15px;
   border: 1px solid #464646;
-  font-size: 1rem;
   border-radius: 16px;
+  font-size: 1rem;
   margin: 10px 0 20px 0;
+}
+
+.input-icone{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icone i{
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.input-icone input{
+  width: 100%;
+  padding: 15px 15px 18px 40px;
+  margin: 0;
 }
 
 .lembrar-senha {
