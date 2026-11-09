@@ -1,31 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   text-transform: capitalize;
   outline: none;
-  
 }
 
-body{
-  background: #FFF0E8;
-  margin: 0px 115px;
+body {
+  background: #fff0e8;
 }
-.logo{
+.logo {
   margin: 15px 0px 15px 50px;
   width: 99px;
   height: 61.5px;
 }
 
-.header{
+.header {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   z-index: 1000;
-  background-color: #FF746C;
+  background-color: #ff746c;
   margin: 35px auto;
   max-width: 1210px;
   height: 89px;
@@ -36,50 +34,108 @@ body{
   align-content: center;
 }
 
-.menu{
- font-family: 'fredoka';
- font-weight: 700;
- font-size: 1.5rem;
- display: flex;
- align-items: center;
- gap: 40px;
+.menu {
+  font-family: 'fredoka', Arial;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-.menu-item:hover{
-  color: #FAD383;
+.menu-item:hover {
+  color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
 }
 
-.menu-item{
+.menu-item {
   color: #ffffff;
 }
 
-.cadastre-se{
+.cadastre-se {
   margin-right: 50px;
-  font-family: 'fredoka';
+  font-family: 'fredoka', Arial;
   font-weight: 700;
   display: flex;
   align-items: center;
 }
 
-.menu-cadastro{
+.menu-cadastro {
   color: #ffffff;
   font-size: 1.5rem;
 }
 
-.menu-cadastro:hover{
-  color: #FAD383;
+.menu-cadastro:hover {
+  color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
 }
 
-.imagem-conta:hover path{
-  fill: #FAD383;
+.imagem-conta:hover path {
+  fill: #fad383;
+}
+footer {
+  display: flex;
+  background-color: #ff746c;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  gap: 220px;
+  text-align: center;
+  font-family: 'fredoka', Arial;
+  font-weight: 700;
+  color: white;
+}
+.logo-footer {
+  display: flex;
+  align-items: center;
 }
 
-header{
-  background: url(../assets/img/unsplash_3Ex793Z3Vx0.svg);
- height: 100vh;
+
+.logo-footer-patinha{
+  margin-left: 20px;
+}
+.patinha {
+  font-size: 1.5rem;
 }
 
+.adocao {
+  font-size: 1rem;
+}
+
+.redes-socias {
+  align-content: center;
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.25rem;
+}
+
+.menu-footer a{
+  color: white;
+  font-family: 'nunito', Arial;
+  font-weight: normal;
+}
+
+.sobre-footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 115px;
+  font-size: 1.25rem;
+}
+
+.sobre-footer a{
+  font-family: 'nunito', Arial;
+  font-weight: normal;
+  color: white;
+}
