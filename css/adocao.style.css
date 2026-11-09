@@ -1,14 +1,491 @@
-body {
-    background-color: #ff756f;
-}
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
 body {
     background-color: #fff0e8;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #444;
 }
 
 
-header {
-    background-color: #ff756f;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff0e8;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: #444;
+}
+
+.header {
+  background-color: #ff6f61;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 15px 40px;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .menu .menu-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    transition: color 0.2s ease;
+}
+
+.header .menu .menu-item:hover,
+.header .menu .menu-item.ativo {
+    color: #f7d070;
+}
+
+.header .cadastre-se {
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header .imagem-conta {
+    width: 26px;
+    height: 26px;
+}
+
+.container-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 290px 1fr; 
+  gap: 30px;
+}
+
+.sidebar-filtros {
+    background-color: #fff;
+    width: 290px;
+    flex-shrink: 0;
+    padding: 24px;
+    border: 1px solid #555;
+    border-radius: 40px;
+}
+
+.sidebar-filtros h2 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: #444;
+}
+
+.sidebar-filtros h2 i {
+    font-size: 27px;
+    color: #444;
+}
+
+.grupo-filtro {
+    margin-bottom: 23px;
+}
+
+.grupo-filtro h3 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.opcoes-porte {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.opcoes-porte button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #444;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.opcoes-porte button:hover {
+    background: transparent;
+}
+
+.opcoes-porte button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #444;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+}
+
+.opcoes-porte .porte-pequeno {
+    font-size: 16px;
+}
+
+.opcoes-porte .porte-medio {
+    font-size: 23px;
+}
+
+.opcoes-porte .porte-grande {
+    font-size: 29px;
+}
+
+.opcoes-porte button.ativo i {
+    background-color: #f7d070;
+}
+
+.campo-idade {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-idade input {
+    width: 48px;
+    height: 25px;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 4px 8px;
+    outline: none;
+    font-family: inherit;
+}
+
+.campo-idade span {
+    font-size: 13px;
+}
+
+.opcoes-especie,
+.opcoes-sexo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.texto-filtro {
+    font-size: 11px;
+    margin-right: 5px;
+}
+
+.opcoes-especie button,
+.opcoes-sexo button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 9px;
+    font-size: 11px;
+    font-family: inherit;
+    color: #444;
+    background: #fff;
+    border: 1px solid #555;
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.opcoes-especie button i,
+.opcoes-sexo button i {
+    font-size: 14px;
+}
+
+.opcoes-especie button:hover,
+.opcoes-sexo button:hover {
+    background-color: #f7d070;
+}
+
+.opcoes-especie button.ativo,
+.opcoes-sexo button.ativo {
+    background-color: #f7d070;
+}
+
+.opcoes-modalidade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.opcoes-modalidade button {
+    background-color: #fff;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 11px;
+    color: #444;
+    cursor: pointer;
+}
+
+.opcoes-modalidade button.ativo {
+    background-color: #f7d070;
+}
+
+.conteudo-adicao {
+    flex: 1;
+    min-width: 0;
+}
+
+.topo-catalogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.topo-catalogo h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: #444;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.pesquisa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 170px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 0 9px;
+}
+
+.barra-pesquisa i {
+    font-size: 13px;
+    color: #555;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 9px;
+}
+
+.pesquisa-container span {
+    font-size: 9px;
+    color: #555;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 24px;
+}
+
+.card-animal {
+    background-color: #fff;
+    width: 100%;
+    min-width: 0;
+    min-height: 230px;
+    padding: 15px 8px;
+    border: 1px solid #555;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.card-animal img {
+    width: 100%;
+    max-width: 120px;
+    height: 110px;
+    border-radius: 35px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.card-animal h3 {
+    margin: 4px 0;
+    font-size: 13px;
+    font-weight: 900;
+    color: #444;
+}
+
+.card-animal .idade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card-animal .idade i {
+    font-size: 13px;
+}
+
+.card-animal p {
+    font-size: 9px;
+    color: #666;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.btn-adotar {
+    background-color: #f7d070;
+    border: 1px solid #555;
+    border-radius: 20px;
+    padding: 5px 25px;
+    font-size: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #333;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-adotar:hover {
+    background-color: #ffbd42;
+}
+
+@media (max-width: 900px) {
+    .container-principal {
+        flex-direction: column;
+        width: calc(100% - 40px);
+        gap: 30px;
+    }
+
+    .sidebar-filtros {
+        width: 100%;
+    }
+
+    .conteudo-adicao {
+        width: 100%;
+    }
+
+    .topo-catalogo {
+        flex-wrap: wrap;
+    }
+
+    .grid-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        width: calc(100% - 24px);
+        padding: 10px 15px;
+    }
+
+    .header .logo img {
+        height: 35px;
+    }
+
+    .header .menu {
+        gap: 10px;
+    }
+
+    .header .menu .menu-item {
+        font-size: 11px;
+    }
+
+    .container-principal {
+        width: calc(100% - 30px);
+    }
+
+    .grid-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .topo-catalogo h1 {
+        font-size: 21px;
+    }
+
+    .pesquisa-container {
+        align-items: flex-start;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+.opcoes-porte button i {
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+
+.opcoes-porte button:hover i {
+    background-color: #f7d070 !important;
+    border-color: #444444;
+}
+
+
+.opcoes-porte button.ativo i {
+    background-color: #f7d070 !important;
+}
+
+
+.opcoes-especie button:hover,
+.opcoes-sexo button:hover,
+.opcoes-modalidade button:hover,
+.opcoes-especie button.ativo,
+.opcoes-sexo button.ativo,
+.opcoes-modalidade button.ativo,
+.btn-adotar:hover {
+    background-color: #f7d070 !important;
+    border-color: #444444;
 }
