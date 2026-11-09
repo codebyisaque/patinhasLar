@@ -6,17 +6,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
-  color: #464646;
+  font-family: 'Fredoka', sans-serif;
 }
 
 body{
   background-color: #FFF0E8;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  padding: 1px 0 0 0;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #464646;
 }
 
 .container{
@@ -24,13 +23,14 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 100px 0;
 }
 
 .card{
   background-color: #fff;
   border-radius: 28px;
-  padding: 20px 30px;
-  max-width: 650px;
+  padding: 35px;
+  max-width: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ body{
   font-weight: 700;
 }
 
-.seu-interesse .lar-temp{
+.seu-interesse .escolha{
   background-color: #FF746C;
   padding: 6px 15px;
   border-radius: 100px;
@@ -67,7 +67,7 @@ body{
   gap: 5px;
 }
 
-.seu-interesse .lar-temp img{
+.seu-interesse .adocao img{
   width: 20px ;
   height: 20px ;
 }
@@ -121,6 +121,7 @@ body{
   transition: 0.3s linear;
   border: 1px solid #464646;
   margin-bottom: 10px;
+  color: #464646;
 }
 
 .btn:hover{
