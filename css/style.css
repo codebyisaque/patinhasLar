@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.homeUm{
+  display: flex;
+}
+
+.img-homeUm{
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
