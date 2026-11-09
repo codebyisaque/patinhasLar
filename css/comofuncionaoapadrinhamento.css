@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  outline: none;
+  color: black;
+  font-family: 'Fredoka', sans-serif;
+}
+  
+body{
+  background-color: #fff0e8;
+  display: flex;
+  max-width: 30vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.conteudo-inicial{
+  background-color: #464646;
+  
+}
