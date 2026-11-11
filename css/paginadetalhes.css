@@ -1,0 +1,411 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff0e8;
+    font-family: 'Nunito', sans-serif;
+    color: #444;
+}
+
+.header {
+    background: #ff716c;
+    width: 90%;
+    margin: 25px auto;
+    padding: 12px 40px;
+    border-radius: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    width: 65px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #ffd47d;
+}
+
+.user-menu-container {
+    position: relative;
+}
+
+.user-icon {
+    color: white;
+    font-size: 25px;
+}
+
+.dropdown-perfil {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    padding: 15px;
+    width: 190px;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.user-menu-container:hover .dropdown-perfil {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 8px;
+    color: #444;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.container-detalhes {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background: #ffd47d;
+    color: #444;
+     padding: 5px 15px;
+    border: 1px solid #777;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.card-detalhes-animal {
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    padding: 25px;
+}
+
+.card-detalhes-animal h1 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.conteudo-perfil {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 15px 25px;
+}
+
+.galeria-fotos {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+}
+
+.foto-destaque {
+    height: 300px;
+    background: #eee;
+    margin-bottom: 12px;
+}
+
+.foto-destaque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.miniaturas-fotos {
+      display: flex;
+    gap: 12px;
+}
+
+.fotos-thumb,
+.foto-thumb {
+    width: 50%;
+       height: 110px;
+    background: #eee;
+}
+
+.fotos-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ver-mais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        color: #d7a64b;
+      font-size: 13px;
+}
+
+.dados-basicos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.dados-basicos p {
+    font-size: 12px;
+}
+
+       .tag-info {
+       background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+      padding: 3px 8px;
+    font-size: 11px;
+}
+
+.bloco-info {
+    grid-column: 2;
+}
+
+.bloco-info h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.tags-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tag-destaque,
+.tag-outline,
+.tag-pill {
+   border: 1px solid #d6a34d;
+         border-radius: 15px;
+      padding: 4px 10px;
+    font-size: 11px;
+}
+
+.tag-destaque,
+.tag-pill {
+    background: #ffd47d;
+}
+
+.lista-adaptacao {
+    list-style: none;
+}
+
+.lista-adaptacao li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.lista-adaptacao input {
+    accent-color: #ffbf51;
+}
+
+.acoes-adocao {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-acao {
+    background: white;
+    border: 1px solid #555;
+     border-radius: 20px;
+    padding: 8px 15px;
+    color: #444;
+     text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-acao:hover,
+.btn-acao.primario {
+    background: #ffd47d;
+}
+
+.cards-apoio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 35px 0 70px;
+}
+
+.card-apoio {
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.card-apoio img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-apoio h2 {
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.card-apoio p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    background: #ffd47d;
+    color: #444;
+    padding: 7px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+footer {
+    background: #ff716c;
+    color: white;
+    padding: 35px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-logo {
+    width: 65px;
+}
+
+.patinha {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.adocao {
+    font-size: 11px;
+}
+
+.redes-socias {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-socias a {
+    color: white;
+    font-size: 25px;
+}
+
+.menu-footer,
+.sobre-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-footer p,
+.sobre-footer p {
+    font-weight: 800;
+}
+
+.itens-footer {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .conteudo-perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-fotos,
+    .bloco-info,
+    .acoes-adocao {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .dados-basicos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .cards-apoio {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .card-detalhes-animal {
+        padding: 15px;
+    }
+
+    .dados-basicos {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-destaque {
+        height: 220px;
+    }
+
+    .acoes-adocao {
+        flex-wrap: wrap;
+    }
+}
