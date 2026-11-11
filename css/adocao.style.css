@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+       body {
     background-color: #fff0e8;
     font-family: 'Nunito', sans-serif;
     color: #444;
@@ -31,7 +31,7 @@ body {
     min-height: 44px;
 }
 
-.logo-area {
+       .logo-area {
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -64,7 +64,7 @@ body {
     color: #ffdc85;
 }
 
-.nav-links a.active {
+        .nav-links a.active {
     text-decoration: underline;
     text-underline-offset: 7px;
 }
@@ -221,14 +221,14 @@ body {
     gap: 5px;
     background-color: white;
     border: 1px solid #555;
-    border-radius: 25px;
-    padding: 5px 9px;
+     border-radius: 25px;
+     padding: 5px 9px;
     font-family: inherit;
     font-size: 12px;
     color: #444;
     white-space: nowrap;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+     transition: background-color 0.2s ease;
 }
 
 .opcoes-especie button i,
@@ -236,11 +236,11 @@ body {
     font-size: 15px;
 }
 
-.opcoes-especie button:hover,
+ .opcoes-especie button:hover,
 .opcoes-sexo button:hover,
 .opcoes-modalidade button:hover,
 .opcoes-especie button.ativo,
-.opcoes-sexo button.ativo,
+ .opcoes-sexo button.ativo,
 .opcoes-modalidade button.ativo {
     background-color: #ffd47d;
 }
@@ -313,17 +313,17 @@ body {
 }
 
 .card-animal {
-    width: 100%;
+     width: 100%;
     min-width: 0;
-    min-height: 260px;
+     min-height: 260px;
     background-color: white;
     border: 1px solid #777;
-    border-radius: 43px;
+     border-radius: 43px;
     padding: 15px 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -334,10 +334,10 @@ body {
 
 .card-animal .foto-animal {
     width: 100%;
-    max-width: 135px;
-    height: 115px;
+     max-width: 135px;
+     height: 115px;
     object-fit: cover;
-    border-radius: 34px;
+     border-radius: 34px;
     display: block;
     margin-bottom: 7px;
 }
@@ -350,9 +350,9 @@ body {
 
 .card-animal .idade {
     display: flex;
-    align-items: center;
+      align-items: center;
     justify-content: center;
-    gap: 5px;
+       gap: 5px;
     font-size: 12px;
     margin-bottom: 4px;
 }
@@ -371,14 +371,14 @@ body {
 
 .btn-adotar {
     margin-top: auto;
-    background-color: #fff;
+     background-color: #fff;
     color: #333;
-    border: 1px solid #777;
+     border: 1px solid #777;
     border-radius: 25px;
-    padding: 4px 20px;
+      padding: 4px 20px;
     min-width: 90px;
     text-decoration: none;
-    font-size: 10px;
+     font-size: 10px;
     font-weight: 900;
     display: inline-flex;
     align-items: center;
@@ -394,9 +394,9 @@ body {
 footer {
     width: 100%;
     min-height: 160px;
-    background-color: #ff716c;
+     background-color: #ff716c;
     color: white;
-    padding: 35px max(5%, calc((100% - 1280px) / 2));
+       padding: 35px max(5%, calc((100% - 1280px) / 2));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -575,7 +575,7 @@ footer {
     }
 
     .grid-cards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
     }
 
@@ -595,7 +595,7 @@ footer {
     }
 }
 
-@media (max-width: 380px) {
+  @media (max-width: 380px) {
     .grid-cards {
         grid-template-columns: 1fr;
     }
@@ -604,4 +604,4 @@ footer {
         max-width: 280px;
         margin: 0 auto;
     }
-}
+    }
