@@ -29,6 +29,10 @@ body {
   box-shadow: 1px 1px rgba(70, 70, 70, 0.4);
 }
 
+.envio{
+  padding: 20px 0;
+}
+
 .container h1 {
   font-family: 'Fredoka', sans-serif;
   font-size: 3rem;
@@ -132,12 +136,13 @@ body {
   padding: 0 10px;
 }
 
-button {
+button,
+.botao a {
   width: 100%;
   padding: 18px 10px;
   border-radius: 16px;
   font-size: 1rem;
-  margin: 25px 0;
+  margin: 30px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -145,10 +150,13 @@ button {
   gap: 10px;
   transition: 0.3s linear;
   font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid #464646
 }
 
-button:hover {
-  letter-spacing: 0.01rem;
+button:hover, 
+.botao a:hover{
+  letter-spacing: 0.02rem;
 }
 
 .btn-normal {
@@ -156,7 +164,7 @@ button:hover {
 }
 
 .btn-normal:hover {
-  background-color: #fba9a3;
+  background-color: #FF8680;
 }
 
 .icon-google{

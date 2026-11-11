@@ -13,17 +13,24 @@ body{
   background-color: #FFF0E8;
   min-height: 100vh;
   padding: 1px 0 0 0;
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: #464646;
 }
 
+.header{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .container{
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 100px 0;
 }
 
 .card{
@@ -103,11 +110,13 @@ body{
 .descricao{
   font-size: 1rem;
   margin: 20px 0px 15px 0px;
+  text-transform: none
 }
 
 .sub-descricao{
   font-size: 0.8rem;
   margin-bottom: 25px;
+  text-transform: none
 }
 
 .btn{
