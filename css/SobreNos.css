@@ -24,18 +24,18 @@ body {
 }
 
 .texto {
-  width: 55%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
-  font-size: 21px;
+  font-size: 10px;
   line-height: 1.5;
   font-weight: 400;
 }
 
 .caixa {
   background-color: #ff746c;
-  width: 900px;
-  padding: 15px;
+  width: 550px;
+  padding: 5px;
   border-radius: 50px;
   text-align: center;
   margin: 180px auto 60px auto;
@@ -43,7 +43,7 @@ body {
 
 .caixa2 {
   background-color: #ff746c;
-  width: 1000px;
+  width:100 px;
   padding: 15px;
   border-radius: 50px;
   text-align: center;
@@ -52,8 +52,8 @@ body {
 
 .titulinho {
   font-family: 'Fredoka', sans-serif;
-  font-size: 6.0rem;
-  letter-spacing: 2px;
+  font-size: 4rem;
+  letter-spacing: px;
   color: #464646;
   text-align: center;
 }
@@ -63,7 +63,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   font-family: 'Nunito', sans-serif;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 1.35;
   text-align: center;
@@ -72,4 +72,129 @@ body {
 
 p {
   margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #FAD383;
+    color: #333;
+   border: 2px solid #333;;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-sizing: border-box;
+box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
+}
+
+
+.quadrados-rosa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.linha-contato {
+    display: grid;
+    grid-template-columns: 350px 220px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+
+    width: 100%;
+    max-width: 610px;
+}
+
+.rosa {
+    background-color: #ff746c;
+
+    width: 370px !important;
+    min-height: 200px !important;
+
+    border-radius: 20px;
+    padding: 25px !important;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+} 
+
+.branco {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.numero {
+    display: block;
+    color: white;
+    font-weight: 800;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.telefone-linha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.telefone-linha .numero {
+    margin: 0;
+}
+
+.telephone {
+    width: 24px;
+    height: 24px;
+}
+
+.circulo {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    .linha-contato {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rosa {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+.linha-contato:nth-of-type(3) {
+    transform: translateX(60px);
+}
+
+
+.linha-contato:nth-of-type(4) {
+    transform: translateX(-60px);
+}
+
+.linha-contato .rosa {
+    width: 370px !important;
+    min-height: 200px !important;
+    padding: 25px !important;
 }
