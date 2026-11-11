@@ -33,9 +33,10 @@ body {
   padding: 20px 0;
 }
 
-.container h1 {
+.container h1, 
+.container h2{
   font-family: 'Fredoka', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
