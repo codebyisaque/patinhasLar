@@ -1,25 +1,286 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  text-transform: capitalize;
   outline: none;
   color: black;
   font-family: 'Fredoka', sans-serif;
 }
   
-body{
+body {
   background-color: #fff0e8;
-  display: flex;
-  max-width: 30vh;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
 }
 
-.conteudo-inicial{
-  background-color: #464646;
-  
+h1, h2, h3 {
+  color: #464646;
 }
+
+.conteudo-inicial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "titulo imagem"
+    "texto  imagem"
+    "botao  imagem";
+  gap: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.conteudo-inicial h1 {
+  grid-area: titulo;
+  max-width: 450px; 
+  margin: 0 0 25px 0; /* Alterado de '0 auto' para '0' para colar na esquerda */
+  text-align: left;    /* Garante o alinhamento esquerdo */
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.conteudo-inicial .subtitulo {
+  grid-area: texto;
+  max-width: 500px;    /* Opcional: limita a largura do texto para controlar as quebras de linha */
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn-inicio {
+  grid-area: botao;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  background-color: #FAD383;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 16px;
+  transition: 0.3s linear;
+  border: 1px solid #464646;
+  color: #464646;
+  text-decoration: none; /* Boa prática para links em formato de botão */
+}
+
+.btn-inicio:hover {
+  background-color: #f7c353;
+  cursor: pointer;
+}
+
+.imagem-apresentacao {
+  grid-area: imagem;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 20px;
+  justify-self: end;
+}
+
+.conteudo-secundario { /* Nome corrigido */
+  display: grid; /* Ligamos o Grid */
+  grid-template-columns: 1fr 1fr; /* Criamos as duas colunas para os cards */
+  gap: 40px; 
+  align-items: start; /* Alinha os cards pelo topo */
+}
+
+.conteudo-secundario h2 {
+  grid-column: 1 / -1; /* Força o H2 a atravessar a tela inteira sozinho na primeira linha */
+  text-align: center; /* Centraliza o texto "O que é apadrinhamento?" */
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.beneficio {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px; /* Ajustado de 10px para 16px para bater mais com a curvatura do Figma */
+  border: 1px solid #000000; /* Adicionado: é isso que desenha a linha preta em volta do card */
+}
+
+.icone-card {
+  width: 70px; 
+  height: 70px;
+  margin-bottom: 20px; 
+}
+
+.como-funciona {
+  max-width: 900px; /* Um pouco menor para o texto não esticar demais na tela */
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.como-funciona h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.passos-lista {
+  list-style: none; /* Remove a numeração padrão automática do HTML */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Distância vertical entre o Passo 1, Passo 2, etc. */
+}
+
+.item-passo {
+  display: flex;
+  align-items: center; /* Centraliza o círculo e a caixa horizontalmente */
+  gap: 25px; /* Espaço horizontal entre o círculo numérico e a caixa branca */
+}
+
+.numero-passo {
+  background-color: #FF746C; /* Cor de fundo terracota/avermelhada */
+  color: #ffffff; /* Cor do número em branco */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0; /* Garante que o círculo nunca seja espremido pelo texto */
+}
+
+.conteudo-passo {
+  background-color: #ffffff; /* Fundo branco do bloco */
+  border: 1px solid #000000; /* Linha de borda preta */
+  border-radius: 16px; /* Cantos arredondados */
+  padding: 20px 30px; /* Espaço interno para o texto não colar na borda */
+  width: 100%; /* Faz a caixa esticar até o fim da tela */
+}
+
+.conteudo-passo h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.conteudo-passo p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333333;
+}
+
+.por-que-apadrinhar h2{
+   text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.cards-motivos{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.card-motivo {
+  background-color: white;
+  width: 200px;
+  min-height: 150px; /* Garante uma altura mínima, mas cresce se tiver muito texto */
+  padding: 20px;
+  border-radius: 16px; 
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.apadrinhamento-vs-adocao h2{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.subtitulo {
+  text-align: center; /* Joga o texto perfeitamente para o meio */
+  margin-bottom: 30px; /* Cria o espaço de respiro até os cards de baixo */
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.comparacao-cards{
+  display: flex;
+  flex-direction: row; /* Coloca os elementos lado a lado */
+  justify-content: center; /* Centraliza os cards na tela */
+  gap: 30px; /* Espaço de respiro entre os dois cards */
+  flex-wrap: wrap; /* Garante responsividade caso a tela diminua muito */
+}
+
+.card-apadrinhar{
+  flex: 1; /* Faz com que ambos cresçam dividindo o espaço igualmente */
+  max-width: 450px; /* Evita que fiquem esticados demais em telas grandes */
+  background-color: white;
+  width: 200px;
+  min-height: 150px; /* Garante uma altura mínima, mas cresce se tiver muito texto */
+  padding: 20px;
+  border-radius: 16px; 
+  border: 1px solid #000000;
+}
+
+.card-adotar{
+  flex: 1; /* Faz com que ambos cresçam dividindo o espaço igualmente */
+  max-width: 450px; /* Evita que fiquem esticados demais em telas grandes */
+  background-color: white;
+  width: 200px;
+  min-height: 150px; /* Garante uma altura mínima, mas cresce se tiver muito texto */
+  padding: 20px;
+  border-radius: 16px; 
+  border: 1px solid #000000;
+}
+
+.conteudo-final h2{
+  text-decoration-color: #464646;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 450px; /* Ajuste este valor para controlar onde a linha quebra */
+  margin: 0 auto 25px auto; /* Centraliza horizontalmente e dá um espaço abaixo */
+  font-size: 2.2rem; /* Aumenta o tamanho da letra conforme desejado */
+  line-height: 1.3; /* Melhora o espaçamento entre as linhas quando quebrar */
+}
+.conteudo-final .subtitulo {
+  grid-area: texto;
+  max-width: 500px;
+  width: 100%;          /* Garante que o elemento ocupe o espaço disponível até o limite */
+  margin: 0 auto 20px auto; /* O 'auto' nas laterais empurra o bloco inteiro para o centro */
+  text-align: center;   /* Centraliza o texto dentro da caixa */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.btn-final {
+  grid-area: botao;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  background-color: #FAD383;
+  padding: 10px 20px; /* Reduza levemente o padding lateral se quiser ele mais compacto */
+  font-size: 0.95rem; /* Letra um pouco mais sutil se necessário */
+  font-weight: 600;
+  border-radius: 16px;
+  transition: 0.3s linear;
+  border: 1px solid #464646;
+  color: #464646;
+}
+
+.btn-final:hover {
+  background-color: #f7c353;
+  cursor: pointer;
+  }
