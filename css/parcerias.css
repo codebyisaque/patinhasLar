@@ -25,3 +25,39 @@ body {
     background-position: top center;
      height: 100vh; 
 }
+
+.titulinho {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 4rem;
+  letter-spacing: px;
+  color: #464646;
+  text-align: center;
+}
+
+.textinho {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: center;
+  color: #464646;
+}
+
+.botao {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #FAD383;
+    color: #333;
+   border: 2px solid #333;;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-sizing: border-box;
+box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
+}
