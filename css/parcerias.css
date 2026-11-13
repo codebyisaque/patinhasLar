@@ -1,0 +1,15 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: none;
+  outline: none;
+   box-sizing: border-box;
+}
+html,
+body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+}
