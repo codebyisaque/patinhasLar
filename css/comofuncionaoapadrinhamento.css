@@ -82,24 +82,32 @@ h1, h2, h3 {
   justify-self: end;
 }
 
-.conteudo-secundario { /* Nome corrigido */
-  display: grid; /* Ligamos o Grid */
-  grid-template-columns: 1fr 1fr; /* Criamos as duas colunas para os cards */
-  gap: 40px; 
-  align-items: start; /* Alinha os cards pelo topo */
+.conteudo-secundario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px; /* Mantém os 70px entre o card da esquerda e o da direita */
+  row-gap: 32px;    /* Define os exatos 32px entre o título e os cards */
+  padding: 0 115px;
+  margin-top: 20px;    /* Empurra a seção para baixo, afastando da foto do cachorro */
+  margin-bottom: 72px; /* Mantém o espaço para a seção de baixo */
 }
 
 .conteudo-secundario h2 {
-  grid-column: 1 / -1; /* Força o H2 a atravessar a tela inteira sozinho na primeira linha */
-  text-align: center; /* Centraliza o texto "O que é apadrinhamento?" */
+  grid-column: 1 / -1;
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
+  margin: 0; 
 }
 
 .beneficio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
   background-color: white;
-  padding: 30px;
+  padding: 40px 30px;
   border-radius: 16px; /* Ajustado de 10px para 16px para bater mais com a curvatura do Figma */
   border: 1px solid #000000; /* Adicionado: é isso que desenha a linha preta em volta do card */
 }
@@ -163,7 +171,7 @@ h1, h2, h3 {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #000000;
+  color: #464646;
 }
 
 .conteudo-passo p {
@@ -204,7 +212,7 @@ h1, h2, h3 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .subtitulo {
