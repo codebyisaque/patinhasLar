@@ -8,7 +8,7 @@
   text-decoration: none;
   text-transform: none;
   outline: none;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -82,8 +82,9 @@ body {
   color: #464646;
 }
 
-p {
-  margin-bottom: 35px;
+.textinho p{
+    text-transform: none;
+    margin-bottom: 35px;
 }
 
 .botao {
