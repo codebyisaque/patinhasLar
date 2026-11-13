@@ -30,7 +30,7 @@ body {
 }
 
 .container{
-  padding: 40px 35px;
+  padding: 30px 35px;
 }
 
 .container-sucesso{
@@ -43,26 +43,36 @@ body {
   text-align: center;
 }
 
-.container-sucesso .icone{
-  width: 170px;
-  height: 170px;
-  padding: 15px;
+.icone{
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .envio{
   padding: 20px 0;
 }
 
-.container h1, .container-sucesso h1{
+.container h1, 
+.container-sucesso h1, 
+.container-sucesso h2{
   font-family: 'Fredoka', sans-serif;
-  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 15px;
+  font-size: 2.5rem;
 }
 
+.container-sucesso h2{
+  font-size: 1.5rem;
+  margin: 20px 10px;
+}
+
+.container-sucesso h1{
+  padding: 5px 20px;
+}
 .container p {
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .dado label{
@@ -162,10 +172,10 @@ button,
 .botao a,
 .botao-pet a{
   width: 100%;
-  padding: 15px 40px;
+  padding: 15px 45px;
   border-radius: 16px;
   font-size: 1rem;
-  margin: 30px 0;
+  margin: 20px 0 15px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -180,8 +190,7 @@ button,
 .botoes-sucesso{
   display: flex;
   justify-content: space-between;
-  gap: 25px;
-  
+  gap: 30px;
 }
 button:hover, 
 .botao a:hover,
