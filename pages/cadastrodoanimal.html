@@ -38,17 +38,17 @@
         </div>
         <div class="especie">
           <span>Especie:</span>
-          <input type="radio" id="cachorro" name="especie" value="cachorro" checked>
-          <label for="cachorro" class="botaoespecie"><!--icone do cachorro-->Cachorro</label>
+          <input type="radio" id="cachorro" name="especie" value="cachorro">
+          <label for="cachorro" class="botaoespecie"><!--icone-->Cachorro</label>
           <input type="radio" id="gato" name="especie" value="gato">
-          <label for="gato" class="botaoespecie">Gato<!--icone do gato--></label>
+          <label for="gato" class="botaoespecie">Gato<!--icone--></label>
         </div>
         <div class="sexo">
           <span>Sexo:</span>
           <input type="radio" id="femea" name="sexo" value="femea">
-          <label for="femea" class="botaosexo"><!--simbolo fêmea-->Fêmea</label>
+          <label for="femea" class="botaosexo"><!--icone-->Fêmea</label>
           <input type="radio" id="macho" name="sexo" value="macho">
-          <label for="macho" class="botaosexo"><!--simbolo macho-->Macho</label>
+          <label for="macho" class="botaosexo"><!--icone-->Macho</label>
         </div>
         <div class="idade">
           <label for="idade">Idade estipulada:</label>
@@ -104,11 +104,11 @@
       <div class="selecaoporte">
         <h2>Porte</h2>
         <input type="radio" id="portepequeno" name="porte" value="pequeno">
-        <label for="portepequeno">Pequeno<!-- icone patinha --></label>
+        <label for="portepequeno">Pequeno<!--icone--></label>
         <input type="radio" id="portemedio" name="porte" value="medio">
-        <label for="portemedio">Médio<!-- icone patinha 2 --></label>
+        <label for="portemedio">Médio<!--icone--></label>
         <input type="radio" id="portegrande" name="porte" value="grande">
-        <label for="portegrande">Grande<!-- icone patinha 3--></label>
+        <label for="portegrande">Grande<!--icone--></label>
       </div>
       <div class="convivio-adaptacao">
         <h2>Convívio e Adaptação</h2>
@@ -155,7 +155,7 @@
           <label for="per-docil">Dócil</label>
         </div>
         <div class="opcao">
-          <input type="checkbox" id="per-agressivo" name="personalidade" value="agressivo">
+          <input type="checkbox" id="per-agressivo" value="agressivo">
           <label for="per-agressivo">Agressivo</label>
         </div>
         <div class="opcao">
@@ -200,7 +200,7 @@
         <label for="sobre">
           <p>Nos conte sobre onde você encontrou o animal, em que situação estava e como está sendo sua convivência com ele de forma mais detalha. Nos ajude a encontrar o melhor lar possível para o nosso amigo!</p>
         </label>
-        <textarea id="sobre" rows="4" placeholder="Escreva aqui os detalhes..."></textarea> <!--sugestão da ia para colocar textarea pois cabe mais informações do que input="text"-->
+        <textarea id="sobre" rows="4" placeholder="Escreva aqui os detalhes..."></textarea>
       </div>
       <div class="pet-descrição">
         <h2>Descrição</h2>
@@ -212,22 +212,28 @@
       <h2>Finalidade do Cadastro</h2>
       <div class="finalizarcadastro">
         <div class="selecaocadstro">
-          <input type="radio" id="lartemporario" name="finalidade">
-          <label for="lartemporario">Lar temporário</label>
-          <span>(em busca de um lar temporário para tirar o animal da rua ou reduzir a superlotação de forma urgente)</span>
+          <input type="radio" id="lartemporario" name="finalidade" value="lar-temporario">
+          <label for="lartemporario">
+            <strong>Lar temporário</strong>
+            <span>(em busca de um lar temporário para tirar o animal da rua ou reduzir a superlotação de forma urgente)</span>
+          </label>
         </div>
         <div class="selecaocadstro">
-          <input type="radio" id="adocao" name="finalidade">
-          <label for="adocao">Adoção</label>
-          <span>(o animal está recebendo os devidos cuidados e você tem as condições de ficar com ele até aparecer um interessado)</span>
+          <input type="radio" id="adocao" name="finalidade" value="adocao">
+          <label for="adocao">
+            <strong>Para Adoção</strong>
+            <span>(o animal está recebendo os devidos cuidados e você tem as condições de ficar com ele até aparecer um interessado)</span>
+          </label>
         </div>
         <div class="selecaocadstro">
-          <input type="radio" id="apadrinhar" name="finalidade">
-          <label for="apadrinhar">Apadrinhar</label>
-          <span>(peça o suporte para ajudar um animal com deficiência)</span>
+          <input type="radio" id="apadrinhar" name="finalidade" value="apadrinhar">
+          <label for="apadrinhar">
+            <strong>Para Apadrinhar</strong>
+            <span>(peça o suporte para ajudar um animal com deficiência)</span>
+          </label>
         </div>
       </div>
-      <div class="acoes-formulario">
+      <div class="acaoformulario">
         <button type="submit" class="btn-enviar">Finalizar Cadastro</button>
       </div>
     </form>
