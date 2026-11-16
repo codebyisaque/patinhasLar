@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  font-family: 'Fredoka', sans-serif;
+}
+
+body {
+  background-color: #fff0e8;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: #464646;
+}
+
+.conteudo-inicial {
+  display: grid;
+  grid-template-columns: 1.2fr 0.1fr;
+  grid-template-areas:
+    'tag    imagem'
+    'titulo imagem'
+    'texto  imagem'
+    'botao  imagem';
+  gap: 16px 40px;
+  max-width: 1200px;
+  margin: 80px;
+  padding: 60px 20px;
+  align-items: center;
+}
+
+.tag-destaque {
+  grid-area: tag;
+  justify-self: start;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ff746c;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.conteudo-inicial h1 {
+  grid-area: titulo;
+  max-width: 460px; /* Força a quebra em 3 linhas como no Figma */
+  margin: 0;
+  text-align: left;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #464646;
+}
+
+.conteudo-inicial .subtitulo {
+  grid-area: texto;
+  max-width: 520px;
+  margin: 8px 0 16px 0;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #464646;
+}
+
+.btn-inicio {
+  grid-area: botao;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fad383;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 14px;
+  border: 1px solid #464646;
+  color: #464646;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.btn-inicio:hover {
+  background-color: #f7c353;
+}
+
+.imagem-apresentacao {
+  grid-area: imagem;
+  justify-self: end;
+  width: 310px;
+  height: 470px;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.sobre-lar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #464646;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 80px;
+  padding: 60px 20px;
+}
+
+.sobre-lar img {
+  width: 480px;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.sobre-texto {
+  max-width: 520px;
+}
+
+.sobre-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #464646;
+}
+
+.sobre-texto p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  color: #464646;
+}
+
+.pilares-lar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que o 3º item quebre para a linha de baixo */
+  gap: 12px; /* Espaço entre as pílulas */
+  max-width: 380px; /* Limita a largura para forçar o 3º item a descer */
+}
+
+.pilares-lar li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Distância entre o ícone e o texto */
+  background-color: #fff0e8; /* Fundo suave da pílula como no Figma */
+  color: #464646;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px; /* Deixa as bordas totalmente arredondadas */
+}
+
+.pilares-lar li img {
+  width: 18px; /* Tamanho elegante e proporcional ao texto */
+  height: 18px;
+  object-fit: contain;
+}
+
+.como-funciona {
+  max-width: 900px; /* Um pouco menor para o texto não esticar demais na tela */
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.como-funciona h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+  grid-area: texto;
+  max-width: 600px;
+  width: 100%; /* Garante que o elemento ocupe o espaço disponível até o limite */
+  margin: 0 auto 20px auto;
+  text-align: center; /* Centraliza o texto dentro da caixa */
+  font-size: 1.1rem;
+}
+
+.passos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0 auto;
+  max-width: 1200px; /* Garante largura suficiente para os 5 caberem */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Mantém os 5 em uma única fileira */
+  justify-content: center; /* Centraliza a fileira na tela */
+  align-items: stretch; /* Faz todos os 5 ficarem com a mesma altura */
+  gap: 16px;
+}
+
+.card-passo {
+  box-sizing: border-box; /* Faz o padding ficar por dentro da largura */
+  flex: 1; /* Divide o espaço igualmente entre os 5 cards */
+  min-width: 0; /* Evita quebra de layout no Flexbox */
+  background-color: white;
+  min-height: 200px;
+  padding: 18px 14px; /* Padding mais enxuto para não apertar o texto */
+  border-radius: 16px;
+  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-passo h3 {
+  margin-top: 12px; /* Espaço entre a bolinha numerada e o título */
+  margin-bottom: 10px; /* Espaço entre o título e o parágrafo logo abaixo */
+}
+
+.card-passo p {
+  margin: 0; /* Remove margens extras embaixo do parágrafo */
+  line-height: 1.4;
+}
+
+.numero {
+  background-color: #ff746c;
+  color: #ffffff; /* Cor do número em branco */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.beneficios {
+  max-width: 1200px;
+  margin: 80px;
+  padding: 0 20px;
+}
+
+.beneficios h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.beneficios .subtitulo-secao {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 1.5;
+}
+
+.beneficios-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.card-beneficio {
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  min-height: 260px;
+  background-color: #ffffff; /* Ou transparente/branco conforme o fundo da sua página */
+  padding: 28px 18px; /* Maior respiro em cima e embaixo para não achatar */
+  border-radius: 16px;
+  border: 1px solid #464646;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.icone {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.card-beneficio h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+  color: #464646;
+}
+
+.card-beneficio p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0;
+  color: #464646;
+}
+
+.conteudo-final {
+  display: flex; /* Mude de 'grid' para 'flex' */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #ff746c;
+  border-radius: 28px;
+  max-width: 1160px;
+  margin: 80px; /* 'auto' nas laterais centraliza o banner na tela */
+  padding: 36px 48px;
+  box-sizing: border-box;
+}
+
+.texto-final {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 490px;
+}
+
+.conteudo-final h2 {
+  color: #ffffff;
+  margin: 0;
+  text-align: left; /* Alinhado à esquerda como no Figma */
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.conteudo-final .subtitulo {
+  margin: 0 0 8px 0;
+  text-align: left; /* Alinhado à esquerda como no Figma */
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: #ffffff;
+}
+
+.btn-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fad383;
+  color: #2b2b2b;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: 1px solid #464646;
+  text-decoration: none;
+}
+
+.imagem-final {
+  width: 440px;
+  height: 360px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.duvidas-frequentes {
+  max-width: 1200px;
+  margin: 80px;
+  padding: 0 20px;
+}
+
+.duvidas-frequentes h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo-duvidas {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #464646;
+}
+
+.card-pergunta {
+  background-color: #ffffff;
+  border: 1px solid #464646;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  padding: 18px 24px;
+  text-align: left;
+}
+
+.card-pergunta summary {
+  list-style: none; /* Remove a setinha padrão no Firefox */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 700; /* Pergunta em negrito para destacar */
+  color: #2b2b2b;
+  cursor: pointer;
+}
+
+.card-pergunta summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Adiciona a seta personalizada na direita */
+.card-pergunta summary::after {
+  content: '🠟';
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+/* Gira a seta para cima quando a pergunta é aberta */
+.card-pergunta[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.card-pergunta p {
+  margin: 14px 0 0 0;
+  font-size: 0.95rem; 
+  font-weight: 400;
+  line-height: 1.5;
+  color: #464646;
+}
