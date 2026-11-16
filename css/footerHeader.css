@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-:root{
-  --cor-principal:#ff746c;
+:root {
+  --cor-principal: #ff746c;
   --amarelo: #fad383;
   --preto: #464646;
   --branco: #ffffff;
@@ -12,11 +12,16 @@
   padding: 0;
   text-decoration: none;
   outline: none;
+  text-transform: none;
+  list-style: none;
 }
 
 body {
   background: #fff0e8;
 }
+
+/* Header */
+
 .logo {
   margin: 15px 0px 15px 50px;
   width: 99px;
@@ -40,13 +45,19 @@ body {
   align-content: center;
 }
 
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .menu {
   font-family: 'fredoka', Arial;
   font-weight: 700;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 40px;
 }
 
 .menu-item:hover {
@@ -54,10 +65,13 @@ body {
   color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
+  transform: scale(1.1);
 }
 
 .menu-item {
   color: #ffffff;
+  display: inline-block;
+  transition: 0.5s ease;
 }
 
 .cadastre-se {
@@ -69,19 +83,25 @@ body {
 }
 
 .menu-cadastro {
+  display: inline-block;
   color: #ffffff;
   font-size: 1.5rem;
+  transition: 0.5s ease;
 }
 
 .menu-cadastro:hover {
   color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
+  transform: scale(1.1);
 }
 
 .imagem-conta:hover path {
   fill: #fad383;
 }
+
+/* Footer */
+
 footer {
   display: flex;
   background-color: #ff746c;
@@ -100,8 +120,7 @@ footer {
   align-items: center;
 }
 
-
-.logo-footer-patinha{
+.logo-footer-patinha {
   margin-left: 20px;
 }
 .patinha {
@@ -112,8 +131,28 @@ footer {
   font-size: 1rem;
 }
 
-.redes-socias {
+.redes-sociais {
   align-content: center;
+}
+
+.redes-sociais .insta {
+  fill: var(--branco);
+  transition: 0.5s ease;
+}
+
+.redes-sociais .insta:hover {
+  fill: var(--amarelo);
+  transform: scale(1.1);
+}
+
+.redes-sociais .face {
+  fill: var(--branco);
+  transition: 0.5s ease;
+}
+
+.redes-sociais .face:hover {
+  fill: var(--amarelo);
+  transform: scale(1.1);
 }
 
 .menu-footer {
@@ -125,10 +164,17 @@ footer {
   font-size: 1.25rem;
 }
 
-.menu-footer a{
+.menu-footer a {
+  display: inline-block;
   color: white;
   font-family: 'nunito', Arial;
   font-weight: normal;
+  transition: 0.5s ease;
+}
+
+.menu-footer a:hover {
+  color: var(--amarelo);
+  transform: scale(1.1);
 }
 
 .sobre-footer {
@@ -140,8 +186,15 @@ footer {
   font-size: 1.25rem;
 }
 
-.sobre-footer a{
+.sobre-footer a {
+  display: inline-block;
   font-family: 'nunito', Arial;
   font-weight: normal;
   color: white;
+  transition: 0.5s ease;
+}
+
+.sobre-footer a:hover {
+  color: var(--amarelo);
+  transform: scale(1.1);
 }
