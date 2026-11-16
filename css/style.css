@@ -16,6 +16,10 @@
   text-transform: none;
 }
 
+body {
+  background: #fff0e8;
+}
+
 .homeUm {
   background: url('../assets/img/backgroundHome.png') no-repeat center center;
   height: 1116px;

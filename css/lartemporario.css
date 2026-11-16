@@ -5,13 +5,14 @@
   padding: 0;
   text-decoration: none;
   outline: none;
-  color: black;
+  color: #464646;
   font-family: 'Fredoka', sans-serif;
 }
 
-body {
+main {
   background-color: #fff0e8;
-  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 h1,
@@ -30,8 +31,7 @@ h3 {
     'botao  imagem';
   gap: 16px 40px;
   max-width: 1200px;
-  margin: 80px;
-  padding: 60px 20px;
+  padding: 150px 115px;
   align-items: center;
 }
 
@@ -429,3 +429,4 @@ h3 {
   line-height: 1.5;
   color: #464646;
 }
+
