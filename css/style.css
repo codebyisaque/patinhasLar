@@ -1,15 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+  --cor-principal:#ff746c;
+  --amarelo: #fad383;
+  --preto: #464646;
+  --branco: #ffffff;
+}
+
 *{
   margin: 0;
   padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: none;
+
 }
 
 .homeUm{
-  display: flex;
+  background: url("../assets/img/backgroundHome.png") no-repeat center center;
+  height: 1116px;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover ;
 }
 
-.img-homeUm{
-  display: flex;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.homeUm .container-home{
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.homeUm .adotar-homeUm{
+  margin-left: 115px;
+  padding-top: 216px;
+  font-family: 'fredoka', 'nunito', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--preto);
+  font-size: 3.75rem;
+}
+
+.homeUm .coracao-pata{
+  height: 100px;
+}
+
+.homeUm .txt-homeUm{
+  margin-top: 40px;
+  margin-left: 115px;
+  max-width: 460px;
+  font-family: 'nunito', Arial, Helvetica, sans-serif;
+  color: #464646;
+  font-size: 1.5rem;
+}
+.container-home button{
+  margin-left: 115px;
+  margin-top: 70px;
+  width: 223px;
+  height: 56px;
+  background-color: var(--amarelo);
+  border: 1px solid;
+  border-color: var(--preto);
+  border-radius: 10px;
+  font-size: 1.125rem;
+  font-family: 'fredoka', 'nunito', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--preto);
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.container-home button:hover{
+  transform: translateY(-2px);
 }
