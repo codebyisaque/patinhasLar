@@ -59,13 +59,14 @@ body {
 }
 
 .botao {
+   font-family: 'Nunito', sans-serif;
     display: inline-block;
     width: 130px;
     padding: 9px 10px;
     font-size: 15px;
     background-color: #FAD383;
-    color: #333;
-   border: 2px solid #333;;
+    color: #464646;
+   border: 2px solid #464646;;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
@@ -80,9 +81,11 @@ margin-top:10px ;
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
     max-width: 1000px;
-    margin: 50px auto;
-    column-gap: 40px;
-    row-gap: 60px;
+    margin: 0 auto 50px auto;
+    padding-top: 200px;
+    column-gap: 70px;
+    row-gap: 200px;
+    margin-bottom: 200px;
 }
 
 .parcerias {
@@ -100,4 +103,13 @@ margin-top:10px ;
     max-width: none;
     object-fit: contain;
     flex-shrink: 0;
+    position: relative;
+    left: -25px;
+}
+
+.botao:hover{
+  transition:0.3s ease;
+  letter-spacing:0.02rem;
+  background-color:#fddc98 ;
+  background-color: #ff8680;
 }
