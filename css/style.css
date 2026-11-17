@@ -72,11 +72,11 @@ body {
   font-weight: 700;
   color: var(--preto);
   cursor: pointer;
-  transition: 0.3s linear;
+  transition: 0.3s ease;
 }
 
 .container-home button:hover {
-  transform: translateY(-2px);
+  transform: scale(1.1);
 }
 
 /* Home dois */
@@ -84,13 +84,38 @@ body {
 .container-homeDois {
   margin: 80px 115px;
   display: flex;
-  flex-direction: row;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
+.lista-homeDois {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin-top: 80px;
+}
+
+
 .card-homeDois {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 264px;
   max-width: 276px;
   background-color: var(--cor-principal);
   border-radius: 15px;
+  font-family: 'nunito', Arial, Helvetica, sans-serif;
+  color: var(--branco);
   text-align: center;
+  font-size: 1.125rem;
+  
+}
+.card-homeDois img{
+  height: 40px
+}
+.card-homeDois p {
+  margin: 24px 24px 0px 24px;
+  height: 100px;
 }
