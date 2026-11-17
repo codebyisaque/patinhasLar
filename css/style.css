@@ -6,7 +6,12 @@
   --preto: #464646;
   --branco: #ffffff;
 }
-
+/* (Animação)
+transition: 0.3s ease; 
+letter-spacing: 0.02rem;
+background-color: #FDDC98;
+background-color: #FF8680;
+*/
 * {
   margin: 0;
   padding: 0;
