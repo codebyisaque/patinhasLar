@@ -14,10 +14,13 @@ body {
   overflow-y: auto;
 }
 
-
+  body {
+    background: url("../assets/img/borda_animais_1408x3813.png")
+        center top / 100% auto repeat-y !important;
+}
 
 .gatos{
-    background-image: url(../assets/img/unsplash_3Ex793Z3Vx0\ \(1\).svg);
+    background-image: url(../assets/img/WhatsApp\ Image\ 2026-11-16\ at\ 23.02.26.jpg);
 
     height: 100vh;
     background-repeat: no-repeat;
@@ -34,22 +37,31 @@ body {
   text-align: center;
 }
 
-.textinho {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  font-family: 'Nunito', sans-serif;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.35;
+.caixa {
+  background-color: #ff746c;
+  width: 550px;
+  padding: 5px;
+  border-radius: 50px;
   text-align: center;
+  margin: 180px auto 60px auto;
+}
+
+.textinho {
   color: #464646;
+   width: 100%;
+    max-width: 420px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: 10px auto;
 }
 
 .botao {
     display: inline-block;
-    width: 150px;
-    padding: 10px 20px;
+    width: 130px;
+    padding: 9px 10px;
     font-size: 15px;
     background-color: #FAD383;
     color: #333;
@@ -60,4 +72,32 @@ body {
     font-weight: bold;
     box-sizing: border-box;
 box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
+margin-top:10px ;
+}
+
+.pcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    column-gap: 40px;
+    row-gap: 60px;
+}
+
+.parcerias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.parcerias .logo {
+    display: block;
+    width: 300px;
+    height: 220px;
+    max-width: none;
+    object-fit: contain;
+    flex-shrink: 0;
 }
