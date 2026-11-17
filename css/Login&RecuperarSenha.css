@@ -181,7 +181,7 @@ button,
   justify-content: center;
   align-items: center;
   gap: 10px;
-  transition: 0.3s linear;
+  transition: 0.3s ease;
   font-weight: 700;
   text-decoration: none;
   border: 1px solid #464646;
@@ -195,12 +195,14 @@ button,
 button:hover, 
 .botao a:hover,
 .botao-pet a:hover{
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
+  transform: scale(1.01);
 }
 
 .btn-normal,
 .botao a {
   background-color: #ff746c;
+  color: #fff;
 }
 
 .btn-normal:hover,
