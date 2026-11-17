@@ -58,11 +58,20 @@ body {
   margin: 180px auto 60px auto;
 }
 
+.caixa3 {
+  background-color: #ff746c;
+  width:550px;
+  padding: 15px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 180px auto 60px auto;
+}
+
 .titulinho {
   font-family: 'Fredoka', sans-serif;
   font-size: 2.5rem;
   letter-spacing: px;
-  color: #464646;
+  color: #fff;
   text-align: center;
 }
 
@@ -84,13 +93,14 @@ body {
 }
 
 .botao {
+    font-family: 'Nunito', sans-serif;
     display: inline-block;
     width: 150px;
     padding: 10px 20px;
     font-size: 15px;
-    background-color: #FAD383;
-    color: #333;
-   border: 2px solid #333;;
+    background-color:  #FAD383;
+    color: #464646;
+   border: 2px solid #464646;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
@@ -144,6 +154,14 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    margin: 0;
+}
+
+.numero2 {
+    color: #fff;
+   font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+    
     margin: 0;
 }
 
@@ -206,4 +224,11 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
     width: 370px !important;
     min-height: 200px !important;
     padding: 25px !important;
+}
+
+.botao:hover{
+  transition:0.3s ease;
+  letter-spacing:0.02rem;
+  background-color:#fddc98 ;
+  background-color: #ff8680;
 }
