@@ -3,6 +3,7 @@
 :root {
   --cor-principal: #ff746c;
   --amarelo: #fad383;
+  --amareloEscuro: #e8bc68;
   --preto: #464646;
   --branco: #ffffff;
 }
@@ -86,7 +87,7 @@ body {
 .container-home button:hover {
   letter-spacing: 0.02rem;
   transform: scale(1.01);
-  background-color: #e8bc68;
+  background-color: var(--amareloEscuro);
 }
 
 /* Home dois */
@@ -187,7 +188,7 @@ h3 {
   background-color: var(--branco);
   border: 1px solid;
   border-color: var(--preto);
-  border-radius: 55px;
+  border-radius: 30px;
   justify-items: center;
 }
 
@@ -239,7 +240,7 @@ h3 {
   font-weight: 700;
   font-size: 0.75rem;
   color: var(--preto);
-  border-radius: 55px;
+  border-radius: 30px;
   border: 1px solid;
   border-color: var(--preto);
   transition: 0.3s ease;
@@ -248,7 +249,7 @@ h3 {
 .card-homeTres a:hover {
   letter-spacing: 0.02rem;
   transform: scale(1.03);
-  background-color: #e8bc68;
+  background-color: var(--amareloEscuro);
 }
 
 .setaDireitaHomeTres {
@@ -259,3 +260,107 @@ h3 {
 .homeTres button:hover {
   transform: scale(1.05);
 }
+
+.conteinerBotaoTres {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.homeTres .botaoConheça {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 261px;
+  height: 56px;
+  background-color: var(--amarelo);
+  border-radius: 30px;
+  border: 1px solid;
+  border-color: var(--preto);
+  color: #464646;
+  font-family: 'Fredoka';
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.homeTres .botaoConheça:hover {
+  letter-spacing: 0.02rem;
+  transform: scale(1.03);
+  background-color: var(--amareloEscuro);
+}
+
+/* Home Quatro */
+
+.homeQuatro {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 115px;
+}
+
+.containerHomeQuatro {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerHomeQuatro:not(:first-child) {
+  margin-top: 100px;
+}
+.containerHomeQuatro h2 {
+  font-family: 'fredoka';
+  font-weight: 700;
+  color: var(--preto);
+  font-size: 4rem;
+  margin-bottom: 47px;
+  width: 600px;
+}
+
+.containerHomeQuatro span {
+  position: relative;
+  left: 100px;
+}
+
+.containerHomeQuatro .textoHomeQuatro {
+  font-family: 'nunito';
+  color: var(--preto);
+  font-size: 1.5rem;
+}
+
+.textoHomeQuatro p {
+  width: 600px;
+}
+
+.textoHomeQuatro .txt {
+  margin: 0px auto;
+}
+
+.textoHomeQuatro a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--amarelo);
+  width: 200px;
+  height: 56px;
+  border-radius: 30px;
+  border: 1px solid;
+  border-color: var(--preto);
+  color: var(--preto);
+  font-size: 'fredoka';
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+}
+
+.textoHomeQuatro a:hover {
+  transform: scale(1.03);
+  background-color: var(--amareloEscuro);
+  letter-spacing: 0.02rem;
+}
+
+.textoHomeQuatro .botaoHomeQuatro {
+  width: 303px;
+}
+
+/* Home Cinco */
