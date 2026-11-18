@@ -21,19 +21,19 @@ body {
   background-position: center;
 }
 
-.container, 
-.container-sucesso{
+.container,
+.container-sucesso {
   background-color: #fff0e8;
   border-radius: 28px;
   width: 600px;
   box-shadow: 1px 1px rgba(70, 70, 70, 0.4);
 }
 
-.container{
+.container {
   padding: 30px 35px;
 }
 
-.container-sucesso{
+.container-sucesso {
   width: 680px;
   min-height: 500px;
   padding: 40px;
@@ -43,39 +43,40 @@ body {
   text-align: center;
 }
 
-.icone{
+.icone {
   width: 150px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.envio{
+.envio {
   padding: 20px 0;
 }
 
-.container h1, 
-.container-sucesso h1, 
-.container-sucesso h2{
+.container h1,
+.container-sucesso h1,
+.container-sucesso h2 {
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 2.5rem;
 }
 
-.container-sucesso h2{
+.container-sucesso h2 {
   font-size: 1.5rem;
   margin: 20px 10px;
 }
 
-.container-sucesso h1{
+.container-sucesso h1 {
   padding: 5px 20px;
 }
+
 .container p {
   font-size: 1rem;
   margin-bottom: 10px;
 }
 
-.dado label{
+.dado label {
   font-size: 1rem;
   font-weight: 600;
 }
@@ -89,13 +90,13 @@ body {
   margin: 10px 0 20px 0;
 }
 
-.input-icone{
+.input-icone {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.input-icone i{
+.input-icone i {
   position: absolute;
   left: 15px;
   top: 50%;
@@ -103,7 +104,7 @@ body {
   opacity: 0.7;
 }
 
-.input-icone input{
+.input-icone input {
   width: 100%;
   padding: 15px 15px 18px 40px;
   margin: 0;
@@ -170,7 +171,7 @@ body {
 
 button,
 .botao a,
-.botao-pet a{
+.botao-pet a {
   width: 100%;
   padding: 15px 45px;
   border-radius: 16px;
@@ -187,16 +188,17 @@ button,
   border: 1px solid #464646;
 }
 
-.botoes-sucesso{
+.botoes-sucesso {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-button:hover, 
+
+button:hover,
 .botao a:hover,
-.botao-pet a:hover{
-  letter-spacing: 0.01rem;
-  transform: scale(1.01);
+.botao-pet a:hover {
+  letter-spacing: 0.02rem;
+  transform: scale(1.03);
 }
 
 .btn-normal,
@@ -207,10 +209,10 @@ button:hover,
 
 .btn-normal:hover,
 .botao a:hover {
-  background-color: #FF8680;
+  background-color: #e65f57;
 }
 
-.icon-google{
+.icon-google {
   width: 25px;
   height: 25px;
 }
@@ -223,11 +225,11 @@ button:hover,
   background-color: #eeeeee;
 }
 
-.botao-pet a{
+.botao-pet a {
   padding: 15px 60px;
-  background-color:#FAD383;
+  background-color: #FAD383;
 }
 
-.botao-pet a:hover{
-  background-color: #FDDC98;
+.botao-pet a:hover {
+  background-color: #e8bc68;
 }

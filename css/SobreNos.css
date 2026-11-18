@@ -228,7 +228,7 @@ body {
 
 .botao:hover{
   transition:0.3s ease;
-  letter-spacing:0.01rem;
-  transform: scale(1.01);
-  background-color:#fddc98 ;
+  letter-spacing:0.02rem;
+  transform: scale(1.03);
+  background-color:#e8bc68 ;
 }
