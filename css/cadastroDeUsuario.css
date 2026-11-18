@@ -7,31 +7,28 @@
   box-sizing: 0;
   text-decoration: none;
 }
-body{
+body {
   background-color: #fff0e8;
-  display: flex;
-   justify-self:center;
-   min-height: 100vh;
-  
+  max-height: 1440px;
+  margin: 0 auto;
 }
 
- 
 .conteiner {
   border-radius: 20px;
   height: 120vh;
   width: 65rem;
   background-color: white;
-  margin: 40px 0 40px;
+  margin: 0 auto;
 }
 
-.boasVindas{
+.boasVindas {
   margin: 10px 20px;
   padding-bottom: 30px;
 }
-.boasVindas h1{
-margin-top: 20px;
-  padding-bottom:10px;
-font-weight: 700;
+.boasVindas h1 {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font-weight: 700;
 }
 .boasVindas p {
   font-weight: 300;
@@ -45,9 +42,9 @@ font-weight: 700;
   line-height: 10px;
 }
 
-.fotoPerfil{
+.fotoPerfil {
   margin-top: 10px;
   position: relative;
   display: flex;
-  flex-direction:column 2 ;
+  flex-direction: column 2;
 }

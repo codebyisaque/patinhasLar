@@ -3,23 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  text-transform: none;
-  outline: none;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  height: auto;
-  min-height: 100%;
-  overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
 }
-  body {
-    background: url("../assets/img/borda_animais_1408x3813.png")
-        center top / 100% auto repeat-y !important;
+
+body {
+    background: url("../assets/img/borda_animais_1408x3813.png") center top / 100% auto repeat-y !important;
 }
 
 .gatos {
@@ -32,62 +32,62 @@ body {
 }
 
 .texto {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 10px;
-  line-height: 1.5;
-  font-weight: 400;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 .caixa {
-  background-color: #ff746c;
-  width: 550px;
-  padding: 5px;
-  border-radius: 50px;
-  text-align: center;
-  margin: 180px auto 60px auto;
+    background-color: #ff746c;
+    width: 550px;
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 180px auto 60px auto;
 }
 
 .caixa2 {
-  background-color: #ff746c;
-  width:100 px;
-  padding: 15px;
-  border-radius: 50px;
-  text-align: center;
-  margin: 180px auto 60px auto;
+    background-color: #ff746c;
+    width: 100 px;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 180px auto 60px auto;
 }
 
 .caixa3 {
-  background-color: #ff746c;
-  width:550px;
-  padding: 15px;
-  border-radius: 50px;
-  text-align: center;
-  margin: 180px auto 60px auto;
+    background-color: #ff746c;
+    width: 550px;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 180px auto 60px auto;
 }
 
 .titulinho {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: px;
-  color: #fff;
-  text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: px;
+    color: #fff;
+    text-align: center;
 }
 
 .textinho {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  font-family: 'Nunito', sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 1.35;
-  text-align: center;
-  color: #464646;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: center;
+    color: #464646;
 }
 
-.textinho p{
+.textinho p {
     text-transform: none;
     margin-bottom: 35px;
 }
@@ -98,15 +98,15 @@ body {
     width: 150px;
     padding: 10px 20px;
     font-size: 1.1rem;
-    background-color:  #FAD383;
+    background-color: #FAD383;
     color: #464646;
-   border: 2px solid #464646;
+    border: 2px solid #464646;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     box-sizing: border-box;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -147,7 +147,7 @@ body {
     align-items: center;
 
     text-align: center;
-} 
+}
 
 .branco {
     color: white;
@@ -159,9 +159,9 @@ body {
 
 .numero2 {
     color: #fff;
-   font-family: 'Fredoka', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 16px;
-    
+
     margin: 0;
 }
 
@@ -226,9 +226,9 @@ body {
     padding: 25px !important;
 }
 
-.botao:hover{
-  transition:0.3s ease;
-  letter-spacing:0.01rem;
-  transform: scale(1.01);
-  background-color:#fddc98 ;
+.botao:hover {
+    transition: 0.3s ease;
+    letter-spacing: 0.02rem;
+    transform: scale(1.03);
+    background-color: #e8bc68;
 }
