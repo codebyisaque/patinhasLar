@@ -9,9 +9,10 @@
 /* (Animação)
 transition: 0.3s ease; 
 letter-spacing: 0.02rem;
+transform: scale(1.01)
 background-color: #e8bc68;
 background-color: #e65f57;
-transform: scale(1.01)
+
 */
 * {
   margin: 0;
@@ -154,13 +155,13 @@ h3 {
   color: var(--preto);
 }
 
-.container-homeTres{
+.container-homeTres {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container-homeTres ul{
+.container-homeTres ul {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -175,8 +176,9 @@ h3 {
   height: 46px;
 }
 
-.setaEsquerdaHomeTres{
+.setaEsquerdaHomeTres {
   margin-right: 11px;
+  transition: 0.3s ease;
 }
 .container-homeTres .card-homeTres {
   flex-shrink: 0;
@@ -187,13 +189,11 @@ h3 {
   border-color: var(--preto);
   border-radius: 55px;
   justify-items: center;
-  
 }
 
 .container-homeTres ul li:not(:last-child) {
   margin-right: 115px;
 }
-
 
 .card-homeTres .img {
   margin: 20px 21px 10px 21px;
@@ -242,9 +242,20 @@ h3 {
   border-radius: 55px;
   border: 1px solid;
   border-color: var(--preto);
+  transition: 0.3s ease;
 }
 
-.setaDireitaHomeTres{
+.card-homeTres a:hover {
+  letter-spacing: 0.02rem;
+  transform: scale(1.03);
+  background-color: #e8bc68;
+}
+
+.setaDireitaHomeTres {
   margin-left: 10px;
-  transform: rotate(180deg);
+  transition: 0.3s ease;
+}
+
+.homeTres button:hover{
+  transform: scale(1.05);
 }
