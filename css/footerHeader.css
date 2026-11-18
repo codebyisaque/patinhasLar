@@ -57,11 +57,11 @@
 }
 
 .menu-item:hover {
-  transition: 0.2s linear;
   color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
-  transform: scale(1.1);
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
 }
 
 .menu-item {
@@ -89,7 +89,8 @@
   color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
-  transform: scale(1.1);
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
 }
 
 .imagem-conta:hover path {
