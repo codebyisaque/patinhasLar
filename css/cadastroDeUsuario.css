@@ -4,24 +4,50 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: 0;
+  text-decoration: none;
 }
 body{
   background-color: #fff0e8;
+  display: flex;
+   justify-self:center;
+   min-height: 100vh;
+  
 }
 
  
 .conteiner {
-  display:flex;
-  position:relative;
-  justify-self:center;
-  align-self: center;
-  height:600vh;
-  width: 70rem;
+  border-radius: 20px;
+  height: 120vh;
+  width: 65rem;
   background-color: white;
   margin: 40px 0 40px;
 }
 
+.boasVindas{
+  margin: 10px 20px;
+  padding-bottom: 30px;
+}
 .boasVindas h1{
-  
-  margin-left: 10px;
+margin-top: 20px;
+  padding-bottom:10px;
+font-weight: 700;
+}
+.boasVindas p {
+  font-weight: 300;
+  padding-bottom: 10px;
+  line-height: 15px;
+}
+.boasVindas i {
+  color: darkgrey;
+  padding-bottom: 10px;
+  font-weight: 200;
+  line-height: 10px;
+}
+
+.fotoPerfil{
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  flex-direction:column 2 ;
 }
