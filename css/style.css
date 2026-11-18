@@ -19,16 +19,18 @@ background-color: #FF8680;
   border: none;
   text-decoration: none;
   text-transform: none;
+  box-sizing: border-box;
 }
 
 body {
   background: #fff0e8;
 }
 
+
 .homeUm {
   background: url('../assets/img/backgroundHome.png') no-repeat center center;
   height: 1116px;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   background-size: cover;
@@ -123,4 +125,55 @@ body {
 .card-homeDois p {
   margin: 24px 24px 0px 24px;
   height: 100px;
+}
+
+/* Home Tres */
+
+.homeTres{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 115px;
+}
+
+.homeTres h2, h3{
+  text-align: center;
+}
+.homeTres h2{
+  font-size: 4rem;
+  color: var(--preto);
+  font-weight: 700;
+  font-family: 'fredoka';
+}
+
+.homeTres h3{
+  margin: 24px 0px 72px 0px;
+  font-size: 2.5rem;
+  font-family: 'nunito';
+  color: var(--preto);
+}
+
+
+.container-homeTres{
+  display: flex;
+}
+
+.container-homeTres > button {
+  background-color: transparent;
+  border: none;                  
+  cursor: pointer;
+}
+
+.card-homeTres {
+  height: 461px;
+  width: 289px;
+  background-color: var(--branco);
+  border: 1px solid;
+  border-color: var(--preto);
+  border-radius: 55px;
+  justify-items: center;
+}
+
+.card-homeTres img{
+  margin: 27px 21px 19px 21px;
 }
