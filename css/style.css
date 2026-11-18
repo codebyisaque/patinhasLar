@@ -256,6 +256,6 @@ h3 {
   transition: 0.3s ease;
 }
 
-.homeTres button:hover{
+.homeTres button:hover {
   transform: scale(1.05);
 }
