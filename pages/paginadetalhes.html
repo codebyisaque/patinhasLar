@@ -63,20 +63,32 @@
                 <section class="galeria-fotos" aria-label="Fotos de Maylon">
 
                     <figure class="foto-destaque">
-                        <img src="../assets/img/maylon.jpg" alt="Maylon, cachorro disponível para adoção">
+                        <img src="/assets/img/icons/marley teste 3.webp" alt="Maylon, cachorro disponível para adoção">
                     </figure>
 
                     <div class="miniaturas-fotos">
 
                         <figure class="fotos-thumb">
-                            <img src="../assets/img/maylon.jpg" alt="Outra foto de Maylon">
+                            <img src="/assets/img/icons/marley teste 4.webp" alt="Outra foto de Maylon">
                         </figure>
 
-                        <div class="foto-thumb ver-mais">
-                            <span>+ Ver mais</span>
-                        </div>
+                       <button type="button" class="foto-thumb ver-mais" id="ver-mais">
+                      <span>+ Ver mais</span>
+                 </button>
 
                     </div>
+                           <dialog id="galeria" aria-labelledby="titulo-galeria">
+    <h2 id="titulo-galeria">Mais fotos do Maylon</h2>
+
+    <img src="/assets/img/icons/marley teste 1.avif"
+         alt="Outra foto do Maylon" width="300">
+
+    <form method="dialog">
+        <button type="submit">Fechar</button>
+    </form>
+</dialog>
+                             
+
 
                 </section>
 
@@ -292,6 +304,8 @@
         </nav>
 
     </footer>
+
+    
 
 </body>
 </html>
