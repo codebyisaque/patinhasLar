@@ -143,7 +143,7 @@ body {
 }
 
 .homeTres h2,
-h3 {
+.homeTres h3 {
   text-align: center;
 }
 
@@ -354,7 +354,7 @@ h3 {
   border: 1px solid;
   border-color: var(--preto);
   color: var(--preto);
-  font-size: 'fredoka';
+  font-family: 'fredoka';
   font-weight: 700;
   font-size: 1.125rem;
   margin-top: 30px;
