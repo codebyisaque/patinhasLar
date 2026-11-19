@@ -1,43 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
   outline: none;
-  color: black;
   font-family: 'Fredoka', sans-serif;
 }
-  
+
 body {
   background-color: #fff0e8;
-  padding: 20px;
 }
 
-h1, h2, h3 {
+main {
+  background-color: #fff0e8;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 72px 115px 72px 115px;
+}
+
+
+main h1,
+main h2,
+main h3,
+main p {
   color: #464646;
 }
-
 .conteudo-inicial {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "titulo imagem"
-    "texto  imagem"
-    "botao  imagem";
+    'titulo imagem'
+    'texto  imagem'
+    'botao  imagem';
   gap: 20px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .conteudo-inicial h1 {
   grid-area: titulo;
-  max-width: 450px; 
-  margin: 0 0 25px 0; /* Alterado de '0 auto' para '0' para colar na esquerda */
-  text-align: left;    /* Garante o alinhamento esquerdo */
+  max-width: 450px;
+  margin: 0 0 10px 0;
+  text-align: left;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
@@ -45,11 +52,11 @@ h1, h2, h3 {
 
 .conteudo-inicial .subtitulo {
   grid-area: texto;
-  max-width: 500px;    /* Opcional: limita a largura do texto para controlar as quebras de linha */
+  max-width: 500px;
   text-align: left;
   font-size: 1.1rem;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .btn-inicio {
@@ -57,20 +64,31 @@ h1, h2, h3 {
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  background-color: #FAD383;
+  background-color: #fad383;
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.02rem;
   border-radius: 16px;
-  transition: 0.3s linear;
   border: 1px solid #464646;
   color: #464646;
-  text-decoration: none; /* Boa prática para links em formato de botão */
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-inicio:hover {
-  background-color: #f7c353;
+  background-color: #fddc98;
+  color: #464646;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
   cursor: pointer;
+}
+
+.btn-inicio:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
 }
 
 .imagem-apresentacao {
@@ -85,11 +103,10 @@ h1, h2, h3 {
 .conteudo-secundario {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 70px; /* Mantém os 70px entre o card da esquerda e o da direita */
-  row-gap: 32px;    /* Define os exatos 32px entre o título e os cards */
-  padding: 0 115px;
-  margin-top: 20px;    /* Empurra a seção para baixo, afastando da foto do cachorro */
-  margin-bottom: 72px; /* Mantém o espaço para a seção de baixo */
+  align-items: stretch;
+  column-gap: 70px;
+  row-gap: 32px;
+  margin-bottom: 80px;
 }
 
 .conteudo-secundario h2 {
@@ -98,30 +115,37 @@ h1, h2, h3 {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin: 0; 
 }
 
 .beneficio {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0;
-  background-color: white;
+  background-color: #ffffff;
   padding: 40px 30px;
-  border-radius: 16px; /* Ajustado de 10px para 16px para bater mais com a curvatura do Figma */
-  border: 1px solid #000000; /* Adicionado: é isso que desenha a linha preta em volta do card */
+  border-radius: 16px;
+  border: 1px solid #464646;
+}
+
+.beneficio h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .icone-card {
-  width: 70px; 
+  width: 70px;
   height: 70px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  object-fit: contain;
 }
 
 .como-funciona {
-  max-width: 900px; /* Um pouco menor para o texto não esticar demais na tela */
-  margin: 80px auto;
-  padding: 0 20px;
+  margin-bottom: 80px;
 }
 
 .como-funciona h2 {
@@ -132,163 +156,187 @@ h1, h2, h3 {
 }
 
 .passos-lista {
-  list-style: none; /* Remove a numeração padrão automática do HTML */
-  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Distância vertical entre o Passo 1, Passo 2, etc. */
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .item-passo {
   display: flex;
-  align-items: center; /* Centraliza o círculo e a caixa horizontalmente */
-  gap: 25px; /* Espaço horizontal entre o círculo numérico e a caixa branca */
+  align-items: center;
+  gap: 25px;
 }
 
 .numero-passo {
-  background-color: #FF746C; /* Cor de fundo terracota/avermelhada */
-  color: #ffffff; /* Cor do número em branco */
+  background-color: #ff746c;
+  color: #ffffff;
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-  flex-shrink: 0; /* Garante que o círculo nunca seja espremido pelo texto */
+  flex-shrink: 0;
 }
 
 .conteudo-passo {
-  background-color: #ffffff; /* Fundo branco do bloco */
-  border: 1px solid #000000; /* Linha de borda preta */
-  border-radius: 16px; /* Cantos arredondados */
-  padding: 20px 30px; /* Espaço interno para o texto não colar na borda */
-  width: 100%; /* Faz a caixa esticar até o fim da tela */
+  background-color: #ffffff;
+  border: 1px solid #464646;
+  border-radius: 16px;
+  padding: 20px 30px;
+  flex: 1;
 }
 
 .conteudo-passo h3 {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 8px;
-  color: #464646;
 }
 
 .conteudo-passo p {
   font-size: 1rem;
   line-height: 1.4;
-  color: #333333;
 }
 
-.por-que-apadrinhar h2{
-   text-align: center;
+.por-que-apadrinhar {
+  margin-bottom: 80px;
+}
+
+.por-que-apadrinhar h2 {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 50px;
 }
 
-.cards-motivos{
+.cards-motivos {
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1100px;
-  margin: 20px auto;
+  gap: 24px;
 }
 
 .card-motivo {
-  background-color: white;
-  width: 200px;
-  min-height: 150px; /* Garante uma altura mínima, mas cresce se tiver muito texto */
-  padding: 20px;
-  border-radius: 16px; 
-  border: 1px solid #000000;
+  background-color: #ffffff;
+  width: calc(25% - 18px);
+  min-height: 210px;
+  padding: 24px 20px;
+  border-radius: 16px;
+  border: 1px solid #464646;
   display: flex;
   flex-direction: column;
 }
 
-.apadrinhamento-vs-adocao h2{
+.card-motivo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card-motivo p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.apadrinhamento-vs-adocao {
+  margin-bottom: 80px;
+}
+
+.apadrinhamento-vs-adocao h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-.subtitulo {
-  text-align: center; /* Joga o texto perfeitamente para o meio */
-  margin-bottom: 30px; /* Cria o espaço de respiro até os cards de baixo */
+.apadrinhamento-vs-adocao .subtitulo {
+  text-align: center;
+  margin-bottom: 40px;
   font-size: 1.1rem;
-  color: #333;
 }
 
-.comparacao-cards{
+.comparacao-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 70px;
+}
+
+.card-apadrinhar,
+.card-adotar {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #464646;
   display: flex;
-  flex-direction: row; /* Coloca os elementos lado a lado */
-  justify-content: center; /* Centraliza os cards na tela */
-  gap: 30px; /* Espaço de respiro entre os dois cards */
-  flex-wrap: wrap; /* Garante responsividade caso a tela diminua muito */
+  flex-direction: column;
 }
 
-.card-apadrinhar{
-  flex: 1; /* Faz com que ambos cresçam dividindo o espaço igualmente */
-  max-width: 450px; /* Evita que fiquem esticados demais em telas grandes */
-  background-color: white;
-  width: 200px;
-  min-height: 150px; /* Garante uma altura mínima, mas cresce se tiver muito texto */
-  padding: 20px;
-  border-radius: 16px; 
-  border: 1px solid #000000;
+.card-apadrinhar h3,
+.card-adotar h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
-.card-adotar{
-  flex: 1; /* Faz com que ambos cresçam dividindo o espaço igualmente */
-  max-width: 450px; /* Evita que fiquem esticados demais em telas grandes */
-  background-color: white;
-  width: 200px;
-  min-height: 150px; /* Garante uma altura mínima, mas cresce se tiver muito texto */
-  padding: 20px;
-  border-radius: 16px; 
-  border: 1px solid #000000;
+.card-apadrinhar p,
+.card-adotar p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.conteudo-final h2{
-  text-decoration-color: #464646;
+.conteudo-final {
+  margin-bottom: 0;
   text-align: center;
+}
+
+.conteudo-final h2 {
+  max-width: 480px;
+  margin: 0 auto 25px auto;
+  font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 50px;
-  text-align: center;
-  max-width: 450px; /* Ajuste este valor para controlar onde a linha quebra */
-  margin: 0 auto 25px auto; /* Centraliza horizontalmente e dá um espaço abaixo */
-  font-size: 2.2rem; /* Aumenta o tamanho da letra conforme desejado */
-  line-height: 1.3; /* Melhora o espaçamento entre as linhas quando quebrar */
+  line-height: 1.3;
 }
+
 .conteudo-final .subtitulo {
-  grid-area: texto;
   max-width: 500px;
-  width: 100%;          /* Garante que o elemento ocupe o espaço disponível até o limite */
-  margin: 0 auto 20px auto; /* O 'auto' nas laterais empurra o bloco inteiro para o centro */
-  text-align: center;   /* Centraliza o texto dentro da caixa */
+  margin: 0 auto 28px auto;
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
 .btn-final {
-  grid-area: botao;
-  justify-self: center;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  background-color: #FAD383;
-  padding: 10px 20px; /* Reduza levemente o padding lateral se quiser ele mais compacto */
-  font-size: 0.95rem; /* Letra um pouco mais sutil se necessário */
+  justify-content: center;
+  background-color: #fad383;
+  padding: 12px 24px;
+  font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.02rem;
   border-radius: 16px;
-  transition: 0.3s linear;
   border: 1px solid #464646;
   color: #464646;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-final:hover {
-  background-color: #f7c353;
+  background-color: #fddc98;
+  color: #464646;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
   cursor: pointer;
-  }
+}
+
+.btn-final:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
+}

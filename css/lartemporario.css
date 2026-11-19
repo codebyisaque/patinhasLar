@@ -1,38 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* transition: 0.3s ease;
+letter-spacing: 0.02rem;
+background-color: #FDDC98;
+background-color: #FF8680;
+*/
+
+/* Paleta oficial do projeto:
+#464646 - Texto, títulos e bordas
+#FFFFFF - Fundo dos cards e textos em destaque
+#FF746C - Detalhes, círculos numéricos e hover
+#FAD383 - Botões principais
+#FFF0E8 - Fundo geral da página
+*/
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
   outline: none;
-  color: #464646;
   font-family: 'Fredoka', sans-serif;
+}
+
+body {
+  background-color: #fff0e8;
 }
 
 main {
   background-color: #fff0e8;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
+  padding: 72px 115px 72px 115px;
 }
 
-h1,
-h2,
-h3 {
+main h1,
+main h2,
+main h3,
+main p {
   color: #464646;
 }
 
 .conteudo-inicial {
   display: grid;
-  grid-template-columns: 1.2fr 0.1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   grid-template-areas:
     'tag    imagem'
     'titulo imagem'
     'texto  imagem'
     'botao  imagem';
   gap: 16px 40px;
-  max-width: 1200px;
-  padding: 150px 115px;
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .tag-destaque {
@@ -52,13 +72,12 @@ h3 {
 
 .conteudo-inicial h1 {
   grid-area: titulo;
-  max-width: 460px; /* Força a quebra em 3 linhas como no Figma */
+  max-width: 460px;
   margin: 0;
   text-align: left;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.15;
-  color: #464646;
 }
 
 .conteudo-inicial .subtitulo {
@@ -68,7 +87,6 @@ h3 {
   text-align: left;
   font-size: 1.05rem;
   line-height: 1.55;
-  color: #464646;
 }
 
 .btn-inicio {
@@ -81,15 +99,27 @@ h3 {
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 14px;
+  letter-spacing: 0.02rem;
+  border-radius: 16px;
   border: 1px solid #464646;
   color: #464646;
-  text-decoration: none;
-  transition: background-color 0.25s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-inicio:hover {
-  background-color: #f7c353;
+  background-color: #fddc98;
+  color: #464646;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
+  cursor: pointer;
+}
+
+.btn-inicio:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
 }
 
 .imagem-apresentacao {
@@ -105,18 +135,18 @@ h3 {
 .sobre-lar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #ffffff;
   border-radius: 40px;
   border: 1px solid #464646;
   gap: 50px;
-  max-width: 1200px;
-  margin: 80px 115px 0px 115px;
-  padding: 60px 20px;
+  margin-bottom: 80px;
+  padding: 50px 60px;
 }
 
-.sobre-lar img {
+.sobre-lar > img {
   width: 480px;
+  max-width: 100%;
   height: auto;
   border-radius: 24px;
   object-fit: cover;
@@ -129,48 +159,42 @@ h3 {
 .sobre-texto h2 {
   font-size: 2.2rem;
   margin-bottom: 16px;
-  color: #464646;
 }
 
 .sobre-texto p {
   font-size: 1.05rem;
   line-height: 1.55;
   margin-bottom: 20px;
-  color: #464646;
 }
 
 .pilares-lar {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  flex-wrap: wrap; /* Permite que o 3º item quebre para a linha de baixo */
-  gap: 12px; /* Espaço entre as pílulas */
-  max-width: 380px; /* Limita a largura para forçar o 3º item a descer */
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 380px;
 }
 
 .pilares-lar li {
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* Distância entre o ícone e o texto */
-  background-color: #fff0e8; /* Fundo suave da pílula como no Figma */
+  gap: 8px;
+  background-color: #fff0e8;
   color: #464646;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 8px 16px;
-  border-radius: 999px; /* Deixa as bordas totalmente arredondadas */
+  border-radius: 999px;
 }
 
 .pilares-lar li img {
-  width: 18px; /* Tamanho elegante e proporcional ao texto */
+  width: 18px;
   height: 18px;
   object-fit: contain;
 }
 
 .como-funciona {
-  max-width: 900px; /* Um pouco menor para o texto não esticar demais na tela */
-  margin: 80px auto;
-  padding: 20px;
+  margin-bottom: 80px;
 }
 
 .como-funciona h2 {
@@ -181,68 +205,64 @@ h3 {
 }
 
 .subtitulo-secao {
-  grid-area: texto;
   max-width: 600px;
-  width: 100%; /* Garante que o elemento ocupe o espaço disponível até o limite */
-  margin: 0 auto 20px auto;
-  text-align: center; /* Centraliza o texto dentro da caixa */
+  width: 100%;
+  margin: 0 auto 40px auto;
+  text-align: center;
   font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .passos-lista {
   list-style: none;
-  padding: 0;
-  margin: 40px auto 0 auto;
-  max-width: 1200px; /* Garante largura suficiente para os 5 caberem */
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; /* Mantém os 5 em uma única fileira */
-  justify-content: center; /* Centraliza a fileira na tela */
-  align-items: stretch; /* Faz todos os 5 ficarem com a mesma altura */
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
   gap: 16px;
 }
 
 .card-passo {
-  box-sizing: border-box; /* Faz o padding ficar por dentro da largura */
-  flex: 1; /* Divide o espaço igualmente entre os 5 cards */
-  min-width: 0; /* Evita quebra de layout no Flexbox */
-  background-color: white;
-  min-height: 200px;
-  padding: 18px 14px; /* Padding mais enxuto para não apertar o texto */
+  flex: 1;
+  min-width: 0;
+  background-color: #ffffff;
+  min-height: 220px;
+  padding: 24px 18px;
   border-radius: 16px;
-  border: 1px solid #000000;
+  border: 1px solid #464646;
   display: flex;
   flex-direction: column;
 }
 
 .card-passo h3 {
-  margin-top: 12px; /* Espaço entre a bolinha numerada e o título */
-  margin-bottom: 10px; /* Espaço entre o título e o parágrafo logo abaixo */
+  font-size: 1.15rem;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  line-height: 1.25;
 }
 
 .card-passo p {
-  margin: 0; /* Remove margens extras embaixo do parágrafo */
+  font-size: 0.92rem;
   line-height: 1.4;
 }
 
 .numero {
   background-color: #ff746c;
-  color: #ffffff; /* Cor do número em branco */
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   flex-shrink: 0;
 }
 
 .beneficios {
-  max-width: 1200px;
-  margin: 80px;
-  padding: 0 20px;
+  margin-bottom: 80px;
 }
 
 .beneficios h2 {
@@ -250,13 +270,6 @@ h3 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.beneficios .subtitulo-secao {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  line-height: 1.5;
 }
 
 .beneficios-container {
@@ -269,12 +282,11 @@ h3 {
 }
 
 .card-beneficio {
-  box-sizing: border-box;
   flex: 1;
   min-width: 0;
   min-height: 260px;
-  background-color: #ffffff; /* Ou transparente/branco conforme o fundo da sua página */
-  padding: 28px 18px; /* Maior respiro em cima e embaixo para não achatar */
+  background-color: #ffffff;
+  padding: 28px 18px;
   border-radius: 16px;
   border: 1px solid #464646;
   display: flex;
@@ -291,31 +303,26 @@ h3 {
 }
 
 .card-beneficio h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.25;
-  margin: 0 0 12px 0;
-  color: #464646;
+  margin-bottom: 12px;
 }
 
 .card-beneficio p {
   font-size: 0.9rem;
   line-height: 1.45;
-  margin: 0;
-  color: #464646;
 }
 
 .conteudo-final {
-  display: flex; /* Mude de 'grid' para 'flex' */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   background-color: #ff746c;
   border-radius: 28px;
-  max-width: 1160px;
-  margin: 80px; /* 'auto' nas laterais centraliza o banner na tela */
-  padding: 36px 48px;
-  box-sizing: border-box;
+  margin-bottom: 80px;
+  padding: 40px 56px;
 }
 
 .texto-final {
@@ -329,15 +336,15 @@ h3 {
 .conteudo-final h2 {
   color: #ffffff;
   margin: 0;
-  text-align: left; /* Alinhado à esquerda como no Figma */
-  font-size: 2.6rem;
+  text-align: left;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.15;
 }
 
 .conteudo-final .subtitulo {
   margin: 0 0 8px 0;
-  text-align: left; /* Alinhado à esquerda como no Figma */
+  text-align: left;
   font-size: 1.05rem;
   line-height: 1.45;
   color: #ffffff;
@@ -348,26 +355,46 @@ h3 {
   align-items: center;
   gap: 10px;
   background-color: #fad383;
-  color: #2b2b2b;
+  color: #464646;
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.02rem;
   padding: 12px 24px;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid #464646;
-  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.imagem-final {
+.btn-final span {
+  color: #464646;
+}
+
+.btn-final:hover {
+  background-color: #fddc98;
+  color: #464646;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
+  cursor: pointer;
+}
+
+.btn-final:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
+}
+
+.imagem-alerta {
   width: 440px;
+  max-width: 100%;
   height: 360px;
   border-radius: 20px;
   object-fit: cover;
 }
 
 .duvidas-frequentes {
-  max-width: 1200px;
-  margin: 80px;
-  padding: 0 20px;
+  margin-bottom: 0;
 }
 
 .duvidas-frequentes h2 {
@@ -380,8 +407,7 @@ h3 {
 .subtitulo-duvidas {
   text-align: center;
   font-size: 1.1rem;
-  margin-bottom: 16px;
-  color: #464646;
+  margin-bottom: 36px;
 }
 
 .card-pergunta {
@@ -393,14 +419,18 @@ h3 {
   text-align: left;
 }
 
+.card-pergunta:last-child {
+  margin-bottom: 0;
+}
+
 .card-pergunta summary {
-  list-style: none; /* Remove a setinha padrão no Firefox */
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.05rem;
-  font-weight: 700; /* Pergunta em negrito para destacar */
-  color: #2b2b2b;
+  font-weight: 700;
+  color: #464646;
   cursor: pointer;
 }
 
@@ -408,7 +438,6 @@ h3 {
   display: none;
 }
 
-/* Adiciona a seta personalizada na direita */
 .card-pergunta summary::after {
   content: '🠟';
   font-size: 1.4rem;
@@ -417,16 +446,13 @@ h3 {
   transition: transform 0.25s ease;
 }
 
-/* Gira a seta para cima quando a pergunta é aberta */
 .card-pergunta[open] summary::after {
   transform: rotate(180deg);
 }
 
 .card-pergunta p {
   margin: 14px 0 0 0;
-  font-size: 0.95rem; 
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #464646;
 }
-
