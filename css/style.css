@@ -427,3 +427,251 @@ h3 {
   max-width: 440px;
   margin-top: 22px;
 }
+
+/* ============================================================
+   RESPONSIVO — adicionado no FINAL do arquivo.
+   O CSS original (1440px+) continua intacto.
+   ============================================================ */
+
+/* ---------- Até 1439px (notebooks) ---------- */
+@media (max-width: 1439px) {
+  .container-homeTres ul li:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+/* ---------- Até 1279px (notebooks pequenos / tablet paisagem) ---------- */
+@media (max-width: 1279px) {
+  .homeTres,
+  .homeCinco {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .homeQuatro {
+    padding: 20px 48px;
+  }
+
+  .homeUm .adotar-homeUm,
+  .homeUm .txt-homeUm,
+  .container-home button {
+    margin-left: 48px;
+  }
+
+  /* Home 2: cards quebram de linha em vez de estourar */
+  .container-homeDois {
+    padding: 0 48px;
+  }
+  .lista-homeDois {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Home 3: lista de cards rola se não couber */
+  .container-homeTres ul {
+    overflow-x: auto;
+    max-width: 100%;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+  .container-homeTres ul li {
+    scroll-snap-align: center;
+  }
+  .container-homeTres ul li:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  /* Home 4: texto e imagem dividem o espaço */
+  .containerHomeQuatro {
+    gap: 32px;
+  }
+  .containerHomeQuatro h2,
+  .textoHomeQuatro p {
+    width: auto;
+    max-width: 600px;
+  }
+  .containerHomeQuatro h2 {
+    font-size: 3rem;
+  }
+  .containerHomeQuatro span {
+    left: 0;
+  }
+  .imagemHomeQuatro img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ---------- Até 1023px (tablets) ---------- */
+@media (max-width: 1023px) {
+  /* Home 1 */
+  .homeUm {
+    height: auto;
+    min-height: 700px;
+    padding-bottom: 80px;
+  }
+  .homeUm .adotar-homeUm {
+    padding-top: 140px;
+    font-size: 3rem;
+  }
+
+  /* Títulos */
+  .homeTres h2,
+  .homeCinco h3 {
+    font-size: 2.75rem;
+  }
+  .homeTres h3 {
+    font-size: 1.75rem;
+    margin-bottom: 48px;
+  }
+  .homeCinco .comoAjudar {
+    font-size: 1.75rem;
+  }
+  .homeCinco .txt {
+    font-size: 1.25rem;
+  }
+
+  /* Home 4: empilha */
+  .containerHomeQuatro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .containerHomeQuatro:not(:first-child) {
+    margin-top: 60px;
+  }
+  /* segundo bloco tem imagem antes do texto; aqui o texto vem primeiro nos dois */
+  .containerHomeQuatro:last-child {
+    flex-direction: column-reverse;
+  }
+
+  /* Home 5 */
+  .cardsHomeCinco {
+    margin: 60px 0;
+    height: auto;
+    min-height: 240px;
+    padding: 24px;
+  }
+  .containerHomeCinco {
+    gap: 24px;
+  }
+  .cardsHomeCinco p {
+    font-size: 1.25rem;
+  }
+}
+
+/* ---------- Até 767px (celulares) ---------- */
+@media (max-width: 767px) {
+  /* Home 1 */
+  .homeUm {
+    min-height: 0;
+    padding-bottom: 60px;
+  }
+  .homeUm .adotar-homeUm {
+    margin-left: 24px;
+    padding-top: 130px;
+    font-size: 2.25rem;
+  }
+  .homeUm .coracao-pata {
+    height: 64px;
+  }
+  .homeUm .txt-homeUm {
+    margin: 24px 24px 0;
+    max-width: none;
+    font-size: 1.125rem;
+  }
+  .container-homeTres button {
+    flex-shrink: 0;
+  }
+  .container-home button {
+    margin-left: 24px;
+    margin-top: 40px;
+  }
+
+  /* Home 2: um card por linha */
+  .container-homeDois {
+    padding: 0 24px;
+  }
+  .lista-homeDois {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 48px;
+    width: 100%;
+  }
+  .lista-homeDois li {
+    width: 100%;
+    max-width: 340px;
+  }
+  .card-homeDois {
+    height: auto;
+    max-width: none;
+    padding: 28px 0;
+  }
+  .card-homeDois p {
+    height: auto;
+  }
+
+  /* Home 3 */
+  .homeTres {
+    padding: 60px 16px;
+  }
+  .homeTres h2,
+  .homeCinco h3 {
+    font-size: 2rem;
+  }
+  .homeTres h3 {
+    font-size: 1.25rem;
+    margin: 16px 0 32px;
+  }
+  .setaEsquerdaHomeTres,
+  .setaDireitaHomeTres {
+    display: none; /* no celular o usuário arrasta com o dedo */
+  }
+  .conteinerBotaoTres {
+    margin-top: 40px;
+  }
+
+  /* Home 4 */
+  .homeQuatro {
+    padding: 20px 24px;
+  }
+  .containerHomeQuatro h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .containerHomeQuatro .textoHomeQuatro,
+  .textoHomeQuatro p {
+    font-size: 1.125rem;
+  }
+  .textoHomeQuatro {
+    width: 100%;
+  }
+  .textoHomeQuatro p {
+    max-width: none;
+  }
+  .textoHomeQuatro .botaoHomeQuatro {
+    width: 100%;
+    max-width: 303px;
+  }
+
+  /* Home 5 */
+  .homeCinco {
+    padding: 40px 24px;
+  }
+  .homeCinco .comoAjudar {
+    font-size: 1.25rem;
+  }
+  .homeCinco .txt {
+    font-size: 1.125rem;
+  }
+  .containerHomeCinco {
+    flex-direction: column;
+  }
+  .cardsHomeCinco {
+    margin: 20px 0;
+    padding: 32px 24px;
+  }
+  .cardsHomeCinco p {
+    font-size: 1.125rem;
+  }
+}
