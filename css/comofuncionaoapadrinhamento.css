@@ -18,9 +18,8 @@ main {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 72px 115px 72px 115px;
+  padding: 200px 115px 72px 115px;
 }
-
 
 main h1,
 main h2,
@@ -60,7 +59,7 @@ main p {
 }
 
 .btn-inicio {
-  grid-area: botao;
+  grid-area: auto;
   justify-self: start;
   display: inline-flex;
   align-items: center;
@@ -72,23 +71,14 @@ main p {
   border-radius: 16px;
   border: 1px solid #464646;
   color: #464646;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-inicio:hover {
-  background-color: #fddc98;
-  color: #464646;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
+  background-color: #e8bc68;
+  letter-spacing: 0.05rem;
+  transform: scale(1.03);
   cursor: pointer;
-}
-
-.btn-inicio:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
 }
 
 .imagem-apresentacao {
@@ -322,21 +312,12 @@ main p {
   border-radius: 16px;
   border: 1px solid #464646;
   color: #464646;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-final:hover {
-  background-color: #fddc98;
-  color: #464646;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
+  background-color: #e8bc68;
+  letter-spacing: 0.05rem;
+  transform: scale(1.03);
   cursor: pointer;
-}
-
-.btn-final:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
 }

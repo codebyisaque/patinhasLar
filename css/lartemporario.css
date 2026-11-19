@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* transition: 0.3s ease;
+/* (Animação)
+transition: 0.3s ease; 
 letter-spacing: 0.02rem;
-background-color: #FDDC98;
-background-color: #FF8680;
+transform: scale(1.01)
+background-color: #e8bc68;
+background-color: #e65f57;
 */
-
 /* Paleta oficial do projeto:
 #464646 - Texto, títulos e bordas
 #FFFFFF - Fundo dos cards e textos em destaque
@@ -32,7 +33,7 @@ main {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 72px 115px 72px 115px;
+  padding: 196px 115px 72px 115px;
 }
 
 main h1,
@@ -103,23 +104,13 @@ main p {
   border-radius: 16px;
   border: 1px solid #464646;
   color: #464646;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-inicio:hover {
-  background-color: #fddc98;
-  color: #464646;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
+  background-color: #e8bc68;
+  transform: scale(1.01);
   cursor: pointer;
-}
-
-.btn-inicio:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
 }
 
 .imagem-apresentacao {
@@ -362,10 +353,7 @@ main p {
   padding: 12px 24px;
   border-radius: 16px;
   border: 1px solid #464646;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .btn-final span {
@@ -373,16 +361,9 @@ main p {
 }
 
 .btn-final:hover {
-  background-color: #fddc98;
-  color: #464646;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(70, 70, 70, 0.18);
+  background-color: #e8bc68;
+  transform: scale(1.01);
   cursor: pointer;
-}
-
-.btn-final:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(70, 70, 70, 0.15);
 }
 
 .imagem-alerta {

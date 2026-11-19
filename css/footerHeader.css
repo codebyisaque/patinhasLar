@@ -194,10 +194,6 @@ footer {
   color: var(--amarelo);
   transform: scale(1.1);
 }
-/* ============================================================
-   RESPONSIVO HEADER + FOOTER (adicionado no final do arquivo)
-   ============================================================ */
-
 /* Itens novos do menu: invisíveis no desktop */
 .menu-toggle,
 .menu-hamburguer {
