@@ -20,17 +20,15 @@
         <i>Os campos com * são obrigatorio. A fotode perfil é opcional</i>
         
         <div class="fotoPerfil">
-          <img
-          width="120"
-          height="120"
-          src="https://img.icons8.com/sf-regular/48/user-male-circle.png"
-          alt="user-male-circle"
-          />
+          <img src="../assets/img/Avatar.svg" alt="Avatar">
+    
           <h3>Foto de perfil</h3>
+          <br>
           <p>
             Adicione uma foto para identificação no perfil. Você também pode fazer
             isso depos.
           </p>
+          <br>
           <a href="#" class="btn">Adicione uma foto</a>
         </div>
 
@@ -40,19 +38,48 @@
       <form>
         <section class="dados-pessoais">
           <h2>Dados peossoais</h2>
-
+<br>
           <div class="input-box">
-            <h3>Nome completo*</h3>
-            <input placeholder="Ex: Ana Clara Silva" type="text" />
+            <h5>Nome completo*</h3>
+              <label>
+                <input placeholder="Ex: Ana Clara Silva" type="text" />
+              </label>
           </div>
 
-          <div class=""></div>
+          <div class="cpfNascimento">
+            <h5> CPF* </h3>
+              <label>
+              <input type="text" placeholder="000.000.000-00">
+            </label>
+
+            <h5>Data de nascimento*</h3>
+              <label>
+                <input type="date">
+              </label>
+          </div>
+        </section>
+        
+        <section class="contato">
+          <h2>Contato</h2>
+          <div class="emailBox">
+             <label for="emailBox">
+              <h5>Email*</h5>
+              <input type="email" name="email" id="e-Box" placeholder="Ex:email@gmail.com">
+             </label>
+          </div>
+
+          <div class="telefone">
+            <label for="telefone">
+<h5>Telefone</h5>
+              <input type="text" name="number" id="t-box" placeholder="Ex:(00) 00000-0000">
+            </label>
+          </div>
         </section>
       </form>
     </main>  
-
-    
-    <footer id="footer-placeholder"></footer>
-    <script type="module" src="../js/script.js"></script>
+<!--
+  <footer id="footer-placeholder"></footer>
+  <script type="module" src="../js/script.js"></script>
+  -->
   </body>
 </html>
