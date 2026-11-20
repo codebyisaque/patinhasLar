@@ -3,6 +3,7 @@
 :root {
   --cor-principal: #ff746c;
   --amarelo: #fad383;
+  --amareloEscuro: #e8bc68;
   --preto: #464646;
   --branco: #ffffff;
 }
@@ -66,7 +67,7 @@
 .menu-item {
   color: #ffffff;
   display: inline-block;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .cadastre-se {
@@ -81,7 +82,7 @@
   display: inline-block;
   color: #ffffff;
   font-size: 1.5rem;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .menu-cadastro:hover {
@@ -92,8 +93,13 @@
   transform: scale(1.01);
 }
 
+.imagem-conta path {
+  transition: 0.3s ease;
+}
+
 .imagem-conta:hover path {
   fill: #fad383;
+  transform: scale(1.03);
 }
 
 /* Footer */
