@@ -1,27 +1,65 @@
-
-.header {
-    position: static;
-    transform: none;
-    width: 90%;
-    box-sizing: border-box;
-    margin: 25px auto 0;
-}
-
-
-
 body {
+    margin: 0;
     background-color: #fff0e8;
+    color: #464646;
 }
 
-.container-detalhes {
-    
-    --espaco-header: 24px;
+/* Coloca o cabeçalho acima do conteúdo, sem cobrir o botão Voltar */
+body > .header {
+    position: relative;
+    inset: auto;
+    transform: none;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 25px auto 0;
+    z-index: 2;
+}
 
+.header .menu-item.ativo {
+    color: #fad383;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.menu-perfil-maylon {
+    position: relative;
+    margin-left: auto;
+}
+
+.menu-perfil-maylon summary {
+    list-style: none;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-perfil-maylon summary::-webkit-details-marker {
+    display: none;
+}
+
+.links-perfil-maylon {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    display: grid;
+    gap: 8px;
+    min-width: 170px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+}
+
+.links-perfil-maylon a {
+    color: #464646;
+    text-decoration: none;
+}
+
+/* Área principal */
+.container-detalhes {
     width: 90%;
     margin: 0 auto;
-    padding: var(--espaco-header) 0 40px;
-    color: #464646;
-    font-family: "Nunito", sans-serif;
+    padding: 24px 0 40px;
+    font-family: "Nunito", Arial, sans-serif;
 }
 
 .container-detalhes,
@@ -30,54 +68,52 @@ body {
 }
 
 .container-detalhes h1,
-.container-detalhes h2,
-.botao-maylon {
-    font-family: "Fredoka", "Nunito", sans-serif;
+.container-detalhes h2 {
+    margin: 0 0 10px;
+    font-family: "Fredoka", "Nunito", Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.container-detalhes h1 {
+    font-size: 30px;
+}
+
+.container-detalhes h2 {
+    font-size: 21px;
 }
 
 .btn-voltar,
 .botao-maylon,
 .btn-saiba-mais {
     display: inline-block;
+    padding: 7px 16px;
+    border: 1px solid #888;
+    border-radius: 12px;
     color: #464646;
+    background-color: #fad383;
     text-decoration: none;
 }
 
 .btn-voltar {
     margin-bottom: 26px;
-    padding: 6px 18px;
-    background-color: #fad383;
-    border: 1px solid #777;
-    border-radius: 20px;
 }
 
-
+/* Cartão do Maylon */
 .card-maylon,
 .card-apoio {
-    background-color: white;
+    padding: clamp(16px, 2vw, 30px);
     border: 1px solid #aaa;
     border-radius: 24px;
-    padding: clamp(16px, 2vw, 30px);
-}
-
-.card-maylon h1 {
-    margin: 0 0 12px;
-    font-size: 30px;
-}
-
-.container-detalhes h2 {
-    margin: 0 0 8px;
-    font-size: 21px;
-    line-height: 1.2;
+    background-color: white;
 }
 
 .perfil-maylon {
     display: grid;
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     gap: 20px;
 }
 
-
+/* Fotos da esquerda */
 .galeria-maylon {
     display: grid;
     grid-template-rows: 2fr 1fr;
@@ -85,35 +121,37 @@ body {
     min-width: 0;
 }
 
-.fotos-menores {
-    display: grid;
-    grid-template-columns: 1fr 1.8fr;
-    gap: 14px;
+.galeria-maylon figure {
+    position: relative;
     min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #eee;
 }
 
 .galeria-maylon img {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
     height: 100%;
-    min-width: 0;
-    min-height: 0;
     object-fit: cover;
-    background-color: #eee;
-    border: 1px solid #ccc;
 }
 
+/* Informações da direita */
 .informacoes-maylon {
     display: grid;
     align-content: start;
-    gap: 18px;
+    gap: 16px;
     min-width: 0;
 }
 
 .dados-maylon {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
 }
 
 .dados-maylon p {
@@ -126,7 +164,7 @@ body {
     display: inline-block;
     padding: 2px 9px;
     border: 1px solid #999;
-    border-radius: 15px;
+    border-radius: 16px;
 }
 
 .lista-cuidados,
@@ -157,7 +195,6 @@ body {
     background-color: white;
 }
 
-
 .lista-convivencia li {
     display: flex;
     align-items: center;
@@ -168,34 +205,36 @@ body {
 
 .lista-convivencia input {
     appearance: none;
+    flex-shrink: 0;
     width: 25px;
     height: 14px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: radial-gradient(circle at 7px center, white 4px, transparent 5px),
-                #555;
+    margin: 0;
+    border: 0;
+    border-radius: 10px;
+    opacity: 1;
+    background:
+        radial-gradient(circle at 7px center, white 4px, transparent 5px),
+        #555;
 }
 
 .lista-convivencia input:checked {
-    background: radial-gradient(circle at 18px center, white 4px, transparent 5px),
-                #fad383;
+    background:
+        radial-gradient(circle at 18px center, white 4px, transparent 5px),
+        #fad383;
 }
 
-
+/* Botões abaixo das duas colunas */
 .acoes-maylon {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
     margin-top: 24px;
 }
 
 .botao-maylon {
-    padding: 7px 20px;
     background-color: white;
-    border: 1px solid #555;
-    border-radius: 12px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -213,9 +252,7 @@ body {
     border-radius: 8px;
 }
 
-.botao-maylon:hover,
-.btn-voltar:hover,
-.btn-saiba-mais:hover {
+.container-detalhes a:hover {
     background-color: #ffc566;
 }
 
@@ -224,13 +261,12 @@ body {
     outline-offset: 3px;
 }
 
-
+/* Cartões de apadrinhamento e lar temporário */
 .cards-apoio {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     margin-top: 32px;
-    scroll-margin-top: var(--espaco-header);
 }
 
 .card-apoio {
@@ -245,8 +281,7 @@ body {
     width: 100%;
     aspect-ratio: 2.2;
     object-fit: cover;
-    border-radius: 12px;
-    background-color: #eee;
+    border-radius: 14px;
 }
 
 .card-apoio h2,
@@ -260,10 +295,6 @@ body {
 
 .btn-saiba-mais {
     margin-top: auto;
-    padding: 7px 15px;
-    background-color: #fad383;
-    border-radius: 12px;
-    font-weight: 700;
 }
 
 /* Celular */
@@ -275,12 +306,6 @@ body {
 
     .galeria-maylon {
         aspect-ratio: 1.15;
-    }
-}
-
-@media (max-width: 480px) {
-    .dados-maylon {
-        grid-template-columns: 1fr;
     }
 
     .acoes-maylon {
