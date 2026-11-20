@@ -13,6 +13,26 @@ body {
   margin: 0 auto;
 }
 
+input{
+border: 2px solid gray;
+border-radius: 40px;
+font-size: 16px;
+height: 20px;
+padding: 5px;
+}
+span{
+  border: #ff746c solid 2px;
+  border-radius: 20px;
+  background-color: #ff746c;
+  height: 10px;
+  width: 15px;
+}
+
+label{
+  display: block;
+  margin-top: 4px;
+}
+
 .conteiner {
   border-radius: 20px;
   height: 120vh;
@@ -71,33 +91,57 @@ font-size:1.1rem ;
   color: black;
   margin-top: 8px;
 }
-span{
-  border: #ff746c solid 2px;
-  border-radius: 20px;
-  background-color: #ff746c;
-  height: 10px;
-  width: 15px;
-}
+
 
 .dados-pessoais{
   background-color: #fff0e8;
-  margin: 0 15px;
+  margin: 10px;
   position: relative;
   border: #fff0e8 solid 5px;
   border-radius: 20px;
-  height: 12rem;
+  height: 10rem;
 }
-.dados-pessoais input{
-border: 2px solid gray;
-border-radius: 40px;
-font-size: 16px;
-height: 20px;
-padding: 10px;
+.dados-pessoais .input-box input{
+width: 59.8rem;
 }
-.cpfNascimento{
-  padding-bottom: 10px;
-  display:inline-flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: transparent;
+.linha{
+  display: flex;
+  gap: 16px;
+}
+.campo{
+  display: flex;
+  flex-direction: column;
+}
+.cpfNascimento input{
+  width: 29rem;
+}
+
+.contato{
+  background-color: #fff0e8;
+  border: #fff0e8 solid 5px;
+  border-radius: 20px;
+  margin: 10px;
+  height: 6rem;
+}
+.contato input{
+  width: 29rem;
+}
+
+.address{
+  background-color: #fff0e8;
+  border: #fff0e8 solid 5px;
+  border-radius: 20px;
+  height: 16rem;
+  margin: 10px;
+}
+.address input{
+width: 27.7rem;
+}
+.grade{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px; 
+}
+.complemento input{
+width: 60rem;
 }
