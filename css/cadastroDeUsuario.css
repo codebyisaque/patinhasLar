@@ -15,7 +15,7 @@ body {
 
 input{
 border: 2px solid gray;
-border-radius: 40px;
+border-radius: 10px;
 font-size: 16px;
 height: 20px;
 padding: 5px;
@@ -61,37 +61,6 @@ label{
   font-weight: 200;
   line-height: 10px;
 }
-.fotoPerfil {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 28px 0 20px; 
-}
-.fotoPerfil img{
-display: grid;
-width: 100px;
-height: 100px;
-flex-shrink: 0;
-place-items: center;
-overflow: hidden;
-}
-.fotoPerfil h2{
-font-size:1.1rem ;
-}
-.fotoPerfil p{
-  font-size: .9rem;
-}
-.fotoPerfil a{
-  display: inline-flex;
-  align-items: center;
-  gap:  6px;
-  background-color: #fff0e8;
-  border: #fff0e8 solid 4px;
-  border-radius: 20px;
-  color: black;
-  margin-top: 8px;
-}
-
 
 .dados-pessoais{
   background-color: #fff0e8;
@@ -143,5 +112,26 @@ width: 27.7rem;
   gap: 10px 16px; 
 }
 .complemento input{
-width: 60rem;
+width: 59.8rem;
+}
+
+.seguranca{
+margin:10px;
+background-color: #fff0e8;
+border-radius: 20px;
+border: #fff0e8  5px;
+height: 6rem;
+}
+.seguranca input{
+  width: 29rem;
+}
+.continue{
+display: block;
+width: fit-content;
+margin: 20px auto;  
+color: black;
+background-color: #fad383;
+border: #fad383 solid 5px;
+border-radius: 20px;
+
 }
