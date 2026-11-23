@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9ebe5;
+  color: #464646;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1205px;
+  margin-top: 150px;
+  margin-left: 115px;
+  margin-right: 115px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.input-cancelar, .input-escondido, .tipo-moradia input[type="radio"],
+.moradia input[type="radio"],
+.selecao input[type="radio"],
+.tempo input[type="radio"],
+.lartemporario input[type="radio"],
+.pet input[type="checkbox"] {
+  display: none;
+}
+
+.usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 15px;
+}
+
+h1 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+h2 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+label, p {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+}
+
+span{
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+}
+
+.usuario-botoes {
+  display: flex;
+  gap: 12px;
+}
+
+.area-cancelar,
+.btn-salvar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.area-cancelar{
+  padding: 10px 24px;
+  background-color: #fff;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.usuario .area-cancelar:hover{
+  border-color: red;
+  color: red;
+  transition: 0.3s ease;
+  letter-spacing: 0.02rem;
+  font-size: 0.9rem;
+}
+
+button.salvar {
+  padding: 10px 24px;
+  background-color: #FF746C;
+  color: #fff;
+  border: 1px solid #FF746C;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 10px -12px #464646;
+}
+
+button.salvar:hover{
+  background-color: #FF8680;
+  transition: 0.3s ease;
+  letter-spacing: 0.02rem;
+}
+
+.usuario .salvar a {
+  text-decoration: none;
+}
+
+.foto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.avatar-circulo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #FFF0E8;
+  border: 1px solid rgba(70, 70, 70, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.foto .area-upload,
+.foto .area-cancelar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  gap: 6px;
+  width: 135px;
+  height: auto;
+  padding: 6px 12px;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #464646;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.foto .area-upload,
+.foto .area-cancelar {
+  display: inline-block;
+  width: 130px;
+  padding: 6px 12px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid  rgba(70, 70, 70, 1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.foto .desabilitado {
+  border-color: #B5B5B5;
+  color: #B5B5B5;
+  cursor: not-allowed;
+}
+
+.container-padrao {
+  background-color: #fdf2ee;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cep {
+  grid-column: 1 / -1;
+}
+
+.contato,
+.estado,
+.cidade,
+.rua,
+.bairro,
+.cep {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #fff;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #464646;
+  background-color: #FFFAFA;
+}
+
+.tipo-moradia,
+.moradia,
+.selecao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.tempo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.lartemporario {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.tipo-moradia label,
+.moradia label,
+.selecao label,
+.tempo label,
+.lartemporario label {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label,
+.pet input[type="checkbox"]:checked + label {
+  border-color: #FF746C;
+  background-color: #FFC7C4;
+  font-weight: 800;
+}
+
+.protecao {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.protecao > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.protecao input[type="checkbox"] {
+  accent-color: #FF746C;
+  width: 22px;
+  height: 22px;
+}
+
+.outros-animais #detalhes {
+  margin-top: 12px;
+}
+
+.pet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pet label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #fff;
+  border: 1px solid #464646;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.area-termos {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.area-termos input[type="checkbox"] {
+  accent-color: #FF746C;
+  width: 16px;
+  height: 16px;
+}
+
+.tipo-moradia label,
+.moradia label,
+.selecao label,
+.tempo label,
+.pet label,
+.lartemporario label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icone-avatar {
+  background-image: url("../assets/img/icons/avatarperfil.svg");
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icone-mais{
+  background-image: url("../assets/img/icons/+.svg");
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-lapis{
+  background-image: url("../assets/img/icons/lapis.svg");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-lixo{
+  background-image: url("../assets/img/icons/lixo.svg");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-casa {
+  background-image: url("../assets/img/icons/casa.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-apartamento {
+  background-image: url("../assets/img/icons/apartamento.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-casacoracao {
+  background-image: url("../assets/img/icons/casacoracao.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-casaestrela {
+  background-image: url("../assets/img/icons/casaestrela.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-certo {
+  background-image: url("../assets/img/icons/certo.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-x {
+  background-image: url("../assets/img/icons/x.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-cachorro {
+  background-image: url("../assets/img/icons/cachorro.svg");
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-gato {
+  background-image: url("../assets/img/icons/gato.svg");
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-pote {
+  background-image: url("../assets/img/icons/poteracao.svg");
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.icone-saude {
+  background-image: url("../assets/img/icons/cruz.svg");
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.salvar.final {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 24px;
+}
+

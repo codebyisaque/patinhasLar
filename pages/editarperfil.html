@@ -1,19 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/editarperfil.css">
   <title>Edição do Perfil</title>
 </head>
+
 <body>
-  <header><div id="header-placeholder"></div></header>
+  <header>
+    <div id="header-placeholder"></div>
+  </header>
+
   <main>
-    <h1>Perfil do usuário</h1>
-    <span>Edite suas informações de contato e endereço.</span>
+    <div class="usuario">
+      <div class="usuario-texto">
+        <h1>Perfil do usuário</h1>
+        <span>Edite suas informações de contato e endereço.</span>
+      </div>
+      <div class="usuario-botoes">
+        <div class="cancelar">
+          <input type="reset" id="cancelar-topo" class="input-cancelar">
+          <label for="cancelar-topo" class="area-cancelar">Cancelar</label>
+        </div>
+        <div class="salvar">
+          <a href="#"><button type="button" class="salvar">Salvar alterações</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="foto">
+      <div class="avatar-circulo"><span class="icone-avatar"></span></div>
+      <div class="foto-acoes">
+        <div class="adicionar">
+          <input type="file" id="adicionar" accept="image/*" class="input-escondido">
+          <label for="adicionar" class="area-upload"><span class="icone-mais"></span>Adicionar foto</label>
+        </div>
+        <div class="alterar">
+          <input type="file" id="alterar" accept="image/*" class="input-escondido">
+          <label for="alterar" class="area-upload desabilitado"><span class="icone-lapis"></span>Alterar foto</label>
+        </div>
+        <div class="cancelar">
+          <input type="reset" id="cancelar-foto" class="input-cancelar">
+          <label for="cancelar-foto" class="area-cancelar desabilitado"><span class="icone-lixo"></span>Remover foto</label>
+        </div>
+      </div>
+    </div>
     <form action="#" method="POST">
-      
+      <section class="container-padrao">
+        <h2>Contato</h2>
+        <div class="duas-colunas">
+          <div class="contato">
+            <input type="tel" id="numero" placeholder="(00) 00000-0000">
+            <label for="numero">WhatsApp/Telefone</label>
+          </div>
+          <div class="contato">
+            <input type="email" id="email" placeholder="nome@exemplo.com">
+            <label for="email">E-mail</label>
+          </div>
+        </div>
+      </section>
+      <section class="container-padrao">
+        <h2>Endereço</h2>
+        <div class="duas-colunas">
+          <div class="estado">
+            <input type="text" id="estado" placeholder="Selecione o estado">
+            <label for="estado">Estado</label>
+          </div>
+          <div class="cidade">
+            <input type="text" id="cidade" placeholder="Digite a cidade">
+            <label for="cidade">Cidade</label>
+          </div>
+          <div class="rua">
+            <input type="text" id="rua" placeholder="Digite a rua">
+            <label for="rua">Rua</label>
+          </div>
+          <div class="bairro">
+            <input type="text" id="bairro" placeholder="Digite o bairro">
+            <label for="bairro">Bairro</label>
+          </div>
+          <div class="cep">
+            <input type="text" id="cep" placeholder="00000-000">
+            <label for="cep">CEP</label>
+          </div>
+        </div>
+      </section>
+      <section class="container-padrao">
+        <h2>Moradia e segurança</h2>
+        <h3>Tipo de moradia</h3>
+        <div class="tipo-moradia">
+          <div>
+            <input type="radio" id="casa" name="tipo-moradia" value="casa">
+            <label for="casa"><span class="icone-casa"></span>Casa</label>
+          </div>
+          <div>
+            <input type="radio" id="apartamento" name="tipo-moradia" value="apto">
+            <label for="apartamento"><span class="icone-apartamento"></span>Apartamento</label>
+          </div>
+        </div>
+        <h3>Sua moradia é</h3>
+        <div class="moradia">
+          <div>
+            <input type="radio" name="posse-moradia" id="propria" value="propria">
+            <label for="propria"><span class="icone-casacoracao"></span>Própria</label>
+          </div>
+          <div>
+            <input type="radio" name="posse-moradia" id="alugada" value="alugada">
+            <label for="alugada"><span class="icone-casaestrela"></span>Alugada</label>
+          </div>
+        </div>
+        <h3>Possui proteção contra fugas?</h3>
+        <div class="protecao">
+          <div class="muros">
+            <input type="checkbox" id="muros">
+            <label for="muros">Muros altos/Portão fechado</label>
+          </div>
+          <div>
+            <input type="checkbox" id="telas">
+            <label for="telas">Telas de proteção nas janelas/sacadas (para gatos)</label>
+          </div>
+          <div>
+            <input type="checkbox" id="quintal">
+            <label for="quintal">Quintal grande e privado</label>
+          </div>
+        </div>
+      </section>
+      <section class="container-padrao">
+        <h2>Acolhimento</h2>
+        <h3>Todos os residentes estão de acordo com o lar temporário?</h3>
+        <div class="selecao">
+          <div class="sim">
+            <input type="radio" name="acordo-residentes" id="acordo-sim" value="sim">
+            <label for="acordo-sim"><span class="icone-certo"></span>Sim</label>
+          </div>
+          <div class="nao">
+            <input type="radio" name="acordo-residentes" id="acordo-nao" value="nao">
+            <label for="acordo-nao"><span class="icone-x"></span>Não</label>
+          </div>
+        </div>
+        <h3>Quantas horas por dia o pet ficará sozinho?</h3>
+        <div class="tempo">
+          <div class="horas">
+            <input type="radio" name="horas-sozinho" id="quatro" value="quatro">
+            <label for="quatro">Até 4 horas</label>
+          </div>
+          <div class="horas">
+            <input type="radio" name="horas-sozinho" id="oito" value="oito">
+            <label for="oito">4 a 8 horas</label>
+          </div>
+          <div class="horas">
+            <input type="radio" name="horas-sozinho" id="maisoito" value="maisoito">
+            <label for="maisoito">Mais de 8 horas</label>
+          </div>
+          <div class="horas">
+            <input type="radio" name="horas-sozinho" id="sempre" value="sempre">
+            <label for="sempre">Sempre há alguém em casa</label>
+          </div>
+        </div>
+        <div class="outros-animais">
+          <h3>Possui outros animais?</h3>
+          <div class="selecao">
+            <div class="sim">
+              <input type="radio" name="outros-animais" id="animais-sim" value="sim">
+              <label for="animais-sim"><span class="icone-certo"></span>Sim</label>
+            </div>
+            <div class="nao">
+              <input type="radio" name="outros-animais" id="animais-nao" value="nao">
+              <label for="animais-nao"><span class="icone-x"></span>Não</label>
+            </div>
+          </div>
+          <input type="text" id="detalhes" placeholder="Quais são e são castrados e vacinados?">
+          <label for="detalhes"></label>
+        </div>
+        <h3>Que tipo de pet você tem a condição de acolher?</h3>
+        <div class="pet">
+          <div>
+            <input type="checkbox" id="caes">
+            <label for="caes"><span class="icone-cachorro"></span>Cães</label>
+          </div>
+          <div>
+            <input type="checkbox" id="gatos">
+            <label for="gatos"><span class="icone-gato"></span>Gatos</label>
+          </div>
+          <div>
+            <input type="checkbox" id="filhotes">
+            <label for="filhotes"><span class="icone-pote"></span>Filhotes</label>
+          </div>
+          <div>
+            <input type="checkbox" id="idosos">
+            <label for="idosos"><span class="icone-saude"></span>Idosos</label>
+          </div>
+          <div>
+            <input type="checkbox" id="deficientes">
+            <label for="deficientes"><span class="icone-saude"></span>Deficientes</label>
+          </div>
+          <div>
+            <input type="checkbox" id="medicacao">
+            <label for="medicacao"><span class="icone-saude"></span>Uso de medicação contínua</label>
+          </div>
+        </div>
+        <h3>Tempo estimado de lar temporário</h3>
+        <div class="lartemporario">
+          <div class="meses">
+            <input type="radio" name="tempo-lar" id="tres" value="tres">
+            <label for="tres">1 a 3 meses</label>
+          </div>
+          <div class="meses">
+            <input type="radio" name="tempo-lar" id="seis" value="seis">
+            <label for="seis">3 a 6 meses</label>
+          </div>
+          <div class="meses">
+            <input type="radio" name="tempo-lar" id="lar" value="lar">
+            <label for="lar">Até achar um lar</label>
+          </div>
+        </div>
+        <div class="area-termos">
+          <input type="checkbox" id="termos">
+          <label for="termos">Li e aceito os Termos de Compromisso e Responsabilidade para Lar Temporário.</label>
+        </div>
+      </section>
+      <div class="salvar final">
+        <a href="#"><button type="button" class="salvar">Salvar alterações</button></a>
+      </div>
     </form>
   </main>
   <footer id="footer-placeholder"></footer>
+  <script type="module" src="../js/script.js"></script>
 </body>
+
 </html>
