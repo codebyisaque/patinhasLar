@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/perfildousuario.css">
+  <title>Perfil do usuário</title>
+</head>
+
+<body>
+  <header id="header-placeholder"></header>
+  <main>
+    <section class="perfil">
+      <div class="titulo">
+        <h1>Perfil do usuário</h1>
+        <p>Visualização do cadastro e compromissos do lar temporário</p>
+      </div>
+      <button type="button" class="btn-editar">Editar perfil</button>
+    </section>
+    <section class="atualizado">
+      <h1>Perfil atualizado com sucesso!</h1>
+        <p>Suas alterações foram salvas.</p>
+    </section>
+    <section class="perfilclaudia">
+      <div class="fotodeperfil">
+        <span class="fotopessoa"></span>
+        <label for="upload-foto" class="camera-btn" aria-label="Alterar foto"><img src="../assets/img/icons/camera.svg" alt="camera"></label>
+        <input type="file" id="upload-foto" accept="image/*" class="input-file-oculto"><!--dá para utilizar essa parte do perfil no dash bord tambem!!-->
+      </div>
+      <h2>Claudia Santos</h2>
+      <h3><span class="icone-local"></span>São Paulo, SP</h3>
+      <a href="#" class="btn-cadastrar"> <span class="mais"></span>Cadastrar um animal</a>
+    </section>
+    <section class=" duas-colunas infopessoal"><!--Quando fazer o css, editar todos os section para ficar com o fundo branco menos o info pessoal pq é separado, colocar nas divs-->
+      <div class="contato">
+        <h2>Contato</h2>
+        <h3>WhatsApp/Telefone:</h3>
+        <p>(11) 91234-5678</p><br>
+        <h3>E-mail:</h3>
+        <p>claudia.santos@email.com</p>
+      </div>
+      <div class="endereco">
+        <h2>Endereço</h2>
+        <h3>Estado/Cidade:</h3>
+        <p> SP, São Paulo</p><br>
+        <h3>CEP:</h3>
+        <p> 0512-345</p>
+        <h3>Rua:</h3>
+        <p> Rua dos Bobos, N° 0, Bairro dos Limoeiros</p>
+      </div>
+    </section>
+    <section class="sobremoradia">
+      <h2>Moradia e Segurança</h2>
+      <h3>Tipo de moradia</h3>
+      <div class="duas-colunas moradia">
+        <div class="atualizada-casa"><p><span class="icone-casa"></span>Casa</p></div>
+        <div class="atualizada-apartamento"><p><span class="icone-apartamento"></span>Apartamento</p></div>
+      </div>
+      <h3>Sua moradia é</h3>
+      <div class="duas-colunas tipo">
+        <div class="atualizada-propria">
+          <p><span class="icone-casacoracao"></span>Própria</p></div>
+        <div class="atualizada-alugada"><p><span class="icone-casaestrela"></span>Alugada</p></div>
+      </div>
+      <h3>Possui proteção contra fugas?</h3>
+      <div class="protecao">
+        <div>
+          <input type="checkbox" id="muros">
+          <label for="muros">Muros altos/Portão fechado</label>
+        </div>
+        <div>
+          <input type="checkbox" id="telas" checked>
+          <label for="telas">Telas de proteção nas janelas/sacadas</label>
+        </div>
+        <div>
+          <input type="checkbox" id="quintal">
+          <label for="quintal">Quintal grande e privado</label>
+        </div>
+      </div>
+    </section>
+    <section class="acolhimento">
+      <h2>Acolhimento</h2>
+      <h3>Todos os residentes estão de acordo com o lar temporário?</h3>
+      <div class="duas-colunas lartemporario">
+        <div class="sim"><p><section class="icone-certo"></section>Sim</p></div>
+        <div class="não"><p><section class="icone-x"></section>Não</p></div>
+      </div>
+      <h3>quantas horas por dia o pet ficará sozinho?</h3>
+      <div class="sozinho">
+        <div class="atualizada-quatro"><p>Até 4 horas máx.</p></div>
+        <div class="atualizada-oito"><p>4 à 8 horas</p></div>
+        <div class="maiorqueoito"><p>Mais de 8 horas</p></div>
+        <div class="nunca"><p>Sempre há alguém em casa</p></div>
+      </div>
+      <h3>Possui outros animais?</h3>
+      <div class="duas-colunas outrosanimais">
+        <div class="sim"><p><section class="icone-certo"></section>Sim</p></div>
+        <div class="nao"><p><section class="icone-x"></section>Não</p></div>
+      </div>
+    </section>
+    <section class="pets">
+      <h3>Que tipo de pet você tem a condição de acolher?</h3>
+      <div class="tiposdepets">
+        <div class="caes"><p><section class="icone-cachorro"></section>Cães</p></div>
+        <div class="gatos"><p><section class="icone-gato"></section>Gatos</p></div>
+        <div class="filhotes"><p><section class="icone-pote"></section>Filhotes</p></div>
+        <div class="Idosos"><p><section class="icone-saude"></section>Idosos</p></div>
+        <div class="atualizada-medicacao"><p><section class="icone-saude"></section>Uso de medicação contínua</p></div>
+        <div class="atualizada-deficientes"><p><section class="icone-saude"></section>Deficientes</p></div>
+      </div>
+      <h3>Tempo estimado de lar temporário</h3>
+      <div class="tempo">
+        <div class="atualizada-tres"><p>1 a 3 meses</p></div>
+        <div class="atualizada-seis"><p>3 a 6 meses</p></div>
+        <div class="indefinido"><p>Até achar um lar</p></div>
+      </div>
+      <div class="termo">
+        <input type="checkbox" id="termos" checked>
+        <label for="termos">Li e aceito os termos de Compromisso e Responsabilidade para Lar Temporário</label>
+      </div>
+    </section>
+  </main>
+  <footer id="footer-placeholder"></footer>
+  <script type="module" src="../js/script.js"></script>
+</body>
+</html>
