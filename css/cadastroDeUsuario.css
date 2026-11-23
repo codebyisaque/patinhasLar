@@ -42,13 +42,21 @@ p, a label, input{
    font-weight: 500;
    font-size: larger;
 }
-
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
 .conteiner {
-  border-radius: 20px;
-  height: 100vh;
-  width: 65rem;
+  border-radius: 24px;
+  max-width: 1000px;
   background-color: white;
   margin: 0 auto;
+  margin-top: 140px;
+  margin-bottom: 80px;
+  padding: 32px 40px;
 }
 
 .boasVindas {
@@ -70,6 +78,30 @@ p, a label, input{
   padding-bottom: 10px;
   font-weight: 200;
   line-height: 10px;
+}
+.fotoPerfil{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.iconePerfil{
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+}
+.fotoTexto h2, p, a{
+margin: 0 0 8px;
+}
+.fotoTexto a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 1.5rem;
+  color: black;
+  background-color: #fff0e8;
+  border: #fff0e8 solid 5px;
+  border-radius: 10px;
 }
 
 .dados-pessoais{
@@ -144,4 +176,8 @@ background-color: #fad383;
 border: #fad383 solid 5px;
 border-radius: 20px;
 
+}
+.conteiner .continue{
+  display: block;
+  margin: 32px auto 0;
 }
