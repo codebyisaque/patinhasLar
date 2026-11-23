@@ -1,12 +1,12 @@
-
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   text-transform: none;
   outline: none;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 html,
 body {
   height: auto;
@@ -14,50 +14,107 @@ body {
   overflow-y: auto;
 }
 
-
-
-.gatos{
-    background-image: url(../assets/img/unsplash_3Ex793Z3Vx0\ \(1\).svg);
-
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-     height: 100vh; 
+body {
+  background: url("../assets/img/borda_animais_1408x3813.png") center top / 100% auto repeat-y !important;
 }
 
-.titulinho {
+.gatos {
+  background-image: url(../assets/img/WhatsApp\ Image\ 2026-11-16\ at\ 23.02.26.jpg);
+
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 100vh;
+}
+
+.titulinho,
+.titulinho-final {
   font-family: 'Fredoka', sans-serif;
   font-size: 4rem;
   letter-spacing: px;
-  color: #464646;
+  color: #fff;
   text-align: center;
+}
+
+.titulinho-final {
+  color: #464646;
+}
+
+.caixa {
+  background-color: #ff746c;
+  width: 550px;
+  padding: 5px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 180px auto 60px auto;
 }
 
 .textinho {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  font-family: 'Nunito', sans-serif;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.35;
-  text-align: center;
   color: #464646;
+  width: 100%;
+  max-width: 420px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: center;
+  margin: 10px auto;
 }
 
 .botao {
-    display: inline-block;
-    width: 150px;
-    padding: 10px 20px;
-    font-size: 15px;
-    background-color: #FAD383;
-    color: #333;
-   border: 2px solid #333;;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    box-sizing: border-box;
-box-shadow: 0px 2px 4px rgba(0, 0, 0,0.15);
+  font-family: 'Fredoka', sans-serif;
+  display: inline-block;
+  width: 130px;
+  padding: 9px 10px;
+  font-size: 15px;
+  background-color: #FAD383;
+  color: #464646;
+  border: 2px solid #464646;
+  ;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  margin-top: 10px;
+}
+
+.pcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  padding-top: 200px;
+  column-gap: 70px;
+  row-gap: 200px;
+  margin-bottom: 200px;
+}
+
+.parcerias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.parcerias .logo {
+  display: block;
+  width: 300px;
+  height: 220px;
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+  position: relative;
+  left: -25px;
+}
+
+.botao:hover {
+  transition: 0.3s ease;
+  letter-spacing: 0.02rem;
+  transform: scale(1.03);
+  background-color: #e8bc68;
 }

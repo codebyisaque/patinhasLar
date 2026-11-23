@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+:root {
+  --cor-principal: #ff746c;
+  --amarelo: #fad383;
+  --amareloEscuro: #e8bc68;
+  --preto: #464646;
+  --branco: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  text-transform: capitalize;
   outline: none;
+  text-transform: none;
+  list-style: none;
 }
 
-body {
-  background: #fff0e8;
-}
+/* Header */
+
 .logo {
   margin: 15px 0px 15px 50px;
   width: 99px;
@@ -23,15 +31,21 @@ body {
   transform: translateX(-50%);
   width: 100%;
   z-index: 1000;
-  background-color: #ff746c;
+  background-color: var(--cor-principal);
   margin: 35px auto;
   max-width: 1210px;
   height: 89px;
   border-radius: 40px;
   display: flex;
-  justify-content: center;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .menu {
@@ -40,17 +54,20 @@ body {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 40px;
 }
 
 .menu-item:hover {
   color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
 }
 
 .menu-item {
   color: #ffffff;
+  display: inline-block;
+  transition: 0.3s ease;
 }
 
 .cadastre-se {
@@ -62,24 +79,36 @@ body {
 }
 
 .menu-cadastro {
+  display: inline-block;
   color: #ffffff;
   font-size: 1.5rem;
+  transition: 0.3s ease;
 }
 
 .menu-cadastro:hover {
   color: #fad383;
   text-decoration: underline;
   text-underline-offset: 25%;
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
+}
+
+.imagem-conta path {
+  transition: 0.3s ease;
 }
 
 .imagem-conta:hover path {
   fill: #fad383;
+  transform: scale(1.03);
 }
+
+/* Footer */
+
 footer {
   display: flex;
   background-color: #ff746c;
   width: 100%;
-  height: 200px;
+  height: 285px;
   justify-content: center;
   align-items: center;
   gap: 220px;
@@ -93,8 +122,7 @@ footer {
   align-items: center;
 }
 
-
-.logo-footer-patinha{
+.logo-footer-patinha {
   margin-left: 20px;
 }
 .patinha {
@@ -105,8 +133,28 @@ footer {
   font-size: 1rem;
 }
 
-.redes-socias {
+.redes-sociais {
   align-content: center;
+}
+
+.redes-sociais .insta {
+  fill: var(--branco);
+  transition: 0.5s ease;
+}
+
+.redes-sociais .insta:hover {
+  fill: var(--amarelo);
+  transform: scale(1.1);
+}
+
+.redes-sociais .face {
+  fill: var(--branco);
+  transition: 0.5s ease;
+}
+
+.redes-sociais .face:hover {
+  fill: var(--amarelo);
+  transform: scale(1.1);
 }
 
 .menu-footer {
@@ -118,10 +166,17 @@ footer {
   font-size: 1.25rem;
 }
 
-.menu-footer a{
+.menu-footer a {
+  display: inline-block;
   color: white;
   font-family: 'nunito', Arial;
   font-weight: normal;
+  transition: 0.5s ease;
+}
+
+.menu-footer a:hover {
+  color: var(--amarelo);
+  transform: scale(1.1);
 }
 
 .sobre-footer {
@@ -133,8 +188,187 @@ footer {
   font-size: 1.25rem;
 }
 
-.sobre-footer a{
+.sobre-footer a {
+  display: inline-block;
   font-family: 'nunito', Arial;
   font-weight: normal;
   color: white;
+  transition: 0.5s ease;
+}
+
+.sobre-footer a:hover {
+  color: var(--amarelo);
+  transform: scale(1.1);
+}
+/* Itens novos do menu: invisíveis no desktop */
+.menu-toggle,
+.menu-hamburguer {
+  display: none;
+}
+
+.menu-painel {
+  display: contents;
+}
+
+/* ---------- Até 1439px ---------- */
+@media (max-width: 1439px) {
+  footer {
+    gap: 120px;
+  }
+}
+
+/* ---------- Até 1279px ---------- */
+@media (max-width: 1279px) {
+  .header {
+    width: calc(100% - 48px);
+  }
+
+  footer {
+    gap: 60px;
+  }
+}
+
+/* ---------- Até 1023px (tablets) ---------- */
+@media (max-width: 1023px) {
+  /* Header */
+  .logo {
+    width: 80px;
+    height: auto;
+    margin-left: 30px;
+  }
+  .logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .menu {
+    font-size: 1.125rem;
+  }
+  .menu ul {
+    gap: 24px;
+  }
+  .menu-cadastro {
+    font-size: 1.125rem;
+  }
+  .cadastre-se {
+    margin-right: 30px;
+  }
+
+  /* Footer: altura livre e quebra de linha se faltar espaço */
+  footer {
+    height: auto;
+    min-height: 285px;
+    flex-wrap: wrap;
+    gap: 32px 56px;
+    padding: 48px 32px;
+  }
+}
+
+/* ---------- Até 767px (celulares) ---------- */
+@media (max-width: 767px) {
+  /* Header compacto */
+  .header {
+    width: calc(100% - 32px);
+    height: 64px;
+    margin: 16px auto;
+    border-radius: 32px;
+  }
+  .logo {
+    width: 64px;
+    margin: 0 0 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Botão hambúrguer */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-self: stretch;
+    padding: 0 24px 0 16px;
+    cursor: pointer;
+  }
+  .menu-hamburguer span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--branco);
+    border-radius: 3px;
+    transition: 0.3s ease;
+  }
+  .menu-toggle:focus-visible + .menu-hamburguer {
+    outline: 2px solid var(--amarelo);
+    border-radius: 32px;
+  }
+
+  /* Hambúrguer vira X quando aberto */
+  .menu-toggle:checked + .menu-hamburguer span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle:checked + .menu-hamburguer span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked + .menu-hamburguer span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Painel do menu: fechado por padrão, aberto quando o checkbox está marcado */
+  .menu-painel {
+    display: none;
+  }
+  .menu-toggle:checked ~ .menu-painel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    padding: 32px 24px;
+    background-color: var(--cor-principal);
+    border-radius: 32px;
+  }
+  .menu {
+    font-size: 1.375rem;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .cadastre-se {
+    margin-right: 0;
+  }
+  .menu-cadastro {
+    font-size: 1.25rem;
+  }
+
+  /* Footer: logo e redes em linhas próprias, os dois menus lado a lado */
+  footer {
+    padding: 40px 24px;
+    gap: 28px 40px;
+  }
+  .logo-footer,
+  .redes-sociais {
+    width: 100%;
+    justify-content: center;
+  }
+  .redes-sociais {
+    display: flex;
+    gap: 20px;
+  }
+  .menu-footer a,
+  .sobre-footer a {
+    padding: 4px 0;
+  }
 }

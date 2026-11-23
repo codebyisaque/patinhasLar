@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body {
+      body {
   background: #fff0e8;
   font-family: 'Nunito', sans-serif;
   color: #444;
@@ -21,7 +21,7 @@ body {
   border-radius: 50px;
 }
 
-.navbar {
+     .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +53,7 @@ body {
   font-size: 28px;
 }
 
-.container-principal {
+      .container-principal {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto 70px;

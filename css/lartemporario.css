@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* (Animação)
+transition: 0.3s ease; 
+letter-spacing: 0.02rem;
+transform: scale(1.01)
+background-color: #e8bc68;
+background-color: #e65f57;
+*/
+/* Paleta oficial do projeto:
+#464646 - Texto, títulos e bordas
+#FFFFFF - Fundo dos cards e textos em destaque
+#FF746C - Detalhes, círculos numéricos e hover
+#FAD383 - Botões principais
+#FFF0E8 - Fundo geral da página
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Fredoka', sans-serif;
+}
+
+body {
+  background-color: #fff0e8;
+}
+
+main {
+  background-color: #fff0e8;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 196px 115px 72px 115px;
+}
+
+main h1,
+main h2,
+main h3,
+main p {
+  color: #464646;
+}
+
+.conteudo-inicial {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-areas:
+    'tag    imagem'
+    'titulo imagem'
+    'texto  imagem'
+    'botao  imagem';
+  gap: 16px 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.tag-destaque {
+  grid-area: tag;
+  justify-self: start;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ff746c;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.conteudo-inicial h1 {
+  grid-area: titulo;
+  max-width: 460px;
+  margin: 0;
+  text-align: left;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.conteudo-inicial .subtitulo {
+  grid-area: texto;
+  max-width: 520px;
+  margin: 8px 0 16px 0;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.btn-inicio {
+  grid-area: botao;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fad383;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  border-radius: 16px;
+  border: 1px solid #464646;
+  color: #464646;
+  transition: 0.3s ease;
+}
+
+.btn-inicio:hover {
+  background-color: #e8bc68;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.imagem-apresentacao {
+  grid-area: imagem;
+  justify-self: end;
+  width: 310px;
+  height: 470px;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.sobre-lar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 40px;
+  border: 1px solid #464646;
+  gap: 50px;
+  margin-bottom: 80px;
+  padding: 50px 60px;
+}
+
+.sobre-lar > img {
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.sobre-texto {
+  max-width: 520px;
+}
+
+.sobre-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.sobre-texto p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.pilares-lar {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 380px;
+}
+
+.pilares-lar li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff0e8;
+  color: #464646;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.pilares-lar li img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.como-funciona {
+  margin-bottom: 80px;
+}
+
+.como-funciona h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.passos-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.card-passo {
+  flex: 1;
+  min-width: 0;
+  background-color: #ffffff;
+  min-height: 220px;
+  padding: 24px 18px;
+  border-radius: 16px;
+  border: 1px solid #464646;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-passo h3 {
+  font-size: 1.15rem;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.card-passo p {
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.numero {
+  background-color: #ff746c;
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.beneficios {
+  margin-bottom: 80px;
+}
+
+.beneficios h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.beneficios-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.card-beneficio {
+  flex: 1;
+  min-width: 0;
+  min-height: 260px;
+  background-color: #ffffff;
+  padding: 28px 18px;
+  border-radius: 16px;
+  border: 1px solid #464646;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.icone {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.card-beneficio h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.card-beneficio p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.conteudo-final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #ff746c;
+  border-radius: 28px;
+  margin-bottom: 80px;
+  padding: 40px 56px;
+}
+
+.texto-final {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 490px;
+}
+
+.conteudo-final h2 {
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.conteudo-final .subtitulo {
+  margin: 0 0 8px 0;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: #ffffff;
+}
+
+.btn-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fad383;
+  color: #464646;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: 1px solid #464646;
+  transition: 0.3s ease;
+}
+
+.btn-final span {
+  color: #464646;
+}
+
+.btn-final:hover {
+  background-color: #e8bc68;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.imagem-alerta {
+  width: 440px;
+  max-width: 100%;
+  height: 360px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.duvidas-frequentes {
+  margin-bottom: 0;
+}
+
+.duvidas-frequentes h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo-duvidas {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+
+.card-pergunta {
+  background-color: #ffffff;
+  border: 1px solid #464646;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  padding: 18px 24px;
+  text-align: left;
+}
+
+.card-pergunta:last-child {
+  margin-bottom: 0;
+}
+
+.card-pergunta summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #464646;
+  cursor: pointer;
+}
+
+.card-pergunta summary::-webkit-details-marker {
+  display: none;
+}
+
+.card-pergunta summary::after {
+  content: '🠟';
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.card-pergunta[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.card-pergunta p {
+  margin: 14px 0 0 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+}

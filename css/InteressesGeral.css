@@ -2,30 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Fredoka', sans-serif;
 }
 
-body{
+body {
   background-color: #FFF0E8;
   min-height: 100vh;
-  padding: 1px 0 0 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: #464646;
 }
 
-.header{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.container{
+.container {
+  max-width: 1440px;
+  margin: 100px auto 0 auto;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -34,7 +30,7 @@ body{
   padding: 60px;
 }
 
-.card{
+.card {
   background-color: #fff;
   border-radius: 28px;
   padding: 35px;
@@ -45,10 +41,9 @@ body{
   align-items: center;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  margin: auto;
 }
 
-.seu-interesse{
+.seu-interesse {
   background-color: #FFF0E8;
   padding: 6px 8px;
   border-radius: 100px;
@@ -63,11 +58,12 @@ body{
   font-weight: 700;
   font-family: "Fredoka", sans-serif;
 }
-.seu-interesse span{
+
+.seu-interesse span {
   font-weight: 700;
 }
 
-.seu-interesse .escolha{
+.seu-interesse .escolha {
   background-color: #FF746C;
   padding: 6px 15px;
   border-radius: 100px;
@@ -76,12 +72,12 @@ body{
   gap: 5px;
 }
 
-.seu-interesse .adocao img{
-  width: 20px ;
-  height: 20px ;
+.seu-interesse .adocao img {
+  width: 20px;
+  height: 20px;
 }
 
-.casinha{
+.casinha {
   background-color: #FF746C;
   border-radius: 44px;
   width: 50px;
@@ -92,36 +88,36 @@ body{
   margin: 20px;
 }
 
-.casinha img{
+.casinha img {
   width: 25px;
   height: 25px;
 }
 
-.titulo{
+.titulo {
   font-family: "Fredoka", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-.bloco-texto{
+.bloco-texto {
   width: 100%;
   max-width: 550px;
   padding: 0px 10px;
 }
 
-.descricao{
+.descricao {
   font-size: 1rem;
   margin: 20px 0px 15px 0px;
   text-transform: none
 }
 
-.sub-descricao{
+.sub-descricao {
   font-size: 0.8rem;
   margin-bottom: 25px;
   text-transform: none
 }
 
-.btn{
+.btn {
   background-color: #FAD383;
   padding: 12px 12px;
   font-size: 1rem;
@@ -129,13 +125,14 @@ body{
   font-weight: 600;
   text-decoration: none;
   border-radius: 16px;
-  transition: 0.3s linear;
+  transition: 0.3s ease;
   border: 1px solid #464646;
   margin-bottom: 10px;
   color: #464646;
 }
 
-.btn:hover{
-  background-color: #FFE0A2;
-  letter-spacing: 0.01rem;
+.btn:hover {
+  background-color: #e8bc68;
+  letter-spacing: 0.02rem;
+  transform: scale(1.03);
 }

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/cadastroDeUsuario.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <header id="header-placeholder"></header>
+
+    <main class="conteiner">
+      <section class="boasVindas">
+        <h1>Crie sua conta!</h1>
+        <p>
+          Faça parte dessa corrente e ajude a transformar a vida de muitos a
+          animais
+        </p>
+        <i>Os campos com * são obrigatorio. A fotode perfil é opcional</i>
+        
+        <div class="fotoPerfil">
+          <img src="../assets/img/Avatar.svg" alt="Avatar">
+    
+          <h2>Foto de perfil</h2>
+          <p>
+            Adicione uma foto para identificação no perfil. Você também pode fazer
+            isso depois.
+          </p>
+          <a href="#" class="btn">Adicione uma foto</a>
+        </div>
+
+        <h3>Seu interesse</h3><span> Adoção</span>
+      </section>
+
+      <form>
+      <section class="dados-pessoais">
+        <h2>Dados peossoais</h2>
+          <div class="input-box">
+            <label>
+                <h5>Nome completo*</h3>
+                <input placeholder="Ex: Ana Clara Silva" type="text" />
+              </label>
+            </div>
+            
+            <div class="cpfNascimento">
+
+              <div class="linha">
+
+                <div class="campo">
+                  <label>
+                    <h5> CPF* </h3>
+                      <input type="text" placeholder="000.000.000-00">
+                    </label>
+                </div>
+
+                <div class="campo">
+                  <label>
+                    <h5>Data de nascimento*</h3>
+                      <input type="date">
+                    </label>
+                  </div>
+                </div>
+
+                </div>
+              
+        </section>
+        
+        <section class="contato">
+          <h2>Contato</h2>
+          <div class="emailBox">
+
+            <div class="linha">
+
+              <div class="campo">
+                
+                  <label for="emailBox">
+                  <h5>Email*</h5>
+                  <input type="email" name="email" id="e-Box" placeholder="Ex:email@gmail.com">
+                </label>
+              </div>
+              
+              <div class="campo">
+                <label for="telefone">
+                  <h5>Telefone</h5>
+                  <input type="tel" name="number" id="t-box" placeholder="Ex:(00) 00000-0000">
+                </label>
+              
+            </div>
+          </div>
+          
+        </div>  
+        
+        </section>
+
+        <section class="address">
+           <h2>Endereço</h2>
+
+           <div class="input-inline">
+
+             
+             <div class="grade">
+               
+               <div class="campo">
+                     
+                 <label>
+                   <h5>CEP*</h5>
+                 <input type="text" placeholder="Ex: 00000-000">
+                </label>
+              </div>
+              
+            <div class="campo">
+             <label>
+               <h5>Estado*</h5>
+             <input type="text" placeholder="Digite o estado">
+            </label>
+          </div>
+
+                <div class="campo">
+                  <label>
+                    <h5>Cidade*</h5>
+                    <input type="text" placeholder="DIgite a Cidade">
+                  </label>
+                </div>
+                
+                <div class="campo">
+                  <label>
+                    <h5>Bairro*</h5>
+                    <input type="text" placeholder="DIgite o Bairro">
+                  </label>
+                </div>
+                
+                <div class="campo">
+                  <label>
+                    <h5>Rua*</h5>
+                    <input type="text" placeholder="Digite o nome da rua">
+                  </label>
+                </div>
+
+                <div class="campo">
+                  <label>
+                    <h5>Numero</h5>
+                    <input type="number" placeholder="00">
+                  </label>
+                
+              </div>
+
+          </div>
+        </div>
+            
+            <div class="complemento">
+              
+                <h5>Complemento*</h5>
+                <label>
+                  <input type="text" placeholder="Ex: apto 10, Bloco c">
+                </label>
+              </div>
+          </section>
+
+            <section class="seguranca">
+
+                <h2>Segurança</h2>
+                <div class="linha">
+  <div class="campo">
+    <label for="senha"><h5>Senha*</h5></label>
+    <input type="password" id="senha">
+    <button type="button" class="olho" onclick="toggleSenha('senha', this)">👁</button>
+  </div>
+  <div class="campo">
+    <label for="confirmar"><h5>Confirmar senha*</h5></label>
+    <input type="password" id="confirmar">
+    <button type="button" class="olho" onclick="toggleSenha('senha', this)">👁</button>
+  </div>
+</div>
+                  </section>
+                  
+                <div>
+                  <a href="" class="continue"> Continue o cadastro</a>
+                </div>
+                
+              </form>
+    </main>  
+<!--
+  <footer id="footer-placeholder"></footer>
+  <script type="module" src="../js/script.js"></script>
+  -->
+  </body>
+</html>
