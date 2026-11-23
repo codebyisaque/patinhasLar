@@ -167,6 +167,23 @@ height: 6rem;
 .seguranca input{
   width: 29rem;
 }
+.campo-senha {
+  position: relative;
+}
+.campo-senha input {
+  width: 26rem;
+  border-radius: 10px;
+  padding-right: 45px;
+}
+.olho {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .continue{
 display: block;
 width: fit-content;
