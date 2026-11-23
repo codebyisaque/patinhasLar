@@ -1,18 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../css/dashbord.css">
 </head>
+
 <body>
   <header>
     <div id="header-placeholder"></div>
   </header>
   <main>
-
+    <section class="perfilclaudia">
+      <div class="perfil-info-esquerda">
+        <div class="fotodeperfil">
+          <span class="fotopessoa"></span>
+          <label for="upload-foto" class="camera-btn" aria-label="Alterar foto"><img src="../assets/img/icons/camera.svg" alt="camera"></label>
+          <input type="file" id="upload-foto" accept="image/*" class="input-file-oculto">
+        </div>
+        <h1>Claudia Santos</h1>
+        <p><span class="icone-local"></span>São Paulo, SP</p>
+        <a href="../pages/editarperfil.html"><span class="icone-lapis"></span>Editar dados</a>
+        <a href="#" class="btn-cadastrar"> <span class="mais"></span>Cadastrar um animal</a>
+      </div>
+    </section>
+    <section class="meusanimais">
+      <h2>Meus animais</h2>
+      <p>Acompanhe os animais que você divulga.</p>
+      <div class="opcao">
+        <div class="selecao">
+          <input type="radio" name="filtro-pets" id="todos" value="todos" checked>
+          <label for="todos">Todos</label>
+        </div>
+        <div class="selecao">
+          <input type="radio" name="filtro-pets" id="divulgando" value="divulgando">
+          <label for="divulgando">Divulgando</label>
+        </div>
+        <div class="selecao">
+          <input type="radio" name="filtro-pets" id="acolhidos" value="acolhidos">
+          <label for="acolhidos">Acolhidos</label>
+        </div>
+        <div class="selecao">
+          <input type="radio" name="filtro-pets" id="adotados" value="adotados">
+          <label for="adotados">Adotados</label>
+        </div>
+      </div>
+      <hr class="linha-divisoria">
+      <div class="iconesmeio">
+        <span class="icone-cachorro"></span>
+        <span class="icone-gato"></span>
+      </div>
+      <h2>Uma nova história começa aqui</h2>
+      <p>Você ainda não cadastrou nenhum animal. Apresente seu primeiro resgatado e ajude a encontrar um lar cheio de carinho.</p>
+    </section>
   </main>
+  <aside>
+    <section class="dicas">
+    <span class="icone-patinha"></span>
+    <h2>Dicas para o cadastro do pet:</h2>
+    <h3>1</h3>
+    <h3> Separe as melhores fotos</h3>
+    <p>Imagens nítidas ajudam a criar uma conexão.</p>
+    <h3>2</h3>
+    <h3> Conte a história do animal</h3>
+    <p>Preencha os dados de saúde e personalidade.</p>
+    </section>
+    <section class="perfil-atualizado">
+      <span class="icone-coracao"></span>
+      <h3>Mantenha seu perfil atualizado</h3>
+      <p>Seus contatos ajudam quem quer acolher a chegar até você.</p>
+    </section>
+  </aside>
   <footer id="footer-placeholder"></footer>
   <script type="module" src="../js/script.js"></script>
 </body>
+
 </html>
