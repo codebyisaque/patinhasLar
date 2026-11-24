@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
-  color: #464646;
 }
 
 body {
@@ -16,13 +15,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
 }
 
 main {
   background-color: #ffffff;
   max-width: 1210px;
-  margin-top: 140px;
+  margin-top: 150px;
   margin-bottom: 100px;
   margin-left: 115px;
   margin-right: 115px;
