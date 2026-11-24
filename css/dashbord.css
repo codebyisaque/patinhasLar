@@ -10,31 +10,46 @@
 
 body {
   background-color: #FDECE2;
-  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #464646;
   display: grid;
-  grid-template-columns: minmax(0, 680px) minmax(0, 340px);
-  justify-content: center;
-  column-gap: 28px;
+  grid-template-columns: 1fr minmax(0, 60%) minmax(0, 28%) 1fr;
+  column-gap: 2%;
   row-gap: 28px;
-  padding: 0 20px 60px;
+  padding: 0; 
+  min-height: 100vh;
 }
 
 header, footer {
   grid-column: 1 / -1;
-  width: 100%;
 }
 
 main {
   display: contents;
 }
 
+.input-file-oculto, .selecao input[type="radio"] {
+  display: none;
+}
+
+h1, h2{
+  font-family: 'Fredoka', sans-serif;
+}
+
+p, label, a, h3{
+  font-family: 'Nunito', sans-serif;
+}
+
+p{
+  font-size: 0.8rem;
+}
+
 .perfilclaudia {
-  grid-column: 1 / -1; 
+  grid-column: 2 / 4; 
   background-color: #FFFFFF;
   border-radius: 20px;
   padding: 28px 36px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-top: 120px;
 }
 
 .perfil-info-esquerda {
@@ -49,8 +64,8 @@ main {
   grid-column: 1;
   grid-row: 1 / 4;
   position: relative;
-  width: 96px;
-  height: 96px;
+  width: 100px;
+  height: 100px;
 }
 
 .fotopessoa {
@@ -58,63 +73,94 @@ main {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #D2C8E8;
+  background-image: url("../assets/img/icons/fotoperfil.svg");
   background-size: cover;
   background-position: center;
 }
 
 .camera-btn {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 28px;
-  height: 28px;
-  background-color: #FFFFFF;
-  border: 1.5px solid #E88D8D;
-  border-radius: 50%;
+  bottom: -2px;
+  right: -2px;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #FF746C;
+  border: 3px solid #ffffff;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .camera-btn img {
-  width: 14px;
-  height: 14px;
+  width: 23px;
+  height: 22px;
 }
 
-.input-file-oculto {
-  display: none;
+.camera-btn:hover {
+  background-color: #FF8680;
+  transform: scale(1.05);
+  transition: 0.2s ease;
 }
 
 .perfil-info-esquerda h1 {
   grid-column: 2;
   grid-row: 1;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 26px;
+  font-size: 2rem;
   font-weight: 700;
-  color: #3B3531;
   align-self: end;
 }
 
 .perfil-info-esquerda p {
   grid-column: 2;
   grid-row: 2;
-  font-size: 14px;
-  color: #6E655F;
   display: flex;
   align-items: center;
   gap: 6px;
   margin: 4px 0;
 }
 
-.perfil-info-esquerda a:not(.btn-cadastrar) {
+.icone-local {
+  background-color: #464646;
+  -webkit-mask-image: url('../assets/img/icons/localizacao.svg');
+  mask-image: url('../assets/img/icons/localizacao.svg');
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.icone-lapis {
+  background-color: #FF746C;
+  -webkit-mask-image: url('../assets/img/icons/lapis.svg');
+  mask-image: url('../assets/img/icons/lapis.svg');
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.editar{
   grid-column: 2;
   grid-row: 3;
   font-size: 13px;
-  font-weight: 600;
-  color: #D96B6B;
+  font-weight: 800;
+  color: #FF746C;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -122,17 +168,34 @@ main {
   align-self: start;
 }
 
-.perfil-info-esquerda a:not(.btn-cadastrar):hover {
-  text-decoration: underline;
+.editar:hover{
+  font-weight: 900;
+}
+
+.editar:hover .icone-lapis {
+  filter: brightness(0.75);
+  transform: scale(1.1);
+}
+
+
+.mais{
+  background-image: url("../assets/img/icons/+.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 .btn-cadastrar {
   grid-column: 3;
   grid-row: 1 / 4;
-  background-color: #F6D06B;
-  color: #3B3531;
+  background-color: #FAD383;
+  color: #464646;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 1.2rem;
   text-decoration: none;
   padding: 14px 24px;
   border-radius: 12px;
@@ -143,18 +206,14 @@ main {
 }
 
 .btn-cadastrar:hover {
-  background-color: #ecc252;
+  background-color: #FDDC98;
+  font-weight: 800;
+  transition: 0.3s ease; 
+  letter-spacing: 0.02rem;
 }
-
-.btn-cadastrar .mais::before {
-  content: "+";
-  font-size: 18px;
-  font-weight: 700;
-}
-
 
 .meusanimais {
-  grid-column: 1;
+  grid-column: 2;
   background-color: #FFFFFF;
   border-radius: 20px;
   padding: 32px 36px 48px;
@@ -162,27 +221,20 @@ main {
 }
 
 .meusanimais > h2:first-of-type {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 22px;
-  color: #464646;
+  font-size: 1.3rem;
   margin-bottom: 4px;
 }
 
-.meusanimais > p:first-of-type {
-  font-size: 14px;
-  color: #464646;
-  margin-bottom: 24px;
+.meusanimais p {
+  font-size: 0.8rem;
 }
 
 .opcao {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 24px;
   margin-bottom: 24px;
-}
-
-.selecao input[type="radio"] {
-  display: none;
 }
 
 .selecao label {
@@ -190,16 +242,15 @@ main {
   padding: 8px 20px;
   border-radius: 20px;
   border: 1px solid #464646;
-  font-size: 13px;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: #464646;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .selecao input[type="radio"]:checked + label {
-  background-color: #F6D06B;
-  border-color: #4646446;
+  background-color: #FAD383;
+  font-weight: 800;
 }
 
 .linha-divisoria {
@@ -210,28 +261,42 @@ main {
 
 .iconesmeio {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   width: fit-content;
   margin: 0 auto 20px;
-  background-color: #F6D06B;
-  padding: 12px 20px;
-  border-radius: 14px;
-  min-width: 90px;
-  min-height: 48px;
+  background-color: #FAD383;
+  padding: 12px 24px;
+  border-radius: 999px;
+}
+
+.icone-cachorro, .icone-gato{
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  flex-shrink: 0;
+}
+.icone-cachorro {
+  background-image: url('../assets/img/icons/cachorro.svg');
+  width: 41px;
+  height: 40px;
+}
+
+.icone-gato {
+  background-image: url('../assets/img/icons/gato.svg');
+  width: 37px;
+  height: 37px;
 }
 
 .meusanimais > h2:last-of-type {
-  font-family: 'Fredoka', sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   text-align: center;
   margin-bottom: 8px;
 }
 
 .meusanimais > p:last-of-type {
-  font-size: 14px;
-  color: #6E655F;
   line-height: 1.5;
   text-align: center;
   max-width: 430px;
@@ -239,7 +304,7 @@ main {
 }
 
 aside {
-  grid-column: 2;
+  grid-column: 3;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -258,28 +323,30 @@ aside {
 
 .icone-patinha {
   grid-column: 1 / -1;
-  width: 36px;
-  height: 36px;
-  background-color: #FDECE2;
+  width: 44px;
+  height: 44px;
+  background-color: #FAD383;
   border-radius: 50%;
   display: inline-block;
   margin-bottom: 14px;
+  background-image: url('../assets/img/icons/patinha.svg');
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .dicas h2 {
   grid-column: 1 / -1;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 1.3;
   margin-bottom: 20px;
 }
 
-.dicas h3:nth-of-type(odd) {
+.n{
   grid-column: 1;
-  background-color: #F6D06B;
-  color: #464646;
-  font-size: 12px;
-  font-weight: 700;
+  background-color: #FAD383;
+  font-size: 1rem;
+  font-weight: 900;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -288,17 +355,16 @@ aside {
   justify-content: center;
 }
 
-.dicas h3:nth-of-type(even) {
+.texto{
   grid-column: 2;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
   margin-bottom: 4px;
 }
 
 .dicas p {
   grid-column: 2;
-  font-size: 13px;
-  color: #6E655F;
+  font-size: 0.8rem;
   line-height: 1.4;
   margin-bottom: 18px;
 }
@@ -308,7 +374,7 @@ aside {
 }
 
 .perfil-atualizado {
-  background-color: #F8D47C;
+  background-color: #FAD383;
   border-radius: 16px;
   padding: 20px 22px;
   display: grid;
@@ -319,22 +385,25 @@ aside {
 
 .icone-coracao {
   grid-column: 1;
-  grid-row: 1 / 3;
-  width: 22px;
-  height: 22px;
+  grid-row: 1/3;
+  align-self: center;
+  background-image: url("../assets/img/icons/coracao.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
   display: inline-block;
 }
 
 .perfil-atualizado h3 {
   grid-column: 2;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
   margin-bottom: 4px;
 }
 
 .perfil-atualizado p {
   grid-column: 2;
-  font-size: 12.5px;
-  color: #4A433E;
+  font-size: 0.8rem;
   line-height: 1.4;
 }
