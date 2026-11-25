@@ -74,8 +74,9 @@
   margin-right: 50px;
   font-family: 'fredoka', Arial;
   font-weight: 700;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  position: relative;
 }
 
 .menu-cadastro {
@@ -102,6 +103,67 @@
   transform: scale(1.03);
 }
 
+.menuLogado{
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 12px;
+  z-index: 10000;
+}
+
+.cadastre-se:hover .menuLogado{
+  display: block;
+}
+
+.cadastre-se .menuLogado:hover{
+  display: inline-flex;
+}
+
+.containerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  min-width: 268px;
+  min-height: 166px;
+  border: 1px solid;
+  border-color: var(--preto);
+  border-radius: 25px;
+  background-color: var(--branco);
+}
+
+.containerMenu a {
+  margin-left: 10px;
+  font-family: 'fredoka', 'nunito', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--preto);
+  text-align: c;
+  transition: 0.4s ease;
+}
+
+.containerMenu a:hover {
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
+  color:#e8bc68;
+  
+}
+
+
+.containerMenu .meuPerfil,
+.minhaPatinha,
+.sair {
+  display: flex;
+  margin: 0px 15px;
+}
+
+.containerMenu .sair {
+  border-top: 1px solid;
+  border-color: #4646465D;
+  padding-top: 15px;
+}
+
+
 /* Footer */
 
 footer {
@@ -117,6 +179,7 @@ footer {
   font-weight: 700;
   color: white;
 }
+
 .logo-footer {
   display: flex;
   align-items: center;
@@ -125,6 +188,7 @@ footer {
 .logo-footer-patinha {
   margin-left: 20px;
 }
+
 .patinha {
   font-size: 1.5rem;
 }
@@ -200,6 +264,7 @@ footer {
   color: var(--amarelo);
   transform: scale(1.1);
 }
+
 /* Itens novos do menu: invisíveis no desktop */
 .menu-toggle,
 .menu-hamburguer {
@@ -230,26 +295,32 @@ footer {
 
 /* ---------- Até 1023px (tablets) ---------- */
 @media (max-width: 1023px) {
+
   /* Header */
   .logo {
     width: 80px;
     height: auto;
     margin-left: 30px;
   }
+
   .logo img {
     display: block;
     width: 100%;
     height: auto;
   }
+
   .menu {
     font-size: 1.125rem;
   }
+
   .menu ul {
     gap: 24px;
   }
+
   .menu-cadastro {
     font-size: 1.125rem;
   }
+
   .cadastre-se {
     margin-right: 30px;
   }
@@ -266,6 +337,7 @@ footer {
 
 /* ---------- Até 767px (celulares) ---------- */
 @media (max-width: 767px) {
+
   /* Header compacto */
   .header {
     width: calc(100% - 32px);
@@ -273,6 +345,7 @@ footer {
     margin: 16px auto;
     border-radius: 32px;
   }
+
   .logo {
     width: 64px;
     margin: 0 0 0 20px;
@@ -288,6 +361,7 @@ footer {
     width: 0;
     height: 0;
   }
+
   .menu-hamburguer {
     display: flex;
     flex-direction: column;
@@ -297,6 +371,7 @@ footer {
     padding: 0 24px 0 16px;
     cursor: pointer;
   }
+
   .menu-hamburguer span {
     display: block;
     width: 28px;
@@ -305,19 +380,22 @@ footer {
     border-radius: 3px;
     transition: 0.3s ease;
   }
-  .menu-toggle:focus-visible + .menu-hamburguer {
+
+  .menu-toggle:focus-visible+.menu-hamburguer {
     outline: 2px solid var(--amarelo);
     border-radius: 32px;
   }
 
   /* Hambúrguer vira X quando aberto */
-  .menu-toggle:checked + .menu-hamburguer span:nth-child(1) {
+  .menu-toggle:checked+.menu-hamburguer span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  .menu-toggle:checked + .menu-hamburguer span:nth-child(2) {
+
+  .menu-toggle:checked+.menu-hamburguer span:nth-child(2) {
     opacity: 0;
   }
-  .menu-toggle:checked + .menu-hamburguer span:nth-child(3) {
+
+  .menu-toggle:checked+.menu-hamburguer span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
@@ -325,7 +403,8 @@ footer {
   .menu-painel {
     display: none;
   }
-  .menu-toggle:checked ~ .menu-painel {
+
+  .menu-toggle:checked~.menu-painel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -338,17 +417,21 @@ footer {
     background-color: var(--cor-principal);
     border-radius: 32px;
   }
+
   .menu {
     font-size: 1.375rem;
   }
+
   .menu ul {
     flex-direction: column;
     gap: 20px;
     text-align: center;
   }
+
   .cadastre-se {
     margin-right: 0;
   }
+
   .menu-cadastro {
     font-size: 1.25rem;
   }
@@ -358,17 +441,21 @@ footer {
     padding: 40px 24px;
     gap: 28px 40px;
   }
+
   .logo-footer,
   .redes-sociais {
     width: 100%;
     justify-content: center;
   }
+
   .redes-sociais {
     display: flex;
     gap: 20px;
   }
+
   .menu-footer a,
   .sobre-footer a {
     padding: 4px 0;
   }
 }
+
