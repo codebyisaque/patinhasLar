@@ -27,8 +27,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    height: 100vh;
-    background-color: #fce9e2;
+    height: clamp(300px, 70vw, 900px);
+    
 }
 
 .texto {
@@ -67,9 +67,19 @@ body {
     margin: 180px auto 60px auto;
 }
 
+.caixa,
+.caixa3 {
+    width: min(90%, 550px);
+    padding: clamp(8px, 1.5vw, 15px);
+    border-radius: clamp(20px, 4vw, 50px);
+    box-sizing: border-box;
+    margin: 180px auto 60px;
+}
+
+
 .titulinho {
     font-family: 'Fredoka', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(22px, 3.5vw, 2.5rem);
     letter-spacing: px;
     color: #fff;
     text-align: center;
@@ -78,12 +88,15 @@ body {
 .textinho {
     width: 100%;
     max-width: 1100px;
+    padding: 0 10px;
     margin: 0 auto;
+max-width: 1100px;
     font-family: 'Nunito', sans-serif;
-    font-size: 25px;
+    font-size:clamp(16px, 2.2vw, 25px);
     font-weight: 400;
     line-height: 1.35;
     text-align: center;
+   
     color: #464646;
 }
 
@@ -122,23 +135,24 @@ body {
 
 .linha-contato {
     display: grid;
-    grid-template-columns: 350px 220px;
+      grid-template-columns: minmax(0, 350px) 190px;
     align-items: center;
     justify-content: center;
-    column-gap: 40px;
-
+    column-gap: 30px;
     width: 100%;
     max-width: 610px;
+     margin: 0 auto;
+
 }
 
 .rosa {
     background-color: #ff746c;
+    width: 100px !important;
 
-    width: 370px !important;
-    min-height: 200px !important;
-
+    min-width: 0;
+    min-height: 200px;
     border-radius: 20px;
-    padding: 25px !important;
+   padding:25px;
     box-sizing: border-box;
 
     display: flex;
@@ -191,22 +205,37 @@ body {
 }
 
 .circulo {
-    width: 190px;
-    height: 190px;
+     width:190px;
+    height:190px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 @media (max-width: 650px) {
+
     .linha-contato {
-        flex-direction: column;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .rosa {
+    .linha-contato .rosa {
+        width: 100% !important;
+        min-width: 0;
+        min-height: 180px !important;
+        padding: 15px !important;
+    }
+
+    .linha-contato .circulo {
         width: 100%;
-        max-width: 350px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 }
 
@@ -231,4 +260,122 @@ body {
     letter-spacing: 0.02rem;
     transform: scale(1.03);
     background-color: #e8bc68;
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+
+    .texto {
+        width: 90%;
+    }
+
+    .caixa,
+    .caixa3 {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .linha-contato {
+        grid-template-columns: minmax(0, 350px) 170px;
+        gap: 20px;
+    }
+
+    .rosa {
+        width: 100% !important;
+    }
+
+    .circulo {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+
+
+
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 650px) {
+
+    .quadrados-rosa {
+        padding: 20px 15px;
+    }
+
+    /* CAIXAS DE CONTATO */
+
+    .quadrados-rosa .linha-contato {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) !important;
+        align-items: center;
+        justify-content: center;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
+    }
+
+  .textinho {
+    width: 70%;
+    max-width: none;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+    .quadrados-rosa .linha-contato > .rosa {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .quadrados-rosa .linha-contato > .circulo {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .quadrados-rosa .branco {
+        font-size: clamp(11px, 3.2vw, 15px);
+    }
+
+    .quadrados-rosa .numero2 {
+        font-size: clamp(10px, 3vw, 15px);
+    }
+
+    .quadrados-rosa .telefone-linha {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .quadrados-rosa .telephone {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* FAIXAS ROSAS DOS TÍTULOS */
+
+    .caixa,
+    .caixa3 {
+        width: 70%;
+        max-width: 400px;
+         padding: px;
+        
+        box-sizing: border-box;
+    }
+
+
+    /* BOTÃO */
+
+    .botao {
+        width:110px;
+        padding: 5px 12px;
+        font-size: 0.85rem;
+    }
+
 }
