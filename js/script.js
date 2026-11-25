@@ -62,3 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('click', (event) => {
+  const btnPerfil = event.target.closest('#btnPerfil');
+  const menuDropdown = document.getElementById('menuDropdown');
+
+  if (!menuDropdown) return;
+
+  // Se clicou no ícone de perfil, abre ou fecha o menu
+  if (btnPerfil) {
+    menuDropdown.classList.toggle('ativo');
+    return;
+  }
+
+  // Se clicou fora do menu enquanto ele está aberto, fecha
+  if (!menuDropdown.contains(event.target)) {
+    menuDropdown.classList.remove('ativo');
+  }
+});
