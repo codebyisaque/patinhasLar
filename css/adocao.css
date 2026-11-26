@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
 * {
@@ -7,17 +6,19 @@
   box-sizing: border-box;
 }
 
-      body {
+body {
   background: #fff0e8;
   font-family: 'Nunito', sans-serif;
   color: #444;
 }
 
 
-      .container-principal {
+
+
+.container-principal {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto 70px;
+  margin: 0px auto 70px;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 50px;
@@ -251,63 +252,6 @@
   background: #ffbf51;
 }
 
-footer {
-  background: #ff716c;
-  color: white;
-  padding: 35px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.logo-footer {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.img-logo {
-  width: 70px;
-}
-
-.patinha {
-  font-size: 18px;
-  font-weight: 900;
-}
-
-.adocao {
-  font-size: 11px;
-}
-
-.redes-socias {
-  display: flex;
-  gap: 15px;
-}
-
-.redes-socias a {
-  color: white;
-  font-size: 25px;
-}
-
-.menu-footer,
-.sobre-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.menu-footer p,
-.sobre-footer p {
-  font-weight: bold;
-}
-
-.itens-footer {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-}
-
 @media (max-width: 1000px) {
   .container-principal {
     grid-template-columns: 250px 1fr;
@@ -319,43 +263,6 @@ footer {
   }
 
   .topo-catalogo {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 650px) {
-  .header {
-    padding: 15px 20px;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .nav-links a {
-    font-size: 12px;
-  }
-
-  .container-principal {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .topo-catalogo h1 {
-    font-size: 23px;
-  }
-
-  footer {
     flex-wrap: wrap;
   }
 }
