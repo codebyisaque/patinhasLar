@@ -13,14 +13,14 @@ body {
   margin: 0 auto;
 }
 
-input{
-border: 2px solid gray;
-border-radius: 10px;
-font-size: 16px;
-height: 20px;
-padding: 5px;
+input {
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 20px;
+  padding: 5px;
 }
-.adocao{
+.adocao {
   border: #ff746c solid 2px;
   border-radius: 20px;
   background-color: #ff746c;
@@ -28,22 +28,28 @@ padding: 5px;
   width: 15px;
 }
 
-label{
+label {
   display: block;
   margin-top: 4px;
 }
-h1, h2, h3, span{
-font-family: "Fredoka", sans-serif;
-font-weight:700;
-color: rgb(46 46 46 / 1);
+.conteiner h1,
+.conteiner h2,
+.conteiner h3,
+.conteiner span {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  color: rgb(46 46 46 / 1);
 }
 
-p, a, h5, input{
-   font-family: "Nunito", sans-serif;
-   font-weight: 300; 
+.conteiner p,
+.conteiner a,
+.conteiner h5,
+.conteiner input {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 
-header{
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -82,23 +88,25 @@ header{
   font-weight: 200;
   line-height: 10px;
 }
-.boasVindas h3{
+.boasVindas h3 {
   margin-top: 10px;
 }
-.fotoPerfil{
+.fotoPerfil {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-.iconePerfil{
+.iconePerfil {
   flex-shrink: 0;
   width: 120px;
   height: 120px;
 }
-.fotoTexto h2, p, a{
-margin: 0 0 8px;
+.fotoTexto h2,
+p,
+a {
+  margin: 0 0 8px;
 }
-.fotoTexto a{
+.fotoTexto a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +119,7 @@ margin: 0 0 8px;
   gap: 5px;
 }
 
-.dados-pessoais{
+.dados-pessoais {
   background-color: #fff0e8;
   margin: 10px;
   position: relative;
@@ -119,59 +127,59 @@ margin: 0 0 8px;
   border-radius: 20px;
   height: 10rem;
 }
-.dados-pessoais .input-box input{
-width: 59.8rem;
+.dados-pessoais .input-box input {
+  width: 59.8rem;
 }
-.linha{
+.linha {
   display: flex;
   gap: 16px;
 }
-.campo{
+.campo {
   display: flex;
   flex-direction: column;
 }
-.cpfNascimento input{
+.cpfNascimento input {
   width: 29rem;
 }
 
-.contato{
+.contato {
   background-color: #fff0e8;
   border: #fff0e8 solid 5px;
   border-radius: 20px;
   margin: 10px;
   height: 6rem;
 }
-.contato input{
+.contato input {
   width: 29rem;
 }
 
-.address{
+.address {
   background-color: #fff0e8;
   border: #fff0e8 solid 5px;
   border-radius: 20px;
   height: 18rem;
   margin: 10px;
 }
-.address input{
-width: 28.9rem;
+.address input {
+  width: 28.9rem;
 }
-.grade{
+.grade {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 1px; 
+  gap: 0 1px;
 }
-.complemento input{
-width: 59.8rem;
+.complemento input {
+  width: 59.8rem;
 }
 
-.seguranca{
-margin:10px;
-background-color: #fff0e8;
-border-radius: 20px;
-border: #fff0e8 solid 5px;
-height: 6rem;
+.seguranca {
+  margin: 10px;
+  background-color: #fff0e8;
+  border-radius: 20px;
+  border: #fff0e8 solid 5px;
+  height: 6rem;
 }
-.seguranca input{
+.seguranca input {
   width: 29rem;
 }
 .campo-senha {
@@ -191,58 +199,57 @@ height: 6rem;
   cursor: pointer;
 }
 
-.continue{
-display: block;
-width: fit-content;
-margin: 20px auto;  
-color: black;
-background-color: #fad383;
-border: #fad383 solid 5px;
-border-radius: 20px;
-
+.continue {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  color: black;
+  background-color: #fad383;
+  border: #fad383 solid 5px;
+  border-radius: 20px;
 }
-.conteiner .continue{
+.conteiner .continue {
   display: block;
   margin: 32px auto 0;
 }
 
-
 /*Css da pagina DOis*/
-.moradia-seguran{
+.moradia-seguran {
   background-color: #fff0e8;
   border: #fff0e8 solid 5px;
   border-radius: 20px;
   margin: 20px;
   padding: 2px;
 }
-.text{
+.text {
   margin-top: 10px;
 }
 
-.linha-cadois{
+.linha-cadois {
   display: flex;
   gap: 40px;
 }
-.moradia, .moradia-situacao{
+.moradia,
+.moradia-situacao {
   flex: 1;
   border: none;
   margin: 0;
   padding: 0;
 }
-h5{
+h5 {
   font-weight: bold;
   margin-bottom: 8px;
   padding: 0;
 }
-.opcoes{
+.opcoes {
   display: flex;
   gap: 12px;
 }
-.opcao{
+.opcao {
   flex: 1;
   cursor: pointer;
 }
-.opcao input{
+.opcao input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -263,8 +270,8 @@ h5{
   height: 20px;
 }
 
-.acolhimento{
-   background-color: #fff0e8;
+.acolhimento {
+  background-color: #fff0e8;
   border: #fff0e8 solid 5px;
   border-radius: 20px;
   margin: 20px;
