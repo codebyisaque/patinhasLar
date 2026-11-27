@@ -108,11 +108,28 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// Botões da sidebar de filtros na página de adoção
-document.addEventListener('click', (event) => {
-  const botaoFiltro = event.target.closest('.sidebar-filtros button');
+const botaoOlhoSenha = document.getElementById ('OlhoSenha');
+const iconeOlho = botaoOlhoSenha?.querySelector ('i');
 
-  if (botaoFiltro) {
-    botaoFiltro.classList.toggle('ativo');
+function atualizarExibicao(mostrar){
+  if (!senha) return;
+
+  senha.type = mostrar ? 'text' : 'password';
+
+  if (iconeOlho){
+    iconeOlho.classList.toggle ('fa-eye', mostrar);
+    iconeOlho.classList.toggle ('fa-eye-slash', !mostrar);
   }
+
+  botaoOlhoSenha?.setAttribute(
+    'aria-label',
+    mostrar ? 'Ocultar senha' : 'Mostrar senha'
+  );
+}
+
+atualizarExibicao (senha?.type === 'text');
+
+botaoOlhoSenha?.addEventListener ('click', () => {
+  if(!senha) return;
+  atualizarExibicao (senha.type === 'password');
 });
