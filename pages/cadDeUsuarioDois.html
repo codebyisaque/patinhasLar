@@ -1,32 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patinhas lar</title>
-</head>
-<body>
-  <header id="header-placeholder"></header>
-  
-<main class="conteiner">
-  <img src="" alt="">
-  <h1>Para oferecer lar temporario</h1>
-  <p>Conte um pouco sobre o espaço e os cuidados que você pode oferecer</p>
-<section class="moradia-seguranca">
-  <h1>Moradia e segurança</h1>
-  <form action="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cadastroDeUsuario.css" />
+    <title>Patinhas lar</title>
+  </head>
+  <body>
+    <header id="header-placeholder"></header>
 
-    <div class="moradia">
-      <h2>Tipo de moradia</h2>
-      
-    </div>
-    
-  </form>
-</section>
-  
-</main>
+    <main class="conteiner">
+      <img src="" alt="" />
+      <h1>Para oferecer lar temporario</h1>
+      <p>Conte um pouco sobre o espaço e os cuidados que você pode oferecer</p>
 
-  <footer id="footer-placeholder"></footer>
-  <script type="module" src="../js/script.js"></script>
-</body>
+      <section class="moradia-seguranca">
+        <h2>Moradia e segurança</h2>
+        <form action="">
+          <div class="linha-moradia">
+            <div class="moradia">
+              <h5>Tipo de moradia</h5>
+
+              <div class="opcoes">
+                <label class="opcao">
+                  <input
+                    type="radio"
+                    name="tipo-moradia"
+                    value="casa"
+                    checked
+                  />
+                  <span class="card">
+                    <img src="../assets/img/icons/casa.svg" alt="" />
+                    Casa
+                  </span>
+                </label>
+
+                <label class="opcao">
+                  <input
+                    type="radio"
+                    name="tipo-moradia"
+                    value="apartamento"
+                    checked
+                  />
+                  <span class="card">
+                    <img src="../assets/img/icons/Apartamento.svg" alt="" />
+                    Apartamento
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="moradia-situacao">
+              <h5>Sua moradia é</h5>
+              <div class="opcoes">
+                <label class="opcao">
+                  <input type="radio" name="situacao-moradia" value="propia" />
+                  <span class="card">
+                    <img src="../assets/img/icons/casacoracao.svg" alt="" />
+                    Própia
+                  </span>
+                </label>
+
+                <label class="opcao">
+                  <input type="radio" name="situacao-moradia" value="alugada" />
+                  <span class="card">
+                    <img src="../assets/img/icons/casaestrela.svg" alt="" />
+                    Alugada
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="seguranca">
+            <h2>Possui proteção contra fugas?</h2>
+            <div class="linha">
+              <div class="campo-sec">
+                <label class="opcao">
+                  <input type="checkbox" name="protecao" value="muro" />
+                  <span class="card"> Muros altos/Portão fechado </span>
+                </label>
+              </div>
+              <div class="campo-sec">
+                <label class="opcao">
+                  <input type="checkbox" name="protecao" value="tela" />
+                  <span class="card"
+                    >Telas de proteção nas janelas e sacadas(Para gatos)</span
+                  >
+                </label>
+              </div>
+              <div class="campo-sec">
+                <label class="opcao">
+                  <input type="checkbox" name="protecao" value="quintal" />
+                  <span class="card">Quintal grande e privado</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+    <!--
+    <script type="module" src="../js/script.js"></script>
+    -->
+  </body>
 </html>
