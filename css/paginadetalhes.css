@@ -1,433 +1,440 @@
 body {
-    margin: 0;
-    background-color: #fff0e8;
-    color: #464646;
+  margin: 0;
+  background-color: #fff0e8;
+  color: #464646;
 }
 
 .menu-perfil-maylon {
-    position: relative;
-    margin-left: auto;
+  position: relative;
+  margin-left: auto;
 }
 
 .menu-perfil-maylon summary {
-    list-style: none;
-    cursor: pointer;
-    color: white;
+  list-style: none;
+  cursor: pointer;
+  color: white;
 }
 
 .menu-perfil-maylon summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 .links-perfil-maylon {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 8px);
-    display: grid;
-    gap: 8px;
-    min-width: 170px;
-    padding: 12px;
-    border: 1px solid #464646;
-    border-radius: 12px;
-    background: white;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  display: grid;
+  gap: 8px;
+  min-width: 170px;
+  padding: 12px;
+  border: 1px solid #464646;
+  border-radius: 12px;
+  background: white;
 }
 
 .links-perfil-maylon a {
-    color: #464646;
-    text-decoration: none;
+  color: #464646;
+  text-decoration: none;
 }
-
-
 
 /* Área principal */
 .container-detalhes {
-    width: calc(100% - 48px);
-    max-width: 1210px;
-    margin: 0px auto;
-    padding: 164px 0px 50px 0px;
-    font-family: "Nunito", Arial, sans-serif;
-    font-size: 24px;
+  width: calc(100% - 48px);
+  max-width: 1210px;
+  margin: 0px auto;
+  padding: 164px 0px 50px 0px;
+  font-family: 'Nunito', Arial, sans-serif;
+  font-size: 24px;
 }
 
 @media (min-width: 761px) {
-    body #header-placeholder .header {
-        left: 50vw;
-    }
+  body #header-placeholder .header {
+    left: 50vw;
+  }
 
-    .container-detalhes {
-        position: relative;
-        left: calc((100vw - 100%) / 2);
-    }
+  .container-detalhes {
+    position: relative;
+    left: calc((100vw - 100%) / 2);
+  }
 }
 
 .container-detalhes,
 .container-detalhes * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container-detalhes h1,
 .container-detalhes h2 {
-    margin: 0 0 10px;
-    font-family: "Fredoka", "Nunito", Arial, sans-serif;
-    line-height: 1.2;
+  margin: 0 0 10px;
+  font-family: 'Fredoka', 'Nunito', Arial, sans-serif;
+  line-height: 1.2;
 }
 
 .container-detalhes h1 {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .container-detalhes h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .btn-voltar,
 .btn-saiba-mais {
-    display: inline-block;
-    padding: 7px 16px;
-    border: 1px solid #464646;
-    border-radius: 12px;
-    color: #464646;
-    background-color: #fad383;
-    text-decoration: none;
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid #464646;
+  border-radius: 12px;
+  color: #464646;
+  background-color: #fad383;
+  text-decoration: none;
+  font-family: 'Fredoka', 'Nunito', Arial, sans-serif;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.btn-voltar:hover,
+.btn-saiba-mais:hover {
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
+  background-color: #e8bc68;
 }
 
 .btn-voltar {
-    margin-bottom: 55px;
-    font-size: 20px;
+  margin-bottom: 55px;
+  font-size: 20px;
 }
 
 /* Cartão do Maylon */
 .card-maylon,
 .card-apoio {
-    width: 100%;
-    padding: clamp(16px, 2vw, 30px);
-    border: 1px solid #464646;
-    border-radius: 24px;
-    background-color: white;
+  width: 100%;
+  padding: clamp(16px, 2vw, 30px);
+  border: 1px solid #464646;
+  border-radius: 24px;
+  background-color: white;
 }
 
 .card-maylon {
-    padding: 10px 20px 55px;
-    border-radius: 44px;
+  padding: 10px 20px 55px;
+  border-radius: 44px;
 }
 
 .card-maylon h1 {
-    margin-left: 22px;
-    margin-bottom: 1px;
+  margin-left: 22px;
+  margin-bottom: 1px;
 }
 
 .perfil-maylon {
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 16px;
 }
 
 /* Fotos da esquerda */
 .galeria-maylon {
-    display: grid;
-    grid-template-columns: 1fr 1.85fr;
-    grid-template-rows: 2fr 1fr;
-    gap: 34px 24px;
-    min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.85fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 34px 24px;
+  min-width: 0;
 }
 
 .galeria-maylon figure:first-child {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .galeria-maylon figure {
-    position: relative;
-    min-height: 0;
-    margin: 0;
-    overflow: hidden;
-    border: 1px solid #464646;
-    background-color: #eee;
+  position: relative;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #464646;
+  background-color: #eee;
 }
 
 .galeria-maylon img {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .nino-dois {
-    object-position: center 20%;
+  object-position: center 20%;
 }
 
 /* Informações da direita */
 .informacoes-maylon {
-    display: grid;
-    align-content: start;
-    gap: 18px;
-    min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  min-width: 0;
 }
 
 .dados-maylon {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 14px;
 }
 
 .dados-maylon p {
-    margin: 0;
+  margin: 0;
 }
 
 .dados-maylon span,
 .lista-cuidados li,
 .lista-personalidade li {
-    display: inline-block;
-    padding: 4px 10px;
-    border: 1px solid #464646;
-    border-radius: 16px;
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #464646;
+  border-radius: 16px;
 }
 
 .lista-cuidados,
 .lista-personalidade,
 .lista-convivencia {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .lista-cuidados {
-    display: grid;
-    gap: 8px;
+  display: grid;
+  gap: 8px;
 }
 
 .lista-personalidade {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.lista-cuidados li,
-.lista-personalidade li {
-    background-color: #fad383;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .lista-cuidados .sem-destaque {
-    background-color: white;
+  background-color: white;
 }
 
 .lista-convivencia li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .lista-convivencia input {
-    appearance: none;
-    flex-shrink: 0;
-    width: 34px;
-    height: 18px;
-    margin: 0;
-    border: 2px solid #555;
-    border-radius: 10px;
-    opacity: 1;
-    background:
-        radial-gradient(circle at 7px center, #555 4px, transparent 5px),
-        white;
+  appearance: none;
+  flex-shrink: 0;
+  width: 34px;
+  height: 18px;
+  margin: 0;
+  border: 2px solid #555;
+  border-radius: 10px;
+  opacity: 1;
+  background:
+    radial-gradient(circle at 7px center, #555 4px, transparent 5px), white;
 }
 
 .lista-convivencia input:checked {
-    border-color: #fad383;
-    background:
-        radial-gradient(circle at 25px center, white 4px, transparent 5px),
-        #fad383;
+  border-color: #fad383;
+  background:
+    radial-gradient(circle at 25px center, white 4px, transparent 5px), #fad383;
 }
 
 /* Botões abaixo das duas colunas */
 .acoes-maylon {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 33px;
 }
 
 @media (min-width: 761px) {
-    .acoes-maylon .botao-maylon:nth-child(1) {
-        width: 122px;
-    }
+  .acoes-maylon .botao-maylon:nth-child(1) {
+    width: 122px;
+  }
 
-    .acoes-maylon .botao-maylon:nth-child(2) {
-        width: 210px;
-    }
+  .acoes-maylon .botao-maylon:nth-child(2) {
+    width: 210px;
+  }
 
-    .acoes-maylon .botao-maylon:nth-child(3) {
-        width: 320px;
-    }
+  .acoes-maylon .botao-maylon:nth-child(3) {
+    width: 320px;
+  }
 }
 
 .botao-maylon {
-    background-color: white;
-    font-weight: 700;
-    text-align: center;
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #464646;
-    border-radius: 18px;
-    color: #464646;
-    text-decoration: none;
-    font-family: "Fredoka", "Nunito", Arial, sans-serif;
-    font-size: 22px;
+  background-color: white;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #464646;
+  border-radius: 18px;
+  color: #464646;
+  text-decoration: none;
+  font-family: 'Fredoka', 'Nunito', Arial, sans-serif;
+  font-size: 22px;
+  transition: 0.3s ease;
 }
 
 .botao-maylon.amarelo {
-    background-color: #fad383;
+  background-color: #fad383;
+}
+
+#botao:hover {
+  letter-spacing: 0.02rem;
+  transform: scale(1.01);
+  background-color: #e8bc68;
+}
+
+.botao-amarelo {
+  background-color: #fad383;
 }
 
 .acao-patinha {
-    margin: 58px 0 10px;
-    text-align: center;
+  margin: 58px 0 10px;
+  text-align: center;
 }
 
 .acao-patinha .botao-maylon {
-    padding: 14px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-}
-
-.container-detalhes a:hover {
-    background-color: #ffc566;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 20px;
 }
 
 .container-detalhes a:focus-visible {
-    outline: 3px solid #315b8f;
-    outline-offset: 3px;
+  outline: 3px solid #315b8f;
+  outline-offset: 3px;
 }
 
 /* Cartões de apadrinhamento e lar temporário */
 .cards-apoio {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    margin-top: 49px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 49px;
 }
 
 .card-apoio {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 19px;
-    padding: 32px 32px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 19px;
+  padding: 32px 32px 25px;
 }
 
 .card-apoio img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 2.2;
-    object-fit: cover;
-    border-radius: 14px;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.2;
+  object-fit: cover;
+  border-radius: 14px;
 }
 
 .card-apoio h2,
 .card-apoio p {
-    margin: 0;
+  margin: 0;
 }
 
 .card-apoio p {
-    font-size: 22px;
-    line-height: 1.4;
+  font-size: 22px;
+  line-height: 1.4;
 }
 
 .btn-saiba-mais {
-    margin-top: auto;
-    align-self: flex-start;
-    padding: 16px 38px;
-    font-size: 16px;
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 16px 38px;
+  font-size: 16px;
 }
 
 /* Celular */
 @media (max-width: 760px) {
+  .perfil-maylon,
+  .cards-apoio {
+    grid-template-columns: 1fr;
+  }
 
-    .perfil-maylon,
-    .cards-apoio {
-        grid-template-columns: 1fr;
-    }
+  .container-detalhes {
+    width: calc(100% - 32px);
+    padding-top: 120px;
+    font-size: 16px;
+  }
 
-    .container-detalhes {
-        width: calc(100% - 32px);
-        padding-top: 120px;
-        font-size: 16px;
-    }
+  .btn-voltar {
+    margin-bottom: 26px;
+    font-size: 16px;
+  }
 
-    .btn-voltar {
-        margin-bottom: 26px;
-        font-size: 16px;
-    }
+  .container-detalhes h1 {
+    font-size: 32px;
+  }
 
-    .container-detalhes h1 {
-        font-size: 32px;
-    }
+  .container-detalhes h2 {
+    font-size: 22px;
+  }
 
-    .container-detalhes h2 {
-        font-size: 22px;
-    }
+  .card-maylon {
+    padding: 16px;
+    border-radius: 24px;
+  }
 
-    .card-maylon {
-        padding: 16px;
-        border-radius: 24px;
-    }
+  .card-maylon h1 {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 
-    .card-maylon h1 {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+  .galeria-maylon img {
+    visibility: visible;
+  }
 
-    .galeria-maylon img {
-        visibility: visible;
-    }
+  .galeria-maylon {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    aspect-ratio: 1.15;
+  }
 
-    .galeria-maylon {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-        aspect-ratio: 1.15;
-    }
+  .galeria-maylon figure:first-child {
+    grid-column: auto;
+  }
 
-    .galeria-maylon figure:first-child {
-        grid-column: auto;
-    }
+  .acoes-maylon {
+    gap: 8px;
+  }
 
-    .acoes-maylon {
-        gap: 8px;
-    }
+  .botao-maylon {
+    padding: 7px 12px;
+    font-size: 16px;
+  }
 
-    .botao-maylon {
-        padding: 7px 12px;
-        font-size: 16px;
-    }
+  .acao-patinha {
+    margin-top: 24px;
+  }
 
-    .acao-patinha {
-        margin-top: 24px;
-    }
+  .acao-patinha .botao-maylon {
+    padding: 8px 14px;
+    font-size: 16px;
+  }
 
-    .acao-patinha .botao-maylon {
-        padding: 8px 14px;
-        font-size: 16px;
-    }
-
-    .cards-apoio {
-        margin-top: 32px;
-    }
+  .cards-apoio {
+    margin-top: 32px;
+  }
 }
 
 @media (max-width: 767px) {
-    .header {
-        width: calc(100% - 32px);
-        margin: 16px auto 0;
-    }
+  .header {
+    width: calc(100% - 32px);
+    margin: 16px auto 0;
+  }
 
-    #footer-placeholder,
-    #footer-placeholder footer {
-        box-sizing: border-box;
-        width: 100%;
-    }
+  #footer-placeholder,
+  #footer-placeholder footer {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
