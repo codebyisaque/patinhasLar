@@ -55,7 +55,7 @@ body {
   width: 100%;
   max-width: 420px;
   font-family: 'Nunito', sans-serif;
-  font-size: 22px;
+  font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 15px;
   text-align: center;
@@ -71,7 +71,6 @@ body {
   background-color: #FAD383;
   color: #464646;
   border: 2px solid #464646;
-  ;
   border-radius: 12px;
   text-align: center;
   text-decoration: none;
@@ -79,6 +78,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   margin-top: 10px;
+  transition: 0.3s ease;
 }
 
 .pcontainer {
@@ -113,7 +113,6 @@ body {
 }
 
 .botao:hover {
-  transition: 0.3s ease;
   letter-spacing: 0.02rem;
   transform: scale(1.03);
   background-color: #e8bc68;

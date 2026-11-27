@@ -124,9 +124,7 @@ body {
 }
 
 /* Estado selecionado (amarelo) */
-.opcoes-porte button:hover i,
 .opcoes-porte button.ativo i,
-.opcoes-porte button:hover svg,
 .opcoes-porte button.ativo svg {
   background-color: #F4CE7A;
 }
@@ -194,9 +192,6 @@ body {
 }
 
 /* Estado selecionado (amarelo) */
-.opcoes-especie button:hover,
-.opcoes-sexo button:hover,
-.opcoes-modalidade button:hover,
 .opcoes-especie button.ativo,
 .opcoes-sexo button.ativo,
 .opcoes-modalidade button.ativo {
