@@ -42,6 +42,7 @@ p, a, h5, input{
    font-family: "Nunito", sans-serif;
    font-weight: 300; 
 }
+
 header{
   position: fixed;
   top: 0;
@@ -167,7 +168,7 @@ width: 59.8rem;
 margin:10px;
 background-color: #fff0e8;
 border-radius: 20px;
-border: #fff0e8  5px;
+border: #fff0e8 solid 5px;
 height: 6rem;
 }
 .seguranca input{
@@ -207,7 +208,7 @@ border-radius: 20px;
 
 
 /*Css da pagina DOis*/
-.moradia-seguranca{
+.moradia-seguran{
   background-color: #fff0e8;
   border: #fff0e8 solid 5px;
   border-radius: 20px;
@@ -218,7 +219,7 @@ border-radius: 20px;
   margin-top: 10px;
 }
 
-.linha-moradia{
+.linha-cadois{
   display: flex;
   gap: 40px;
 }
@@ -260,4 +261,12 @@ h5{
 .card img {
   width: 20px;
   height: 20px;
+}
+
+.acolhimento{
+   background-color: #fff0e8;
+  border: #fff0e8 solid 5px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 2px;
 }

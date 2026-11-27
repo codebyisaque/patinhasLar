@@ -15,9 +15,9 @@
       <p>Conte um pouco sobre o espaço e os cuidados que você pode oferecer</p>
       <form action="">
 
-      <section class="moradia-seguranca">
+      <section class="moradia-seguran">
         <h2>Moradia e segurança</h2>
-          <div class="linha-moradia">
+          <div class="linha-cadois">
             <div class="moradia">
               <h5>Tipo de moradia</h5>
 
@@ -32,6 +32,7 @@
                   <span class="card">
                     <img src="../assets/img/icons/casa.svg" alt="" />
                     Casa
+                    <span class="check">✓</span>
                   </span>
                 </label>
 
@@ -45,10 +46,12 @@
                   <span class="card">
                     <img src="../assets/img/icons/Apartamento.svg" alt="" />
                     Apartamento
+                    <span class="check">✓</span>
                   </span>
                 </label>
               </div>
             </div>
+          
             <div class="moradia-situacao">
               <h5>Sua moradia é</h5>
               <div class="opcoes">
@@ -57,6 +60,7 @@
                   <span class="card">
                     <img src="../assets/img/icons/casacoracao.svg" alt="" />
                     Própia
+                    <span class="check">✓</span>
                   </span>
                 </label>
 
@@ -65,6 +69,7 @@
                   <span class="card">
                     <img src="../assets/img/icons/casaestrela.svg" alt="" />
                     Alugada
+                    <span class="check">✓</span>
                   </span>
                 </label>
               </div>
@@ -78,7 +83,7 @@
             </p>
           </div>
 
-          <div class="seguranca">
+          <div class="securyte">
             <h2>Possui proteção contra fugas?</h2>
             <div class="linha">
               <div class="campo-sec">
@@ -104,11 +109,59 @@
             </div>
           </div>
         </section>
+
+        <section class="acolhimento">
+          <h2>Acolhimento</h2>
+          <div class="resident">
+            <h3>Todos os residentes estão de acordo com o lar temporário ?</h3>
+            <div class="linha">
+              <div class="opcoes">
+                <label class="opcao">
+                  <span class="card">Sim</span>
+                  <input type="radio" name="sim" value="sim">
+                </label>
+                
+                
+                <label class="opcao">
+                  <span class="card">Não</span>
+                  <input type="radio" name="nao" value="nao">
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="pet-sozinho">
+            <h3>Quantas horas o pet ficará sozinho ?</h3>
+            <div class="linha-cadois">
+              <div class="opcoes">
+                <label class="opcao">
+                  <input type="radio" name="horas" value="igual-quatro-horas">
+                  <span class="card">Até 4 horas</span>
+                </label>
+
+                <label class="opcao">
+                  <input type="radio" name="horas" value="entre-quatro-oito-horas">
+                  <span class="card">4 à 8 horas</span>
+                </label>
+
+                <label class="opcao">
+                  <input type="radio" name="horas" value="mais-de-oito-horas">
+                  <span class="card">Mais de 8 horas</span>
+                </label>
+
+                <label class="opcao">
+                  <input type="radio" name="horas" value="sempre-tem-alguem">
+                  <span class="card">Sempre há alguem em casa</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
       </form>
     </main>
 
     <footer id="footer-placeholder"></footer>
-    <!--
+    
     <script type="module" src="../js/script.js"></script>
     -->
   </body>
