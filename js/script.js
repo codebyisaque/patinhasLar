@@ -8,7 +8,6 @@ function destacarMenuAtivo() {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Ajusta o caminho caso esteja no index.html (na raiz) e o link comece com ../
     if (!estaNaPastaPages && href.startsWith('../')) {
       link.setAttribute('href', href.replace('../', './'));
     }
@@ -41,7 +40,6 @@ function loadComponent(elementId, componentName) {
     .then((html) => {
       element.innerHTML = html;
 
-      // Destaca o link ativo logo após o header ser carregado
       if (elementId === 'header-placeholder') {
         destacarMenuAtivo();
       }
@@ -52,10 +50,9 @@ function loadComponent(elementId, componentName) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Carrega o footer
+  // Carrega o footer e o header
   loadComponent('footer-placeholder', 'footer.html');
 
-  // Carrega o header (logado ou deslogado)
   const usuarioLogado = sessionStorage.getItem('usuarioLogado') === 'true';
   loadComponent(
     'header-placeholder',
@@ -89,6 +86,33 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Preencha o e-mail e a senha para entrar.');
     }
   });
+
+  // Lógica do olho da senha (movida para cá onde 'senha' já existe!)
+  const botaoOlhoSenha = document.getElementById('OlhoSenha');
+  const iconeOlho = botaoOlhoSenha?.querySelector('i');
+
+  function atualizarExibicao(mostrar) {
+    if (!senha) return;
+
+    senha.type = mostrar ? 'text' : 'password';
+
+    if (iconeOlho) {
+      iconeOlho.classList.toggle('fa-eye', mostrar);
+      iconeOlho.classList.toggle('fa-eye-slash', !mostrar);
+    }
+
+    botaoOlhoSenha?.setAttribute(
+      'aria-label',
+      mostrar ? 'Ocultar senha' : 'Mostrar senha'
+    );
+  }
+
+  if (senha) {
+    atualizarExibicao(senha.type === 'text');
+    botaoOlhoSenha?.addEventListener('click', () => {
+      atualizarExibicao(senha.type === 'password');
+    });
+  }
 });
 
 // Dropdown do perfil no header logado
@@ -108,28 +132,11 @@ document.addEventListener('click', (event) => {
   }
 });
 
-const botaoOlhoSenha = document.getElementById ('OlhoSenha');
-const iconeOlho = botaoOlhoSenha?.querySelector ('i');
+// Botões da sidebar de filtros na página de adoção
+document.addEventListener('click', (event) => {
+  const botaoFiltro = event.target.closest('.sidebar-filtros button');
 
-function atualizarExibicao(mostrar){
-  if (!senha) return;
-
-  senha.type = mostrar ? 'text' : 'password';
-
-  if (iconeOlho){
-    iconeOlho.classList.toggle ('fa-eye', mostrar);
-    iconeOlho.classList.toggle ('fa-eye-slash', !mostrar);
+  if (botaoFiltro) {
+    botaoFiltro.classList.toggle('ativo');
   }
-
-  botaoOlhoSenha?.setAttribute(
-    'aria-label',
-    mostrar ? 'Ocultar senha' : 'Mostrar senha'
-  );
-}
-
-atualizarExibicao (senha?.type === 'text');
-
-botaoOlhoSenha?.addEventListener ('click', () => {
-  if(!senha) return;
-  atualizarExibicao (senha.type === 'password');
 });
