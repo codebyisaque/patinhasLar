@@ -207,6 +207,17 @@ border-radius: 20px;
 
 
 /*Css da pagina DOis*/
+.moradia-seguranca{
+  background-color: #fff0e8;
+  border: #fff0e8 solid 5px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 2px;
+}
+.text{
+  margin-top: 10px;
+}
+
 .linha-moradia{
   display: flex;
   gap: 40px;
@@ -221,4 +232,32 @@ h5{
   font-weight: bold;
   margin-bottom: 8px;
   padding: 0;
+}
+.opcoes{
+  display: flex;
+  gap: 12px;
+}
+.opcao{
+  flex: 1;
+  cursor: pointer;
+}
+.opcao input{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 2px solid #222;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 14px;
+}
+.card img {
+  width: 20px;
+  height: 20px;
 }
