@@ -110,6 +110,49 @@ body {
   margin: 0;
 }
 
+.input-iconeO{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 20px 0;
+}
+
+.input-iconeO input {
+  width: 100%;
+  padding: 15px 44px 18px 15px;
+  margin: 0;
+}
+
+.btn-olhinho {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto !important;
+  height: auto;
+  margin: 0 !important;
+  padding: 6px !important;
+  background: transparent !important;
+  border: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn-olhinho:hover {
+  opacity: 1;
+  letter-spacing: normal;
+  transform: translateY(-50%);
+}
+
+.btn-olhinho i {
+  position: static;
+  transform: none;
+}
+
 .lembrar-senha {
   display: flex;
   justify-content: space-between;

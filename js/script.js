@@ -80,3 +80,29 @@ document.addEventListener('click', (event) => {
     menuDropdown.classList.remove('ativo');
   }
 });
+
+const botaoOlhoSenha = document.getElementById ('OlhoSenha');
+const iconeOlho = botaoOlhoSenha?.querySelector ('i');
+
+function atualizarExibicao(mostrar){
+  if (!senha) return;
+
+  senha.type = mostrar ? 'text' : 'password';
+
+  if (iconeOlho){
+    iconeOlho.classList.toggle ('fa-eye', mostrar);
+    iconeOlho.classList.toggle ('fa-eye-slash', !mostrar);
+  }
+
+  botaoOlhoSenha?.setAttribute(
+    'aria-label',
+    mostrar ? 'Ocultar senha' : 'Mostrar senha'
+  );
+}
+
+atualizarExibicao (senha?.type === 'text');
+
+botaoOlhoSenha?.addEventListener ('click', () => {
+  if(!senha) return;
+  atualizarExibicao (senha.type === 'password');
+});
