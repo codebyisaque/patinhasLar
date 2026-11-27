@@ -17,10 +17,10 @@ Projeto desenvolvido como trabalho de conclusão do curso **Transforme-se** (rea
 ## ✨ Páginas e Funcionalidades
 
 - **Página Inicial (`index.html`):** apresentação da plataforma, carrossel interativo de pets (*Dara*, *Maylon*, *Nino*) e seções informativas sobre lar temporário e apadrinhamento.
-- **Adoção (`adocao.html`) & Detalhes dos Pets (`paginadetalhes*.html`):** vitrine de animais disponíveis e páginas individuais com informações detalhadas de cada pet.
+- **Adoção (`adocao.html`) & Detalhes dos Pets (`paginadetalhes.html`):** vitrine de animais disponíveis e páginas individuais com informações detalhadas de cada pet.
 - **Como Funciona o Apadrinhamento (`comofuncionaoapadrinhamento.html`):** explicação sobre o apoio contínuo aos animais.
 - **Lar Temporário (`lartemporario.html`):** informações sobre o acolhimento provisório de pets resgatados.
-- **Formulários de Interesse (`InteresseAdoção.html`, `InteresseApadrinhar.html`, `InteresseLarTemp.html`):** fluxos para manifestar interesse em adotar, apadrinhar ou oferecer lar temporário.
+- **Envio de Interesse (`InteresseAdoção.html`, `InteresseApadrinhar.html`, `InteresseLarTemp.html`):** fluxos para manifestar interesse em adotar, apadrinhar ou oferecer lar temporário.
 - **Cadastro e Autenticação (`cadastroDeUsuario.html`, `login.html`, `RecuperarSenha.html`):** fluxo completo de cadastro, login e recuperação de senha com telas de confirmação.
 - **Cadastro de Animal (`cadastrodoanimal.html`):** formulário para registrar novos animais na plataforma.
 - **Sobre Nós (`sobreNos.html`) & Parcerias (`parcerias.html`):** apresentação institucional do projeto e empresas/marcas parceiras.
