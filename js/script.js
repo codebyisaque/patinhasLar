@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const usuarioLogado = sessionStorage.getItem('usuarioLogado') === 'true';
   loadComponent(
     'header-placeholder',
-    usuarioLogado ? 'headerlogado.html' : 'header.html'
+    usuarioLogado ? 'headerlogado.html' : 'header.html',
   );
 
   // Lógica da tela de login
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadComponent(
       'header-placeholder',
-      camposPreenchidos || logado ? 'headerlogado.html' : 'header.html'
+      camposPreenchidos || logado ? 'headerlogado.html' : 'header.html',
     );
   }
 
@@ -139,4 +139,30 @@ document.addEventListener('click', (event) => {
   if (botaoFiltro) {
     botaoFiltro.classList.toggle('ativo');
   }
+});
+
+const botaoOlhoSenha = document.getElementById('OlhoSenha');
+const iconeOlho = botaoOlhoSenha?.querySelector('i');
+
+function atualizarExibicao(mostrar) {
+  if (!senha) return;
+
+  senha.type = mostrar ? 'text' : 'password';
+
+  if (iconeOlho) {
+    iconeOlho.classList.toggle('fa-eye', mostrar);
+    iconeOlho.classList.toggle('fa-eye-slash', !mostrar);
+  }
+
+  botaoOlhoSenha?.setAttribute(
+    'aria-label',
+    mostrar ? 'Ocultar senha' : 'Mostrar senha',
+  );
+}
+
+atualizarExibicao(senha?.type === 'text');
+
+botaoOlhoSenha?.addEventListener('click', () => {
+  if (!senha) return;
+  atualizarExibicao(senha.type === 'password');
 });
