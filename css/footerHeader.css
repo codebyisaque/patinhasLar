@@ -159,6 +159,11 @@ button{
   
 }
 
+.header .menu-item.ativo {
+  color: #fad383;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 .containerMenu .meuPerfil,
 .minhaPatinha,
@@ -172,8 +177,6 @@ button{
   border-color: #4646465D;
   padding-top: 15px;
 }
-
-
 /* Footer */
 
 footer {

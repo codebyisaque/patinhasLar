@@ -12,50 +12,70 @@ body {
   color: #444;
 }
 
-
-
-
 .container-principal {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1200px; /* Aumentado para comportar os 754px da sidebar + os cards ao lado */
   margin: 0px auto 70px;
+  padding-top: 170px;
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 50px;
+  grid-template-columns: 415px 1fr; /* Sidebar com 754px e o catálogo ocupando o restante */
+  gap: 70px;
   align-items: start;
 }
 
 .sidebar-filtros {
-  background: white;
-  border: 1px solid #777;
-  border-radius: 40px;
-  padding: 25px;
+  width: 415px;
+  min-height: 754px;
+  background-color: #ffffff;
+  border: 1.5px solid #3D3A39;
+  border-radius: 50px;
+  padding: 36px 32px;
+  color: #3D3A39;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Cabeçalho "Filtros" com o ícone */
 .sidebar-filtros h2 {
   display: flex;
   align-items: center;
-  gap: 25px;
-  font-size: 21px;
-  margin-bottom: 30px;
+  gap: 32px;
+  font-size: 26px;
+  font-weight: 900;
+  color: #3D3A39;
+  margin-bottom: 24px;
 }
 
-.sidebar-filtros h2 i {
-  font-size: 27px;
+.sidebar-filtros h2 i,
+.sidebar-filtros h2 svg {
+  font-size: 36px;
+  width: 42px;
+  height: 42px;
 }
 
+/* Blocos de cada pergunta */
 .grupo-filtro {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
+}
+
+.grupo-filtro:last-child {
+  margin-bottom: 0;
 }
 
 .grupo-filtro h3 {
-  font-size: 16px;
-  margin-bottom: 15px;
+  font-size: 19px;
+  font-weight: 900;
+  color: #3D3A39;
+  margin-bottom: 16px;
 }
 
+/* --- PORTE DO ANIMAL (círculos com tamanhos crescentes) --- */
 .opcoes-porte {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end; /* Alinha as bases dos círculos de tamanhos diferentes */
+  justify-content: flex-start;
+  gap: 32px;
 }
 
 .opcoes-porte button {
@@ -64,93 +84,124 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: inherit;
-  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3D3A39;
   cursor: pointer;
 }
 
-.opcoes-porte button i {
-  border: 1px solid #555;
+/* Base comum dos círculos das patinhas */
+.opcoes-porte button i,
+.opcoes-porte button svg {
+  border: 1.5px solid #3D3A39;
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+/* Tamanhos crescentes iguais aos do Figma */
 .porte-pequeno {
-  font-size: 17px;
+  width: 46px;
+  height: 46px;
+  font-size: 22px;
 }
 
 .porte-medio {
-  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  font-size: 28px;
 }
 
 .porte-grande {
-  font-size: 30px;
+  width: 64px;
+  height: 64px;
+  font-size: 34px;
 }
 
+/* Estado selecionado (amarelo) */
 .opcoes-porte button:hover i,
-.opcoes-porte button.ativo i {
-  background: #ffd47d;
+.opcoes-porte button.ativo i,
+.opcoes-porte button:hover svg,
+.opcoes-porte button.ativo svg {
+  background-color: #F4CE7A;
 }
 
+/* --- QUAL IDADE? --- */
 .campo-idade {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .campo-idade input {
-  width: 50px;
-  height: 27px;
-  border: 1px solid #777;
+  width: 64px;
+  height: 32px;
+  border: 1.5px solid #3D3A39;
   border-radius: 20px;
-  padding: 5px;
+  padding: 4px 12px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: #3D3A39;
+  outline: none;
 }
 
 .campo-idade span {
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3D3A39;
 }
 
+/* --- ESPÉCIE, SEXO E MODALIDADE --- */
 .opcoes-especie,
 .opcoes-sexo,
 .opcoes-modalidade {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
 .texto-filtro {
-  font-size: 12px;
-  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #3D3A39;
+  margin-right: 12px;
 }
 
 .opcoes-especie button,
 .opcoes-sexo button,
 .opcoes-modalidade button {
-  background: white;
-  border: 1px solid #777;
-  border-radius: 20px;
-  padding: 5px 10px;
-  color: #444;
+  background-color: #ffffff;
+  border: 1.5px solid #3D3A39;
+  border-radius: 25px;
+  padding: 6px 16px;
+  color: #3D3A39;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
+/* Estado selecionado (amarelo) */
 .opcoes-especie button:hover,
 .opcoes-sexo button:hover,
 .opcoes-modalidade button:hover,
 .opcoes-especie button.ativo,
 .opcoes-sexo button.ativo,
 .opcoes-modalidade button.ativo {
-  background: #ffd47d;
+  background-color: #F4CE7A;
 }
-
 .conteudo-adicao {
   min-width: 0;
 }
@@ -197,8 +248,9 @@ body {
 
 .grid-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(192px, 192px)); /* Mínimo de 192px e estica no espaço livre */
+  grid-auto-rows: 306px;
+  gap: 67px;
 }
 
 .card-animal {
@@ -214,9 +266,9 @@ body {
 
 .foto-animal {
   width: 100%;
-  height: 115px;
+  height: 155px; /* Aumentado levemente para ficar proporcional à nova altura de 306px */
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 40px;
   margin-bottom: 8px;
 }
 
@@ -252,23 +304,20 @@ body {
   background: #ffbf51;
 }
 
-@media (max-width: 1000px) {
+/* Responsividade: quando a tela for menor que 1100px, reduz a sidebar para não estourar a tela */
+@media (max-width: 1100px) {
   .container-principal {
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 25px;
   }
+}
 
-  .grid-cards {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .container-principal {
+    grid-template-columns: 1fr;
   }
 
   .topo-catalogo {
     flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 380px) {
-  .grid-cards {
-    grid-template-columns: 1fr;
   }
 }

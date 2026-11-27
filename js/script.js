@@ -1,13 +1,34 @@
 // js/script.js
 
+function destacarMenuAtivo() {
+  const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
+  const estaNaPastaPages = window.location.pathname.includes('/pages/');
+
+  document.querySelectorAll('.header .menu-item').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // Ajusta o caminho caso esteja no index.html (na raiz) e o link comece com ../
+    if (!estaNaPastaPages && href.startsWith('../')) {
+      link.setAttribute('href', href.replace('../', './'));
+    }
+
+    const paginaLink = href.split('/').pop();
+
+    if (paginaLink === paginaAtual) {
+      link.classList.add('ativo');
+    } else {
+      link.classList.remove('ativo');
+    }
+  });
+}
+
 function loadComponent(elementId, componentName) {
   const element = document.getElementById(elementId);
   if (!element) return;
 
-  // Se a página atual estiver dentro da pasta 'pages', precisamos voltar um nível (../)
   const estaNaPastaPages = window.location.pathname.includes('/pages/');
   const basePath = estaNaPastaPages ? '../components/' : 'components/';
-
   const filePath = basePath + componentName;
 
   fetch(filePath)
@@ -19,6 +40,11 @@ function loadComponent(elementId, componentName) {
     })
     .then((html) => {
       element.innerHTML = html;
+
+      // Destaca o link ativo logo após o header ser carregado
+      if (elementId === 'header-placeholder') {
+        destacarMenuAtivo();
+      }
     })
     .catch((error) => {
       console.error('Erro:', error);
@@ -29,12 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Carrega o footer
   loadComponent('footer-placeholder', 'footer.html');
 
+  // Carrega o header (logado ou deslogado)
   const usuarioLogado = sessionStorage.getItem('usuarioLogado') === 'true';
   loadComponent(
     'header-placeholder',
     usuarioLogado ? 'headerlogado.html' : 'header.html'
   );
 
+  // Lógica da tela de login
   const email = document.getElementById('email');
   const senha = document.getElementById('senha');
   const botaoEntrar = document.querySelector('.btn-normal');
@@ -63,20 +91,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Dropdown do perfil no header logado
 document.addEventListener('click', (event) => {
   const btnPerfil = event.target.closest('#btnPerfil');
   const menuDropdown = document.getElementById('menuDropdown');
 
   if (!menuDropdown) return;
 
-  // Se clicou no ícone de perfil, abre ou fecha o menu
   if (btnPerfil) {
     menuDropdown.classList.toggle('ativo');
     return;
   }
 
-  // Se clicou fora do menu enquanto ele está aberto, fecha
   if (!menuDropdown.contains(event.target)) {
     menuDropdown.classList.remove('ativo');
+  }
+});
+
+// Botões da sidebar de filtros na página de adoção
+document.addEventListener('click', (event) => {
+  const botaoFiltro = event.target.closest('.sidebar-filtros button');
+
+  if (botaoFiltro) {
+    botaoFiltro.classList.toggle('ativo');
   }
 });
